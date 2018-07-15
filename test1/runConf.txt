@@ -1,0 +1,8 @@
+LibSoft - Run Configuration:
+
+[Filepath]\IFML2NG2\data\libraryIFML.core
+[Filepath]\IFML2NG2\data\libraryUML_CD.uml
+[Filepath]\IFML2NG2\data\adaptUI.xml
+[Filepath]\IFML2NG2\data\adaptUI.xsd
+[Filepath]\IFML2NG2\static
+[Filepath]\Gen

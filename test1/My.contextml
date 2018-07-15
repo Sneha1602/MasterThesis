@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<contextML:Context
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:contextML="platform:/resource/ContextML/model/contextML.ecore"
+    name="contextModel">
+  <entity xsi:type="contextML:User"
+      id="userid">
+    <role provider="//@provider.0"
+        type="string"/>
+    <colorBlind
+        provider="//@provider.0"
+        type="string"/>
+    <age provider="//@provider.1"
+        type="number"/>
+  </entity>
+  <entity xsi:type="contextML:Platform">
+    <device
+        provider="//@provider.2"
+        type="string"/>
+    <lang provider="//@provider.2"
+        type="string"/>
+  </entity>
+  <entity xsi:type="contextML:Environment">
+    <movementLevel
+        provider="//@provider.2"
+        type="number"/>
+  </entity>
+  <provider
+      id="appState"/>
+  <provider
+      id="faceDetection"/>
+  <provider
+      id="deviceAPI"/>
+</contextML:Context>

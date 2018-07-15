@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated contextML -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="contextML.presentation.ContextMLModelWizardID"
+            name="%_UI_ContextMLModelWizard_label"
+            class="contextML.presentation.ContextMLModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/ContextMLModelFile.gif">
+         <description>%_UI_ContextMLModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated contextML -->
+      <editor
+            id="contextML.presentation.ContextMLEditorID"
+            name="%_UI_ContextMLEditor_label"
+            icon="icons/full/obj16/ContextMLModelFile.gif"
+            extensions="contextml"
+            class="contextML.presentation.ContextMLEditor"
+            contributorClass="contextML.presentation.ContextMLActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

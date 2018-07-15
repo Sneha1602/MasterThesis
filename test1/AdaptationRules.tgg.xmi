@@ -1,0 +1,1224 @@
+<?xml version="1.0" encoding="ASCII"?>
+<org.emoflon.ibex.tgg.core.language:TGG
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:org.emoflon.ibex.tgg.core.language="platform:/plugin/org.emoflon.ibex.tgg.core.language/model/Language.ecore#/"
+    name="AdaptationRules">
+  <src href="../ContextML/model/contextML.ecore#/"/>
+  <trg href="../EssentialIFML/model/essentialIFML.ecore#/"/>
+  <corr href="../AdaptationRules/model/AdaptationRules.ecore#/"/>
+  <rules name="AdaptationAgeAndRole">
+    <nodes name="context"
+        outgoingEdges="//@rules.0/@edges.0">
+      <type
+          href="../ContextML/model/contextML.ecore#//Context"/>
+    </nodes>
+    <nodes name="e"
+        incomingEdges="//@rules.0/@edges.0"
+        outgoingEdges="//@rules.0/@edges.1 //@rules.0/@edges.2">
+      <type
+          href="../ContextML/model/contextML.ecore#//User"/>
+    </nodes>
+    <nodes name="roleName"
+        bindingType="CREATE"
+        incomingEdges="//@rules.0/@edges.2">
+      <type
+          href="../ContextML/model/contextML.ecore#//Admin"/>
+    </nodes>
+    <nodes name="ageOfUser"
+        bindingType="CREATE"
+        incomingEdges="//@rules.0/@edges.1">
+      <type
+          href="../ContextML/model/contextML.ecore#//UserIsOld"/>
+    </nodes>
+    <nodes name="essentialIFML"
+        domainType="TRG"
+        outgoingEdges="//@rules.0/@edges.3">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//EssentialIFMLModel"/>
+    </nodes>
+    <nodes name="ShowDetails"
+        domainType="TRG"
+        bindingType="CREATE"
+        incomingEdges="//@rules.0/@edges.3">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//IncreaseButtonSize"/>
+    </nodes>
+    <nodes xsi:type="org.emoflon.ibex.tgg.core.language:TGGRuleCorr"
+        name="context2EssentialIFML"
+        domainType="CORR"/>
+    <nodes xsi:type="org.emoflon.ibex.tgg.core.language:TGGRuleCorr"
+        name="age2IncreaseButton"
+        domainType="CORR"
+        bindingType="CREATE"/>
+    <edges name="context__entity__e_eMoflonEdge"
+        srcNode="//@rules.0/@nodes.0"
+        trgNode="//@rules.0/@nodes.1">
+      <type
+          href="../ContextML/model/contextML.ecore#//Context/entity"/>
+    </edges>
+    <edges name="e__age__ageOfUser_eMoflonEdge"
+        bindingType="CREATE"
+        srcNode="//@rules.0/@nodes.1"
+        trgNode="//@rules.0/@nodes.3">
+      <type
+          href="../ContextML/model/contextML.ecore#//User/age"/>
+    </edges>
+    <edges name="e__role__roleName_eMoflonEdge"
+        bindingType="CREATE"
+        srcNode="//@rules.0/@nodes.1"
+        trgNode="//@rules.0/@nodes.2">
+      <type
+          href="../ContextML/model/contextML.ecore#//User/role"/>
+    </edges>
+    <edges name="essentialIFML__increaseButtonSize__ShowDetails_eMoflonEdge"
+        domainType="TRG"
+        bindingType="CREATE"
+        srcNode="//@rules.0/@nodes.4"
+        trgNode="//@rules.0/@nodes.5">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//EssentialIFMLModel/increaseButtonSize"/>
+    </edges>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="AdaptationColorBlindness">
+    <nodes name="context"
+        outgoingEdges="//@rules.1/@edges.0">
+      <type
+          href="../ContextML/model/contextML.ecore#//Context"/>
+    </nodes>
+    <nodes name="e"
+        incomingEdges="//@rules.1/@edges.0"
+        outgoingEdges="//@rules.1/@edges.1">
+      <type
+          href="../ContextML/model/contextML.ecore#//User"/>
+    </nodes>
+    <nodes name="colorBlind"
+        bindingType="CREATE"
+        incomingEdges="//@rules.1/@edges.1">
+      <type
+          href="../ContextML/model/contextML.ecore#//UserIsColorBlind"/>
+    </nodes>
+    <nodes name="ifml"
+        domainType="TRG"
+        outgoingEdges="//@rules.1/@edges.2">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//EssentialIFMLModel"/>
+    </nodes>
+    <nodes name="allWindows"
+        domainType="TRG"
+        bindingType="CREATE"
+        incomingEdges="//@rules.1/@edges.2">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//LightBackgroundColor"/>
+    </nodes>
+    <nodes xsi:type="org.emoflon.ibex.tgg.core.language:TGGRuleCorr"
+        name="context2EssentialIFML"
+        domainType="CORR"/>
+    <nodes xsi:type="org.emoflon.ibex.tgg.core.language:TGGRuleCorr"
+        name="userColorBlind2AdaptColorBlind"
+        domainType="CORR"
+        bindingType="CREATE"/>
+    <edges name="context__entity__e_eMoflonEdge"
+        srcNode="//@rules.1/@nodes.0"
+        trgNode="//@rules.1/@nodes.1">
+      <type
+          href="../ContextML/model/contextML.ecore#//Context/entity"/>
+    </edges>
+    <edges name="e__colorBlind__colorBlind_eMoflonEdge"
+        bindingType="CREATE"
+        srcNode="//@rules.1/@nodes.1"
+        trgNode="//@rules.1/@nodes.2">
+      <type
+          href="../ContextML/model/contextML.ecore#//User/colorBlind"/>
+    </edges>
+    <edges name="ifml__changeBackgroundColor__allWindows_eMoflonEdge"
+        domainType="TRG"
+        bindingType="CREATE"
+        srcNode="//@rules.1/@nodes.3"
+        trgNode="//@rules.1/@nodes.4">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//EssentialIFMLModel/changeBackgroundColor"/>
+    </edges>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="AdaptationCreateAdminNavBar">
+    <nodes name="context"
+        outgoingEdges="//@rules.2/@edges.0">
+      <type
+          href="../ContextML/model/contextML.ecore#//Context"/>
+    </nodes>
+    <nodes name="e"
+        incomingEdges="//@rules.2/@edges.0"
+        outgoingEdges="//@rules.2/@edges.1">
+      <type
+          href="../ContextML/model/contextML.ecore#//User"/>
+    </nodes>
+    <nodes name="roleName"
+        bindingType="CREATE"
+        incomingEdges="//@rules.2/@edges.1">
+      <type
+          href="../ContextML/model/contextML.ecore#//Admin"/>
+    </nodes>
+    <nodes name="ifml"
+        domainType="TRG"
+        outgoingEdges="//@rules.2/@edges.2">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//EssentialIFMLModel"/>
+    </nodes>
+    <nodes name="allWindows"
+        domainType="TRG"
+        incomingEdges="//@rules.2/@edges.2"
+        outgoingEdges="//@rules.2/@edges.3 //@rules.2/@edges.4">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//ViewContainer"/>
+    </nodes>
+    <nodes name="Administration1"
+        domainType="TRG"
+        incomingEdges="//@rules.2/@edges.3">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//ViewContainer"/>
+    </nodes>
+    <nodes name="Administration2"
+        domainType="TRG"
+        incomingEdges="//@rules.2/@edges.4">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//ViewContainer"/>
+    </nodes>
+    <nodes xsi:type="org.emoflon.ibex.tgg.core.language:TGGRuleCorr"
+        name="context2EssentialIFML"
+        domainType="CORR"/>
+    <nodes xsi:type="org.emoflon.ibex.tgg.core.language:TGGRuleCorr"
+        name="roleToWindow"
+        domainType="CORR"
+        bindingType="CREATE"/>
+    <edges name="context__entity__e_eMoflonEdge"
+        srcNode="//@rules.2/@nodes.0"
+        trgNode="//@rules.2/@nodes.1">
+      <type
+          href="../ContextML/model/contextML.ecore#//Context/entity"/>
+    </edges>
+    <edges name="e__role__roleName_eMoflonEdge"
+        bindingType="CREATE"
+        srcNode="//@rules.2/@nodes.1"
+        trgNode="//@rules.2/@nodes.2">
+      <type
+          href="../ContextML/model/contextML.ecore#//User/role"/>
+    </edges>
+    <edges name="ifml__viewcontainer__allWindows_eMoflonEdge"
+        domainType="TRG"
+        srcNode="//@rules.2/@nodes.3"
+        trgNode="//@rules.2/@nodes.4">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//EssentialIFMLModel/viewcontainer"/>
+    </edges>
+    <edges name="allWindows__navBarContainer__Administration1_eMoflonEdge"
+        domainType="TRG"
+        bindingType="CREATE"
+        srcNode="//@rules.2/@nodes.4"
+        trgNode="//@rules.2/@nodes.5">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//ViewContainer/navBarContainer"/>
+    </edges>
+    <edges name="allWindows__navBarContainer__Administration2_eMoflonEdge"
+        domainType="TRG"
+        bindingType="CREATE"
+        srcNode="//@rules.2/@nodes.4"
+        trgNode="//@rules.2/@nodes.6">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//ViewContainer/navBarContainer"/>
+    </edges>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="AdaptationCreateStudentNavBar">
+    <nodes name="context"
+        outgoingEdges="//@rules.3/@edges.0">
+      <type
+          href="../ContextML/model/contextML.ecore#//Context"/>
+    </nodes>
+    <nodes name="e"
+        incomingEdges="//@rules.3/@edges.0"
+        outgoingEdges="//@rules.3/@edges.1">
+      <type
+          href="../ContextML/model/contextML.ecore#//User"/>
+    </nodes>
+    <nodes name="roleName"
+        bindingType="CREATE"
+        incomingEdges="//@rules.3/@edges.1">
+      <type
+          href="../ContextML/model/contextML.ecore#//Student"/>
+    </nodes>
+    <nodes name="ifml"
+        domainType="TRG"
+        outgoingEdges="//@rules.3/@edges.2">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//EssentialIFMLModel"/>
+    </nodes>
+    <nodes name="allWindows"
+        domainType="TRG"
+        incomingEdges="//@rules.3/@edges.2"
+        outgoingEdges="//@rules.3/@edges.3 //@rules.3/@edges.4">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//ViewContainer"/>
+    </nodes>
+    <nodes name="StudentWindow1"
+        domainType="TRG"
+        incomingEdges="//@rules.3/@edges.3">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//ViewContainer"/>
+    </nodes>
+    <nodes name="HelpWindow"
+        domainType="TRG"
+        incomingEdges="//@rules.3/@edges.4">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//ViewContainer"/>
+    </nodes>
+    <nodes xsi:type="org.emoflon.ibex.tgg.core.language:TGGRuleCorr"
+        name="context2EssentialIFML"
+        domainType="CORR"/>
+    <nodes xsi:type="org.emoflon.ibex.tgg.core.language:TGGRuleCorr"
+        name="roleToWindow"
+        domainType="CORR"
+        bindingType="CREATE"/>
+    <edges name="context__entity__e_eMoflonEdge"
+        srcNode="//@rules.3/@nodes.0"
+        trgNode="//@rules.3/@nodes.1">
+      <type
+          href="../ContextML/model/contextML.ecore#//Context/entity"/>
+    </edges>
+    <edges name="e__role__roleName_eMoflonEdge"
+        bindingType="CREATE"
+        srcNode="//@rules.3/@nodes.1"
+        trgNode="//@rules.3/@nodes.2">
+      <type
+          href="../ContextML/model/contextML.ecore#//User/role"/>
+    </edges>
+    <edges name="ifml__viewcontainer__allWindows_eMoflonEdge"
+        domainType="TRG"
+        srcNode="//@rules.3/@nodes.3"
+        trgNode="//@rules.3/@nodes.4">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//EssentialIFMLModel/viewcontainer"/>
+    </edges>
+    <edges name="allWindows__navBarContainer__StudentWindow1_eMoflonEdge"
+        domainType="TRG"
+        bindingType="CREATE"
+        srcNode="//@rules.3/@nodes.4"
+        trgNode="//@rules.3/@nodes.5">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//ViewContainer/navBarContainer"/>
+    </edges>
+    <edges name="allWindows__navBarContainer__HelpWindow_eMoflonEdge"
+        domainType="TRG"
+        bindingType="CREATE"
+        srcNode="//@rules.3/@nodes.4"
+        trgNode="//@rules.3/@nodes.6">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//ViewContainer/navBarContainer"/>
+    </edges>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="AdaptationUserAge">
+    <nodes name="context"
+        outgoingEdges="//@rules.4/@edges.0">
+      <type
+          href="../ContextML/model/contextML.ecore#//Context"/>
+    </nodes>
+    <nodes name="e"
+        incomingEdges="//@rules.4/@edges.0"
+        outgoingEdges="//@rules.4/@edges.1 //@rules.4/@edges.2">
+      <type
+          href="../ContextML/model/contextML.ecore#//User"/>
+    </nodes>
+    <nodes name="ageOfUser"
+        bindingType="CREATE"
+        incomingEdges="//@rules.4/@edges.1">
+      <type
+          href="../ContextML/model/contextML.ecore#//UserIsOld"/>
+    </nodes>
+    <nodes name="color"
+        bindingType="CREATE"
+        incomingEdges="//@rules.4/@edges.2">
+      <type
+          href="../ContextML/model/contextML.ecore#//ColorBlind"/>
+    </nodes>
+    <nodes name="essentialIFML"
+        domainType="TRG"
+        outgoingEdges="//@rules.4/@edges.3 //@rules.4/@edges.4">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//EssentialIFMLModel"/>
+    </nodes>
+    <nodes name="allWindows"
+        domainType="TRG"
+        bindingType="CREATE"
+        incomingEdges="//@rules.4/@edges.3">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//ZoomScreen"/>
+    </nodes>
+    <nodes name="ShowDetails"
+        domainType="TRG"
+        bindingType="CREATE"
+        incomingEdges="//@rules.4/@edges.4">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//IncreaseButtonSize"/>
+    </nodes>
+    <nodes xsi:type="org.emoflon.ibex.tgg.core.language:TGGRuleCorr"
+        name="context2EssentialIFML"
+        domainType="CORR"/>
+    <nodes xsi:type="org.emoflon.ibex.tgg.core.language:TGGRuleCorr"
+        name="userAge2ScreenZoom"
+        domainType="CORR"
+        bindingType="CREATE"/>
+    <nodes xsi:type="org.emoflon.ibex.tgg.core.language:TGGRuleCorr"
+        name="age2IncreaseButton"
+        domainType="CORR"
+        bindingType="CREATE"/>
+    <edges name="context__entity__e_eMoflonEdge"
+        srcNode="//@rules.4/@nodes.0"
+        trgNode="//@rules.4/@nodes.1">
+      <type
+          href="../ContextML/model/contextML.ecore#//Context/entity"/>
+    </edges>
+    <edges name="e__age__ageOfUser_eMoflonEdge"
+        bindingType="CREATE"
+        srcNode="//@rules.4/@nodes.1"
+        trgNode="//@rules.4/@nodes.2">
+      <type
+          href="../ContextML/model/contextML.ecore#//User/age"/>
+    </edges>
+    <edges name="e__colorBlind__color_eMoflonEdge"
+        bindingType="CREATE"
+        srcNode="//@rules.4/@nodes.1"
+        trgNode="//@rules.4/@nodes.3">
+      <type
+          href="../ContextML/model/contextML.ecore#//User/colorBlind"/>
+    </edges>
+    <edges name="essentialIFML__screenZoom__allWindows_eMoflonEdge"
+        domainType="TRG"
+        bindingType="CREATE"
+        srcNode="//@rules.4/@nodes.4"
+        trgNode="//@rules.4/@nodes.5">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//EssentialIFMLModel/screenZoom"/>
+    </edges>
+    <edges name="essentialIFML__increaseButtonSize__ShowDetails_eMoflonEdge"
+        domainType="TRG"
+        bindingType="CREATE"
+        srcNode="//@rules.4/@nodes.4"
+        trgNode="//@rules.4/@nodes.6">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//EssentialIFMLModel/increaseButtonSize"/>
+    </edges>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="Context2EssentialIFML">
+    <nodes name="context"
+        bindingType="CREATE">
+      <type
+          href="../ContextML/model/contextML.ecore#//Context"/>
+    </nodes>
+    <nodes name="essentialIFML"
+        domainType="TRG"
+        bindingType="CREATE">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//EssentialIFMLModel"/>
+    </nodes>
+    <nodes xsi:type="org.emoflon.ibex.tgg.core.language:TGGRuleCorr"
+        name="context2EssentialIFML"
+        domainType="CORR"
+        bindingType="CREATE"/>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="CreateAdminGUIStructure"
+      refines="//@rules.7">
+    <nodes name="roleName"
+        bindingType="CREATE">
+      <type
+          href="../ContextML/model/contextML.ecore#//Admin"/>
+    </nodes>
+    <nodes name="loginAction"
+        domainType="TRG"
+        outgoingEdges="//@rules.6/@edges.0">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//Action"/>
+    </nodes>
+    <nodes name="adminWindow"
+        domainType="TRG"
+        incomingEdges="//@rules.6/@edges.0">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//ViewContainer"/>
+    </nodes>
+    <nodes xsi:type="org.emoflon.ibex.tgg.core.language:TGGRuleCorr"
+        name="roleToViewContainer"
+        domainType="CORR"
+        bindingType="CREATE"/>
+    <edges name="loginAction__navigates__adminWindow_eMoflonEdge"
+        domainType="TRG"
+        bindingType="CREATE"
+        srcNode="//@rules.6/@nodes.1"
+        trgNode="//@rules.6/@nodes.2">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//Action/navigates"/>
+    </edges>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="CreateGUIStructureAbstract"
+      abstract="true">
+    <nodes name="e"
+        outgoingEdges="//@rules.7/@edges.0">
+      <type
+          href="../ContextML/model/contextML.ecore#//User"/>
+    </nodes>
+    <nodes name="roleName"
+        bindingType="CREATE"
+        incomingEdges="//@rules.7/@edges.0">
+      <type
+          href="../ContextML/model/contextML.ecore#//UserRole"/>
+    </nodes>
+    <nodes name="loginAction"
+        domainType="TRG">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//Action"/>
+    </nodes>
+    <nodes xsi:type="org.emoflon.ibex.tgg.core.language:TGGRuleCorr"
+        name="userToLoginAction"
+        domainType="CORR"/>
+    <edges name="e__role__roleName_eMoflonEdge"
+        bindingType="CREATE"
+        srcNode="//@rules.7/@nodes.0"
+        trgNode="//@rules.7/@nodes.1">
+      <type
+          href="../ContextML/model/contextML.ecore#//User/role"/>
+    </edges>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="CreateLoginWindow">
+    <nodes name="context"
+        outgoingEdges="//@rules.8/@edges.0">
+      <type
+          href="../ContextML/model/contextML.ecore#//Context"/>
+    </nodes>
+    <nodes name="u"
+        bindingType="CREATE"
+        incomingEdges="//@rules.8/@edges.0">
+      <type
+          href="../ContextML/model/contextML.ecore#//User"/>
+    </nodes>
+    <nodes name="ifml"
+        domainType="TRG"
+        outgoingEdges="//@rules.8/@edges.1 //@rules.8/@edges.2 //@rules.8/@edges.3 //@rules.8/@edges.4 //@rules.8/@edges.5 //@rules.8/@edges.6 //@rules.8/@edges.7 //@rules.8/@edges.8">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//EssentialIFMLModel"/>
+    </nodes>
+    <nodes name="loginAction"
+        domainType="TRG"
+        bindingType="CREATE"
+        incomingEdges="//@rules.8/@edges.7 //@rules.8/@edges.13">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//Action"/>
+    </nodes>
+    <nodes name="showDetails"
+        domainType="TRG"
+        bindingType="CREATE"
+        incomingEdges="//@rules.8/@edges.8 //@rules.8/@edges.17">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//Action"/>
+    </nodes>
+    <nodes name="loginWindow"
+        domainType="TRG"
+        bindingType="CREATE"
+        incomingEdges="//@rules.8/@edges.1"
+        outgoingEdges="//@rules.8/@edges.9">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//ViewContainer"/>
+    </nodes>
+    <nodes name="loginForm"
+        domainType="TRG"
+        bindingType="CREATE"
+        incomingEdges="//@rules.8/@edges.9"
+        outgoingEdges="//@rules.8/@edges.10 //@rules.8/@edges.11 //@rules.8/@edges.12">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//Form"/>
+    </nodes>
+    <nodes name="userID"
+        domainType="TRG"
+        bindingType="CREATE"
+        incomingEdges="//@rules.8/@edges.10">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//Field"/>
+    </nodes>
+    <nodes name="pwd"
+        domainType="TRG"
+        bindingType="CREATE"
+        incomingEdges="//@rules.8/@edges.11">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//Field"/>
+    </nodes>
+    <nodes name="loginEvent"
+        domainType="TRG"
+        bindingType="CREATE"
+        incomingEdges="//@rules.8/@edges.12"
+        outgoingEdges="//@rules.8/@edges.13">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//Event"/>
+    </nodes>
+    <nodes name="adminWindow"
+        domainType="TRG"
+        bindingType="CREATE"
+        incomingEdges="//@rules.8/@edges.2"
+        outgoingEdges="//@rules.8/@edges.14 //@rules.8/@edges.15">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//ViewContainer"/>
+    </nodes>
+    <nodes name="displayMessageAdmin"
+        domainType="TRG"
+        bindingType="CREATE"
+        incomingEdges="//@rules.8/@edges.14">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//Details"/>
+    </nodes>
+    <nodes name="userForm"
+        domainType="TRG"
+        bindingType="CREATE"
+        incomingEdges="//@rules.8/@edges.15"
+        outgoingEdges="//@rules.8/@edges.16">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//Form"/>
+    </nodes>
+    <nodes name="test"
+        domainType="TRG"
+        bindingType="CREATE"
+        incomingEdges="//@rules.8/@edges.16"
+        outgoingEdges="//@rules.8/@edges.17">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//Event"/>
+    </nodes>
+    <nodes name="studentWindow"
+        domainType="TRG"
+        bindingType="CREATE"
+        incomingEdges="//@rules.8/@edges.3"
+        outgoingEdges="//@rules.8/@edges.18">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//ViewContainer"/>
+    </nodes>
+    <nodes name="displayMessageStudent"
+        domainType="TRG"
+        bindingType="CREATE"
+        incomingEdges="//@rules.8/@edges.18">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//Details"/>
+    </nodes>
+    <nodes name="windowOnlyforAdmin"
+        domainType="TRG"
+        bindingType="CREATE"
+        incomingEdges="//@rules.8/@edges.4"
+        outgoingEdges="//@rules.8/@edges.19">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//ViewContainer"/>
+    </nodes>
+    <nodes name="displayDetails"
+        domainType="TRG"
+        bindingType="CREATE"
+        incomingEdges="//@rules.8/@edges.19">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//Details"/>
+    </nodes>
+    <nodes name="navContainer1"
+        domainType="TRG"
+        bindingType="CREATE"
+        incomingEdges="//@rules.8/@edges.5">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//ViewContainer"/>
+    </nodes>
+    <nodes name="navContainer2"
+        domainType="TRG"
+        bindingType="CREATE"
+        incomingEdges="//@rules.8/@edges.6">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//ViewContainer"/>
+    </nodes>
+    <nodes xsi:type="org.emoflon.ibex.tgg.core.language:TGGRuleCorr"
+        name="contextToEssentialIFML"
+        domainType="CORR"/>
+    <edges name="context__entity__u_eMoflonEdge"
+        bindingType="CREATE"
+        srcNode="//@rules.8/@nodes.0"
+        trgNode="//@rules.8/@nodes.1">
+      <type
+          href="../ContextML/model/contextML.ecore#//Context/entity"/>
+    </edges>
+    <edges name="ifml__viewcontainer__loginWindow_eMoflonEdge"
+        domainType="TRG"
+        bindingType="CREATE"
+        srcNode="//@rules.8/@nodes.2"
+        trgNode="//@rules.8/@nodes.5">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//EssentialIFMLModel/viewcontainer"/>
+    </edges>
+    <edges name="ifml__viewcontainer__adminWindow_eMoflonEdge"
+        domainType="TRG"
+        bindingType="CREATE"
+        srcNode="//@rules.8/@nodes.2"
+        trgNode="//@rules.8/@nodes.10">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//EssentialIFMLModel/viewcontainer"/>
+    </edges>
+    <edges name="ifml__viewcontainer__studentWindow_eMoflonEdge"
+        domainType="TRG"
+        bindingType="CREATE"
+        srcNode="//@rules.8/@nodes.2"
+        trgNode="//@rules.8/@nodes.14">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//EssentialIFMLModel/viewcontainer"/>
+    </edges>
+    <edges name="ifml__viewcontainer__windowOnlyforAdmin_eMoflonEdge"
+        domainType="TRG"
+        bindingType="CREATE"
+        srcNode="//@rules.8/@nodes.2"
+        trgNode="//@rules.8/@nodes.16">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//EssentialIFMLModel/viewcontainer"/>
+    </edges>
+    <edges name="ifml__viewcontainer__navContainer1_eMoflonEdge"
+        domainType="TRG"
+        bindingType="CREATE"
+        srcNode="//@rules.8/@nodes.2"
+        trgNode="//@rules.8/@nodes.18">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//EssentialIFMLModel/viewcontainer"/>
+    </edges>
+    <edges name="ifml__viewcontainer__navContainer2_eMoflonEdge"
+        domainType="TRG"
+        bindingType="CREATE"
+        srcNode="//@rules.8/@nodes.2"
+        trgNode="//@rules.8/@nodes.19">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//EssentialIFMLModel/viewcontainer"/>
+    </edges>
+    <edges name="ifml__action__loginAction_eMoflonEdge"
+        domainType="TRG"
+        bindingType="CREATE"
+        srcNode="//@rules.8/@nodes.2"
+        trgNode="//@rules.8/@nodes.3">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//EssentialIFMLModel/action"/>
+    </edges>
+    <edges name="ifml__action__showDetails_eMoflonEdge"
+        domainType="TRG"
+        bindingType="CREATE"
+        srcNode="//@rules.8/@nodes.2"
+        trgNode="//@rules.8/@nodes.4">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//EssentialIFMLModel/action"/>
+    </edges>
+    <edges name="loginWindow__viewcomponent__loginForm_eMoflonEdge"
+        domainType="TRG"
+        bindingType="CREATE"
+        srcNode="//@rules.8/@nodes.5"
+        trgNode="//@rules.8/@nodes.6">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//ViewContainer/viewcomponent"/>
+    </edges>
+    <edges name="loginForm__field__userID_eMoflonEdge"
+        domainType="TRG"
+        bindingType="CREATE"
+        srcNode="//@rules.8/@nodes.6"
+        trgNode="//@rules.8/@nodes.7">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//Form/field"/>
+    </edges>
+    <edges name="loginForm__field__pwd_eMoflonEdge"
+        domainType="TRG"
+        bindingType="CREATE"
+        srcNode="//@rules.8/@nodes.6"
+        trgNode="//@rules.8/@nodes.8">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//Form/field"/>
+    </edges>
+    <edges name="loginForm__event__loginEvent_eMoflonEdge"
+        domainType="TRG"
+        bindingType="CREATE"
+        srcNode="//@rules.8/@nodes.6"
+        trgNode="//@rules.8/@nodes.9">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//Form/event"/>
+    </edges>
+    <edges name="loginEvent__actionLinked__loginAction_eMoflonEdge"
+        domainType="TRG"
+        bindingType="CREATE"
+        srcNode="//@rules.8/@nodes.9"
+        trgNode="//@rules.8/@nodes.3">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//Event/actionLinked"/>
+    </edges>
+    <edges name="adminWindow__viewcomponent__displayMessageAdmin_eMoflonEdge"
+        domainType="TRG"
+        bindingType="CREATE"
+        srcNode="//@rules.8/@nodes.10"
+        trgNode="//@rules.8/@nodes.11">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//ViewContainer/viewcomponent"/>
+    </edges>
+    <edges name="adminWindow__viewcomponent__userForm_eMoflonEdge"
+        domainType="TRG"
+        bindingType="CREATE"
+        srcNode="//@rules.8/@nodes.10"
+        trgNode="//@rules.8/@nodes.12">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//ViewContainer/viewcomponent"/>
+    </edges>
+    <edges name="userForm__event__test_eMoflonEdge"
+        domainType="TRG"
+        bindingType="CREATE"
+        srcNode="//@rules.8/@nodes.12"
+        trgNode="//@rules.8/@nodes.13">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//Form/event"/>
+    </edges>
+    <edges name="test__actionLinked__showDetails_eMoflonEdge"
+        domainType="TRG"
+        bindingType="CREATE"
+        srcNode="//@rules.8/@nodes.13"
+        trgNode="//@rules.8/@nodes.4">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//Event/actionLinked"/>
+    </edges>
+    <edges name="studentWindow__viewcomponent__displayMessageStudent_eMoflonEdge"
+        domainType="TRG"
+        bindingType="CREATE"
+        srcNode="//@rules.8/@nodes.14"
+        trgNode="//@rules.8/@nodes.15">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//ViewContainer/viewcomponent"/>
+    </edges>
+    <edges name="windowOnlyforAdmin__viewcomponent__displayDetails_eMoflonEdge"
+        domainType="TRG"
+        bindingType="CREATE"
+        srcNode="//@rules.8/@nodes.16"
+        trgNode="//@rules.8/@nodes.17">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//ViewContainer/viewcomponent"/>
+    </edges>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="CreateUserGUIStructure"
+      refines="//@rules.7">
+    <nodes name="roleName"
+        bindingType="CREATE">
+      <type
+          href="../ContextML/model/contextML.ecore#//Student"/>
+    </nodes>
+    <nodes name="loginAction"
+        domainType="TRG"
+        outgoingEdges="//@rules.9/@edges.0">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//Action"/>
+    </nodes>
+    <nodes name="studentWindow"
+        domainType="TRG"
+        incomingEdges="//@rules.9/@edges.0">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//ViewContainer"/>
+    </nodes>
+    <nodes xsi:type="org.emoflon.ibex.tgg.core.language:TGGRuleCorr"
+        name="roleToViewContainer"
+        domainType="CORR"
+        bindingType="CREATE"/>
+    <edges name="loginAction__navigates__studentWindow_eMoflonEdge"
+        domainType="TRG"
+        bindingType="CREATE"
+        srcNode="//@rules.9/@nodes.1"
+        trgNode="//@rules.9/@nodes.2">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//Action/navigates"/>
+    </edges>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="CreateWindowAbstract"
+      abstract="true">
+    <nodes name="context"
+        outgoingEdges="//@rules.10/@edges.0">
+      <type
+          href="../ContextML/model/contextML.ecore#//Context"/>
+    </nodes>
+    <nodes name="e"
+        incomingEdges="//@rules.10/@edges.0"
+        outgoingEdges="//@rules.10/@edges.1">
+      <type
+          href="../ContextML/model/contextML.ecore#//User"/>
+    </nodes>
+    <nodes name="roleName"
+        bindingType="CREATE"
+        incomingEdges="//@rules.10/@edges.1">
+      <type
+          href="../ContextML/model/contextML.ecore#//UserRole"/>
+    </nodes>
+    <nodes name="ifml"
+        domainType="TRG"
+        outgoingEdges="//@rules.10/@edges.2">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//EssentialIFMLModel"/>
+    </nodes>
+    <nodes name="loginWindow"
+        domainType="TRG"
+        incomingEdges="//@rules.10/@edges.2">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//ViewContainer"/>
+    </nodes>
+    <nodes xsi:type="org.emoflon.ibex.tgg.core.language:TGGRuleCorr"
+        name="context2EssentialIFML"
+        domainType="CORR"/>
+    <nodes xsi:type="org.emoflon.ibex.tgg.core.language:TGGRuleCorr"
+        name="userToLogin"
+        domainType="CORR"/>
+    <edges name="context__entity__e_eMoflonEdge"
+        srcNode="//@rules.10/@nodes.0"
+        trgNode="//@rules.10/@nodes.1">
+      <type
+          href="../ContextML/model/contextML.ecore#//Context/entity"/>
+    </edges>
+    <edges name="e__role__roleName_eMoflonEdge"
+        bindingType="CREATE"
+        srcNode="//@rules.10/@nodes.1"
+        trgNode="//@rules.10/@nodes.2">
+      <type
+          href="../ContextML/model/contextML.ecore#//User/role"/>
+    </edges>
+    <edges name="ifml__viewcontainer__loginWindow_eMoflonEdge"
+        domainType="TRG"
+        srcNode="//@rules.10/@nodes.3"
+        trgNode="//@rules.10/@nodes.4">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//EssentialIFMLModel/viewcontainer"/>
+    </edges>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="CreateWindowsAndLinks">
+    <nodes name="context"
+        outgoingEdges="//@rules.11/@edges.0">
+      <type
+          href="../ContextML/model/contextML.ecore#//Context"/>
+    </nodes>
+    <nodes name="u"
+        bindingType="CREATE"
+        incomingEdges="//@rules.11/@edges.0">
+      <type
+          href="../ContextML/model/contextML.ecore#//User"/>
+    </nodes>
+    <nodes name="ifml"
+        domainType="TRG"
+        outgoingEdges="//@rules.11/@edges.1 //@rules.11/@edges.2 //@rules.11/@edges.3 //@rules.11/@edges.4 //@rules.11/@edges.5 //@rules.11/@edges.6 //@rules.11/@edges.7 //@rules.11/@edges.8">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//EssentialIFMLModel"/>
+    </nodes>
+    <nodes name="loginWindow"
+        domainType="TRG"
+        bindingType="CREATE"
+        incomingEdges="//@rules.11/@edges.1"
+        outgoingEdges="//@rules.11/@edges.9">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//ViewContainer"/>
+    </nodes>
+    <nodes name="loginForm"
+        domainType="TRG"
+        bindingType="CREATE"
+        incomingEdges="//@rules.11/@edges.9"
+        outgoingEdges="//@rules.11/@edges.10 //@rules.11/@edges.11 //@rules.11/@edges.12">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//Form"/>
+    </nodes>
+    <nodes name="userID"
+        domainType="TRG"
+        bindingType="CREATE"
+        incomingEdges="//@rules.11/@edges.10">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//Field"/>
+    </nodes>
+    <nodes name="pwd"
+        domainType="TRG"
+        bindingType="CREATE"
+        incomingEdges="//@rules.11/@edges.11">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//Field"/>
+    </nodes>
+    <nodes name="loginEvent"
+        domainType="TRG"
+        bindingType="CREATE"
+        incomingEdges="//@rules.11/@edges.12"
+        outgoingEdges="//@rules.11/@edges.13">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//Event"/>
+    </nodes>
+    <nodes name="loginAction"
+        domainType="TRG"
+        bindingType="CREATE"
+        incomingEdges="//@rules.11/@edges.7 //@rules.11/@edges.13">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//Action"/>
+    </nodes>
+    <nodes name="adminWindow"
+        domainType="TRG"
+        bindingType="CREATE"
+        incomingEdges="//@rules.11/@edges.2"
+        outgoingEdges="//@rules.11/@edges.14 //@rules.11/@edges.15">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//ViewContainer"/>
+    </nodes>
+    <nodes name="userForm"
+        domainType="TRG"
+        bindingType="CREATE"
+        incomingEdges="//@rules.11/@edges.15"
+        outgoingEdges="//@rules.11/@edges.16">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//Form"/>
+    </nodes>
+    <nodes name="next"
+        domainType="TRG"
+        bindingType="CREATE"
+        incomingEdges="//@rules.11/@edges.16"
+        outgoingEdges="//@rules.11/@edges.17">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//Event"/>
+    </nodes>
+    <nodes name="showDetails"
+        domainType="TRG"
+        bindingType="CREATE"
+        incomingEdges="//@rules.11/@edges.8 //@rules.11/@edges.17"
+        outgoingEdges="//@rules.11/@edges.18">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//Action"/>
+    </nodes>
+    <nodes name="displayMessageAdmin"
+        domainType="TRG"
+        bindingType="CREATE"
+        incomingEdges="//@rules.11/@edges.14">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//Details"/>
+    </nodes>
+    <nodes name="studentWindow"
+        domainType="TRG"
+        bindingType="CREATE"
+        incomingEdges="//@rules.11/@edges.3"
+        outgoingEdges="//@rules.11/@edges.19">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//ViewContainer"/>
+    </nodes>
+    <nodes name="displayMessageStudent"
+        domainType="TRG"
+        bindingType="CREATE"
+        incomingEdges="//@rules.11/@edges.19">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//Details"/>
+    </nodes>
+    <nodes name="windowOnlyforAdmin"
+        domainType="TRG"
+        bindingType="CREATE"
+        incomingEdges="//@rules.11/@edges.4 //@rules.11/@edges.18"
+        outgoingEdges="//@rules.11/@edges.20">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//ViewContainer"/>
+    </nodes>
+    <nodes name="displayDetails"
+        domainType="TRG"
+        bindingType="CREATE"
+        incomingEdges="//@rules.11/@edges.20">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//Details"/>
+    </nodes>
+    <nodes name="navContainer1"
+        domainType="TRG"
+        bindingType="CREATE"
+        incomingEdges="//@rules.11/@edges.5">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//ViewContainer"/>
+    </nodes>
+    <nodes name="navContainer2"
+        domainType="TRG"
+        bindingType="CREATE"
+        incomingEdges="//@rules.11/@edges.6">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//ViewContainer"/>
+    </nodes>
+    <nodes xsi:type="org.emoflon.ibex.tgg.core.language:TGGRuleCorr"
+        name="contextToEssentialIFML"
+        domainType="CORR"/>
+    <nodes xsi:type="org.emoflon.ibex.tgg.core.language:TGGRuleCorr"
+        name="userToLoginWindow"
+        domainType="CORR"
+        bindingType="CREATE"/>
+    <nodes xsi:type="org.emoflon.ibex.tgg.core.language:TGGRuleCorr"
+        name="userToLoginAction"
+        domainType="CORR"
+        bindingType="CREATE"/>
+    <edges name="context__entity__u_eMoflonEdge"
+        bindingType="CREATE"
+        srcNode="//@rules.11/@nodes.0"
+        trgNode="//@rules.11/@nodes.1">
+      <type
+          href="../ContextML/model/contextML.ecore#//Context/entity"/>
+    </edges>
+    <edges name="ifml__viewcontainer__loginWindow_eMoflonEdge"
+        domainType="TRG"
+        bindingType="CREATE"
+        srcNode="//@rules.11/@nodes.2"
+        trgNode="//@rules.11/@nodes.3">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//EssentialIFMLModel/viewcontainer"/>
+    </edges>
+    <edges name="ifml__viewcontainer__adminWindow_eMoflonEdge"
+        domainType="TRG"
+        bindingType="CREATE"
+        srcNode="//@rules.11/@nodes.2"
+        trgNode="//@rules.11/@nodes.9">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//EssentialIFMLModel/viewcontainer"/>
+    </edges>
+    <edges name="ifml__viewcontainer__studentWindow_eMoflonEdge"
+        domainType="TRG"
+        bindingType="CREATE"
+        srcNode="//@rules.11/@nodes.2"
+        trgNode="//@rules.11/@nodes.14">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//EssentialIFMLModel/viewcontainer"/>
+    </edges>
+    <edges name="ifml__viewcontainer__windowOnlyforAdmin_eMoflonEdge"
+        domainType="TRG"
+        bindingType="CREATE"
+        srcNode="//@rules.11/@nodes.2"
+        trgNode="//@rules.11/@nodes.16">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//EssentialIFMLModel/viewcontainer"/>
+    </edges>
+    <edges name="ifml__viewcontainer__navContainer1_eMoflonEdge"
+        domainType="TRG"
+        bindingType="CREATE"
+        srcNode="//@rules.11/@nodes.2"
+        trgNode="//@rules.11/@nodes.18">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//EssentialIFMLModel/viewcontainer"/>
+    </edges>
+    <edges name="ifml__viewcontainer__navContainer2_eMoflonEdge"
+        domainType="TRG"
+        bindingType="CREATE"
+        srcNode="//@rules.11/@nodes.2"
+        trgNode="//@rules.11/@nodes.19">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//EssentialIFMLModel/viewcontainer"/>
+    </edges>
+    <edges name="ifml__action__loginAction_eMoflonEdge"
+        domainType="TRG"
+        bindingType="CREATE"
+        srcNode="//@rules.11/@nodes.2"
+        trgNode="//@rules.11/@nodes.8">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//EssentialIFMLModel/action"/>
+    </edges>
+    <edges name="ifml__action__showDetails_eMoflonEdge"
+        domainType="TRG"
+        bindingType="CREATE"
+        srcNode="//@rules.11/@nodes.2"
+        trgNode="//@rules.11/@nodes.12">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//EssentialIFMLModel/action"/>
+    </edges>
+    <edges name="loginWindow__viewcomponent__loginForm_eMoflonEdge"
+        domainType="TRG"
+        bindingType="CREATE"
+        srcNode="//@rules.11/@nodes.3"
+        trgNode="//@rules.11/@nodes.4">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//ViewContainer/viewcomponent"/>
+    </edges>
+    <edges name="loginForm__field__userID_eMoflonEdge"
+        domainType="TRG"
+        bindingType="CREATE"
+        srcNode="//@rules.11/@nodes.4"
+        trgNode="//@rules.11/@nodes.5">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//Form/field"/>
+    </edges>
+    <edges name="loginForm__field__pwd_eMoflonEdge"
+        domainType="TRG"
+        bindingType="CREATE"
+        srcNode="//@rules.11/@nodes.4"
+        trgNode="//@rules.11/@nodes.6">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//Form/field"/>
+    </edges>
+    <edges name="loginForm__event__loginEvent_eMoflonEdge"
+        domainType="TRG"
+        bindingType="CREATE"
+        srcNode="//@rules.11/@nodes.4"
+        trgNode="//@rules.11/@nodes.7">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//Form/event"/>
+    </edges>
+    <edges name="loginEvent__actionLinked__loginAction_eMoflonEdge"
+        domainType="TRG"
+        bindingType="CREATE"
+        srcNode="//@rules.11/@nodes.7"
+        trgNode="//@rules.11/@nodes.8">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//Event/actionLinked"/>
+    </edges>
+    <edges name="adminWindow__viewcomponent__displayMessageAdmin_eMoflonEdge"
+        domainType="TRG"
+        bindingType="CREATE"
+        srcNode="//@rules.11/@nodes.9"
+        trgNode="//@rules.11/@nodes.13">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//ViewContainer/viewcomponent"/>
+    </edges>
+    <edges name="adminWindow__viewcomponent__userForm_eMoflonEdge"
+        domainType="TRG"
+        bindingType="CREATE"
+        srcNode="//@rules.11/@nodes.9"
+        trgNode="//@rules.11/@nodes.10">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//ViewContainer/viewcomponent"/>
+    </edges>
+    <edges name="userForm__event__next_eMoflonEdge"
+        domainType="TRG"
+        bindingType="CREATE"
+        srcNode="//@rules.11/@nodes.10"
+        trgNode="//@rules.11/@nodes.11">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//Form/event"/>
+    </edges>
+    <edges name="next__actionLinked__showDetails_eMoflonEdge"
+        domainType="TRG"
+        bindingType="CREATE"
+        srcNode="//@rules.11/@nodes.11"
+        trgNode="//@rules.11/@nodes.12">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//Event/actionLinked"/>
+    </edges>
+    <edges name="showDetails__navigates__windowOnlyforAdmin_eMoflonEdge"
+        domainType="TRG"
+        bindingType="CREATE"
+        srcNode="//@rules.11/@nodes.12"
+        trgNode="//@rules.11/@nodes.16">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//Action/navigates"/>
+    </edges>
+    <edges name="studentWindow__viewcomponent__displayMessageStudent_eMoflonEdge"
+        domainType="TRG"
+        bindingType="CREATE"
+        srcNode="//@rules.11/@nodes.14"
+        trgNode="//@rules.11/@nodes.15">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//ViewContainer/viewcomponent"/>
+    </edges>
+    <edges name="windowOnlyforAdmin__viewcomponent__displayDetails_eMoflonEdge"
+        domainType="TRG"
+        bindingType="CREATE"
+        srcNode="//@rules.11/@nodes.16"
+        trgNode="//@rules.11/@nodes.17">
+      <type
+          href="../EssentialIFML/model/essentialIFML.ecore#//ViewContainer/viewcomponent"/>
+    </edges>
+    <attributeConditionLibrary/>
+  </rules>
+  <attributeConstraintDefinitionLibrary/>
+</org.emoflon.ibex.tgg.core.language:TGG>

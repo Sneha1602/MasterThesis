@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated essentialIFML -->
+      <package
+            uri="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//DataTypes"
+            class="essentialIFML.DataTypes.DataTypesPackage"
+            genModel="model/essentialIFML.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated essentialIFML -->
+      <package
+            uri="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core"
+            class="essentialIFML.Core.CorePackage"
+            genModel="model/essentialIFML.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated essentialIFML -->
+      <package
+            uri="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Extensions"
+            class="essentialIFML.Extensions.ExtensionsPackage"
+            genModel="model/essentialIFML.genmodel"/>
+   </extension>
+</plugin>

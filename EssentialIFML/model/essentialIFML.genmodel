@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/EssentialIFML/src-gen" creationIcons="false" editDirectory="/EssentialIFML.edit/src-gen"
+    editorDirectory="/EssentialIFML.editor/src-gen" modelPluginID="EssentialIFML"
+    modelName="EssentialIFML" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0"
+    copyrightFields="false" usedGenPackages="../../org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore ../../org.eclipse.uml2.types/model/Types.genmodel#//types ../../org.eclipse.uml2.uml/model/UML.genmodel#//uml"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>essentialIFML.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="EssentialIFML" disposableProviderFactory="true" ecorePackage="essentialIFML.ecore#/">
+    <nestedGenPackages prefix="DataTypes" basePackage="essentialIFML" disposableProviderFactory="true"
+        ecorePackage="essentialIFML.ecore#//DataTypes">
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="essentialIFML.ecore#//DataTypes/Direction">
+        <genEnumLiterals ecoreEnumLiteral="essentialIFML.ecore#//DataTypes/Direction/in"/>
+        <genEnumLiterals ecoreEnumLiteral="essentialIFML.ecore#//DataTypes/Direction/out"/>
+        <genEnumLiterals ecoreEnumLiteral="essentialIFML.ecore#//DataTypes/Direction/inout"/>
+      </genEnums>
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="essentialIFML.ecore#//DataTypes/SystemEventType">
+        <genEnumLiterals ecoreEnumLiteral="essentialIFML.ecore#//DataTypes/SystemEventType/time"/>
+        <genEnumLiterals ecoreEnumLiteral="essentialIFML.ecore#//DataTypes/SystemEventType/specialCondition"/>
+        <genEnumLiterals ecoreEnumLiteral="essentialIFML.ecore#//DataTypes/SystemEventType/actionCompletion"/>
+      </genEnums>
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="essentialIFML.ecore#//DataTypes/ContextVariableScope">
+        <genEnumLiterals ecoreEnumLiteral="essentialIFML.ecore#//DataTypes/ContextVariableScope/ApplicationScope"/>
+        <genEnumLiterals ecoreEnumLiteral="essentialIFML.ecore#//DataTypes/ContextVariableScope/SessionScope"/>
+        <genEnumLiterals ecoreEnumLiteral="essentialIFML.ecore#//DataTypes/ContextVariableScope/ViewContainerScope"/>
+      </genEnums>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="Core" basePackage="essentialIFML" disposableProviderFactory="true"
+        ecorePackage="essentialIFML.ecore#//Core">
+      <genClasses image="false" ecoreClass="essentialIFML.ecore#//Core/InteractionFlow">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference essentialIFML.ecore#//Core/InteractionFlow/parameterBindingGroup"/>
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference essentialIFML.ecore#//Core/InteractionFlow/sourceInteractionFlowElement"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference essentialIFML.ecore#//Core/InteractionFlow/targetInteractionFlowElement"/>
+      </genClasses>
+      <genClasses ecoreClass="essentialIFML.ecore#//Core/InteractionFlowExpression">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference essentialIFML.ecore#//Core/InteractionFlowExpression/interactionFlow"/>
+      </genClasses>
+      <genClasses ecoreClass="essentialIFML.ecore#//Core/SystemEvent">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference essentialIFML.ecore#//Core/SystemEvent/triggeringExpressions"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute essentialIFML.ecore#//Core/SystemEvent/type"/>
+      </genClasses>
+      <genClasses ecoreClass="essentialIFML.ecore#//Core/ParameterBinding">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference essentialIFML.ecore#//Core/ParameterBinding/sourceParameter"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference essentialIFML.ecore#//Core/ParameterBinding/targetParameter"/>
+      </genClasses>
+      <genClasses ecoreClass="essentialIFML.ecore#//Core/ActionEvent"/>
+      <genClasses ecoreClass="essentialIFML.ecore#//Core/DomainModel">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference essentialIFML.ecore#//Core/DomainModel/domainElements"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="essentialIFML.ecore#//Core/NamedElement">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute essentialIFML.ecore#//Core/NamedElement/name"/>
+      </genClasses>
+      <genClasses ecoreClass="essentialIFML.ecore#//Core/PortDefinition">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference essentialIFML.ecore#//Core/PortDefinition/ports"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="essentialIFML.ecore#//Core/ContentBinding">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute essentialIFML.ecore#//Core/ContentBinding/uniformResourceIdentifier"/>
+      </genClasses>
+      <genClasses ecoreClass="essentialIFML.ecore#//Core/ViewElement">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference essentialIFML.ecore#//Core/ViewElement/viewElementEvents"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference essentialIFML.ecore#//Core/ViewElement/activationExpression"/>
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference essentialIFML.ecore#//Core/ViewElement/viewContainer"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="essentialIFML.ecore#//Core/Expression">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute essentialIFML.ecore#//Core/Expression/language"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute essentialIFML.ecore#//Core/Expression/body"/>
+      </genClasses>
+      <genClasses ecoreClass="essentialIFML.ecore#//Core/DynamicBehavior">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference essentialIFML.ecore#//Core/DynamicBehavior/behavioralFeatureConcept"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference essentialIFML.ecore#//Core/DynamicBehavior/behaviorConcept"/>
+      </genClasses>
+      <genClasses ecoreClass="essentialIFML.ecore#//Core/Viewpoint">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference essentialIFML.ecore#//Core/Viewpoint/interactionFlowModelElements"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference essentialIFML.ecore#//Core/Viewpoint/context"/>
+      </genClasses>
+      <genClasses ecoreClass="essentialIFML.ecore#//Core/DataFlow"/>
+      <genClasses ecoreClass="essentialIFML.ecore#//Core/ViewComponentPart">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference essentialIFML.ecore#//Core/ViewComponentPart/viewElementEvents"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference essentialIFML.ecore#//Core/ViewComponentPart/activationExpression"/>
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference essentialIFML.ecore#//Core/ViewComponentPart/parentViewComponentPart"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference essentialIFML.ecore#//Core/ViewComponentPart/subViewComponentParts"/>
+      </genClasses>
+      <genClasses ecoreClass="essentialIFML.ecore#//Core/ViewContainer">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute essentialIFML.ecore#//Core/ViewContainer/isLandmark"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute essentialIFML.ecore#//Core/ViewContainer/isDefault"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute essentialIFML.ecore#//Core/ViewContainer/isXOR"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference essentialIFML.ecore#//Core/ViewContainer/viewElements"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference essentialIFML.ecore#//Core/ViewContainer/actions"/>
+      </genClasses>
+      <genClasses ecoreClass="essentialIFML.ecore#//Core/ActivationExpression"/>
+      <genClasses ecoreClass="essentialIFML.ecore#//Core/InteractionFlowModel">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference essentialIFML.ecore#//Core/InteractionFlowModel/interactionFlowModelElements"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference essentialIFML.ecore#//Core/InteractionFlowModel/screenZoom"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference essentialIFML.ecore#//Core/InteractionFlowModel/changeBackgroundColor"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference essentialIFML.ecore#//Core/InteractionFlowModel/navBarContainer"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference essentialIFML.ecore#//Core/InteractionFlowModel/setLanguage"/>
+      </genClasses>
+      <genClasses ecoreClass="essentialIFML.ecore#//Core/ContextDimension"/>
+      <genClasses ecoreClass="essentialIFML.ecore#//Core/EssentialIFMLModel">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference essentialIFML.ecore#//Core/EssentialIFMLModel/interactionFlowModel"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference essentialIFML.ecore#//Core/EssentialIFMLModel/domainModel"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference essentialIFML.ecore#//Core/EssentialIFMLModel/interactionFlowModelViewpoint"/>
+      </genClasses>
+      <genClasses ecoreClass="essentialIFML.ecore#//Core/ModuleDefinition">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference essentialIFML.ecore#//Core/ModuleDefinition/inputPorts"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference essentialIFML.ecore#//Core/ModuleDefinition/outputPorts"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference essentialIFML.ecore#//Core/ModuleDefinition/interactionFlowModelElement"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference essentialIFML.ecore#//Core/ModuleDefinition/modules"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference essentialIFML.ecore#//Core/ModuleDefinition/activityConcept"/>
+      </genClasses>
+      <genClasses ecoreClass="essentialIFML.ecore#//Core/BooleanExpression"/>
+      <genClasses image="false" ecoreClass="essentialIFML.ecore#//Core/InteractionFlowElement">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference essentialIFML.ecore#//Core/InteractionFlowElement/parameters"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference essentialIFML.ecore#//Core/InteractionFlowElement/outInteractionFlows"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference essentialIFML.ecore#//Core/InteractionFlowElement/inInteractionFlows"/>
+      </genClasses>
+      <genClasses ecoreClass="essentialIFML.ecore#//Core/IFMLAction">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference essentialIFML.ecore#//Core/IFMLAction/actionEvents"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference essentialIFML.ecore#//Core/IFMLAction/dynamicBehavior"/>
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference essentialIFML.ecore#//Core/IFMLAction/viewContainer"/>
+      </genClasses>
+      <genClasses ecoreClass="essentialIFML.ecore#//Core/NavigationFlow"/>
+      <genClasses ecoreClass="essentialIFML.ecore#//Core/ParameterBindingGroup">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference essentialIFML.ecore#//Core/ParameterBindingGroup/parameterBindings"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="essentialIFML.ecore#//Core/Element">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute essentialIFML.ecore#//Core/Element/id"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference essentialIFML.ecore#//Core/Element/constraints"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference essentialIFML.ecore#//Core/Element/annotations"/>
+      </genClasses>
+      <genClasses ecoreClass="essentialIFML.ecore#//Core/Constraint"/>
+      <genClasses ecoreClass="essentialIFML.ecore#//Core/ViewComponent">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference essentialIFML.ecore#//Core/ViewComponent/viewComponentParts"/>
+      </genClasses>
+      <genClasses ecoreClass="essentialIFML.ecore#//Core/IFMLParameter">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute essentialIFML.ecore#//Core/IFMLParameter/direction"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference essentialIFML.ecore#//Core/IFMLParameter/defaultValue"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference essentialIFML.ecore#//Core/IFMLParameter/type"/>
+      </genClasses>
+      <genClasses ecoreClass="essentialIFML.ecore#//Core/DataBinding">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference essentialIFML.ecore#//Core/DataBinding/conditionalExpression"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference essentialIFML.ecore#//Core/DataBinding/visualizationAttribute"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference essentialIFML.ecore#//Core/DataBinding/dataContextVariables"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference essentialIFML.ecore#//Core/DataBinding/domainConcept"/>
+      </genClasses>
+      <genClasses ecoreClass="essentialIFML.ecore#//Core/ConditionalExpression"/>
+      <genClasses ecoreClass="essentialIFML.ecore#//Core/Context">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference essentialIFML.ecore#//Core/Context/contextDimensions"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference essentialIFML.ecore#//Core/Context/contextVariables"/>
+      </genClasses>
+      <genClasses ecoreClass="essentialIFML.ecore#//Core/VisualizationAttribute">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference essentialIFML.ecore#//Core/VisualizationAttribute/featureConcept"/>
+      </genClasses>
+      <genClasses ecoreClass="essentialIFML.ecore#//Core/Event">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference essentialIFML.ecore#//Core/Event/activationExpression"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference essentialIFML.ecore#//Core/Event/interactionFlowExpression"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="essentialIFML.ecore#//Core/InteractionFlowModelElement"/>
+      <genClasses ecoreClass="essentialIFML.ecore#//Core/ViewElementEvent">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference essentialIFML.ecore#//Core/ViewElementEvent/viewElement"/>
+      </genClasses>
+      <genClasses ecoreClass="essentialIFML.ecore#//Core/Annotation">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute essentialIFML.ecore#//Core/Annotation/text"/>
+      </genClasses>
+      <genClasses ecoreClass="essentialIFML.ecore#//Core/ModulePackage">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference essentialIFML.ecore#//Core/ModulePackage/modularizationElements"/>
+      </genClasses>
+      <genClasses ecoreClass="essentialIFML.ecore#//Core/ModularizationElement">
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference essentialIFML.ecore#//Core/ModularizationElement/modulePackage"/>
+      </genClasses>
+      <genClasses ecoreClass="essentialIFML.ecore#//Core/IFMLModule">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference essentialIFML.ecore#//Core/IFMLModule/moduleDefinition"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference essentialIFML.ecore#//Core/IFMLModule/ports"/>
+      </genClasses>
+      <genClasses ecoreClass="essentialIFML.ecore#//Core/IFMLPort">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference essentialIFML.ecore#//Core/IFMLPort/portDefinition"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference essentialIFML.ecore#//Core/IFMLPort/module"/>
+      </genClasses>
+      <genClasses ecoreClass="essentialIFML.ecore#//Core/CatchingEvent"/>
+      <genClasses ecoreClass="essentialIFML.ecore#//Core/ThrowingEvent"/>
+      <genClasses ecoreClass="essentialIFML.ecore#//Core/BPMNActivityConcept"/>
+      <genClasses ecoreClass="essentialIFML.ecore#//Core/ContextVariable">
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference essentialIFML.ecore#//Core/ContextVariable/context"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute essentialIFML.ecore#//Core/ContextVariable/scope"/>
+      </genClasses>
+      <genClasses ecoreClass="essentialIFML.ecore#//Core/SimpleContextVariable"/>
+      <genClasses ecoreClass="essentialIFML.ecore#//Core/DataContextVariable">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference essentialIFML.ecore#//Core/DataContextVariable/dataBinding"/>
+      </genClasses>
+      <genClasses ecoreClass="essentialIFML.ecore#//Core/DomainConcept">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference essentialIFML.ecore#//Core/DomainConcept/dataBinding"/>
+      </genClasses>
+      <genClasses ecoreClass="essentialIFML.ecore#//Core/FeatureConcept">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference essentialIFML.ecore#//Core/FeatureConcept/visualizationAttribute"/>
+      </genClasses>
+      <genClasses ecoreClass="essentialIFML.ecore#//Core/BehaviorConcept">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference essentialIFML.ecore#//Core/BehaviorConcept/dynamicBehavior"/>
+      </genClasses>
+      <genClasses ecoreClass="essentialIFML.ecore#//Core/BehavioralFeatureConcept">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference essentialIFML.ecore#//Core/BehavioralFeatureConcept/dynamicBehavior"/>
+      </genClasses>
+      <genClasses ecoreClass="essentialIFML.ecore#//Core/UMLBehavior">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference essentialIFML.ecore#//Core/UMLBehavior/behavior"/>
+      </genClasses>
+      <genClasses ecoreClass="essentialIFML.ecore#//Core/UMLBehavioralFeature">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference essentialIFML.ecore#//Core/UMLBehavioralFeature/behavioralFeature"/>
+      </genClasses>
+      <genClasses ecoreClass="essentialIFML.ecore#//Core/UMLDomainConcept">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference essentialIFML.ecore#//Core/UMLDomainConcept/classifier"/>
+      </genClasses>
+      <genClasses ecoreClass="essentialIFML.ecore#//Core/UMLStructuralFeature">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference essentialIFML.ecore#//Core/UMLStructuralFeature/structuralFeature"/>
+      </genClasses>
+      <genClasses ecoreClass="essentialIFML.ecore#//Core/ActivityConcept">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference essentialIFML.ecore#//Core/ActivityConcept/moduleDefinition"/>
+      </genClasses>
+      <genClasses ecoreClass="essentialIFML.ecore#//Core/DomainElement"/>
+      <genClasses ecoreClass="essentialIFML.ecore#//Core/ScreenZoom"/>
+      <genClasses ecoreClass="essentialIFML.ecore#//Core/LightBackgroundColor"/>
+      <genClasses ecoreClass="essentialIFML.ecore#//Core/Language"/>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="Extensions" basePackage="essentialIFML" disposableProviderFactory="true"
+        ecorePackage="essentialIFML.ecore#//Extensions">
+      <genClasses ecoreClass="essentialIFML.ecore#//Extensions/OnSubmitEvent"/>
+      <genClasses ecoreClass="essentialIFML.ecore#//Extensions/ValidationRule"/>
+      <genClasses ecoreClass="essentialIFML.ecore#//Extensions/List">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference essentialIFML.ecore#//Extensions/List/selectEvent"/>
+      </genClasses>
+      <genClasses ecoreClass="essentialIFML.ecore#//Extensions/Position"/>
+      <genClasses ecoreClass="essentialIFML.ecore#//Extensions/UserRole"/>
+      <genClasses ecoreClass="essentialIFML.ecore#//Extensions/IFMLSlot"/>
+      <genClasses ecoreClass="essentialIFML.ecore#//Extensions/OnSelectEvent"/>
+      <genClasses image="false" ecoreClass="essentialIFML.ecore#//Extensions/Field"/>
+      <genClasses ecoreClass="essentialIFML.ecore#//Extensions/Form"/>
+      <genClasses ecoreClass="essentialIFML.ecore#//Extensions/Device"/>
+      <genClasses ecoreClass="essentialIFML.ecore#//Extensions/SelectionField">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute essentialIFML.ecore#//Extensions/SelectionField/isMultiSelection"/>
+      </genClasses>
+      <genClasses ecoreClass="essentialIFML.ecore#//Extensions/SimpleField"/>
+      <genClasses ecoreClass="essentialIFML.ecore#//Extensions/Details"/>
+      <genClasses ecoreClass="essentialIFML.ecore#//Extensions/IFMLWindow">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute essentialIFML.ecore#//Extensions/IFMLWindow/isModal"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute essentialIFML.ecore#//Extensions/IFMLWindow/isNewWindow"/>
+      </genClasses>
+      <genClasses ecoreClass="essentialIFML.ecore#//Extensions/OnLoadEvent"/>
+      <genClasses ecoreClass="essentialIFML.ecore#//Extensions/IFMLMenu"/>
+      <genClasses ecoreClass="essentialIFML.ecore#//Extensions/JumpEvent">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference essentialIFML.ecore#//Extensions/JumpEvent/landingEvent"/>
+      </genClasses>
+      <genClasses ecoreClass="essentialIFML.ecore#//Extensions/LandingEvent">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference essentialIFML.ecore#//Extensions/LandingEvent/jumpingEvents"/>
+      </genClasses>
+      <genClasses ecoreClass="essentialIFML.ecore#//Extensions/SetContextEvent"/>
+    </nestedGenPackages>
+  </genPackages>
+</genmodel:GenModel>

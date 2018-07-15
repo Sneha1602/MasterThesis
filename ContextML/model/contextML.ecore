@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="contextML" nsURI="platform:/resource/ContextML/model/contextML.ecore"
+    nsPrefix="contextML">
+  <eClassifiers xsi:type="ecore:EClass" name="Context">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entity" upperBound="-1"
+        eType="#//Entity" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="provider" upperBound="-1"
+        eType="#//Provider" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Age" eSuperTypes="#//Property"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Entity" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Provider">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="User" eSuperTypes="#//Entity">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="role" lowerBound="1" eType="#//UserRole"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="colorBlind" lowerBound="1"
+        eType="#//ColorBlind" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="age" lowerBound="1" eType="#//Age"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Platform" eSuperTypes="#//Entity">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="device" lowerBound="1"
+        eType="#//DeviceType" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="lang" lowerBound="1" eType="#//Language"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Environment" eSuperTypes="#//Entity">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="movementLevel" lowerBound="1"
+        eType="#//Movement" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="UserRole" eSuperTypes="#//Property"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Admin" eSuperTypes="#//UserRole"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Student" eSuperTypes="#//UserRole"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Property" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="provider" lowerBound="1"
+        eType="#//Provider"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ColorBlind" eSuperTypes="#//Property"/>
+  <eClassifiers xsi:type="ecore:EClass" name="UserIsNotColorBlind" eSuperTypes="#//ColorBlind"/>
+  <eClassifiers xsi:type="ecore:EClass" name="UserIsColorBlind" eSuperTypes="#//ColorBlind"/>
+  <eClassifiers xsi:type="ecore:EClass" name="UserIsYoung" eSuperTypes="#//Age"/>
+  <eClassifiers xsi:type="ecore:EClass" name="UserIsOld" eSuperTypes="#//Age"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DeviceType" eSuperTypes="#//Property"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Mobile" eSuperTypes="#//DeviceType"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Desktop" eSuperTypes="#//DeviceType"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Language" eSuperTypes="#//Property"/>
+  <eClassifiers xsi:type="ecore:EClass" name="German" eSuperTypes="#//Language"/>
+  <eClassifiers xsi:type="ecore:EClass" name="English" eSuperTypes="#//Language"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Movement" eSuperTypes="#//Property"/>
+  <eClassifiers xsi:type="ecore:EClass" name="HighMovement" eSuperTypes="#//Movement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="LowMovement" eSuperTypes="#//Movement"/>
+</ecore:EPackage>

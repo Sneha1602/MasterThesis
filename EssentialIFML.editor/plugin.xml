@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated essentialIFML -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="essentialIFML.Core.presentation.CoreModelWizardID"
+            name="%_UI_CoreModelWizard_label"
+            class="essentialIFML.Core.presentation.CoreModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/CoreModelFile.gif">
+         <description>%_UI_CoreModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated essentialIFML -->
+      <editor
+            id="essentialIFML.Core.presentation.CoreEditorID"
+            name="%_UI_CoreEditor_label"
+            icon="icons/full/obj16/CoreModelFile.gif"
+            extensions="core"
+            class="essentialIFML.Core.presentation.CoreEditor"
+            contributorClass="essentialIFML.Core.presentation.CoreActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated essentialIFML -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="essentialIFML.Extensions.presentation.ExtensionsModelWizardID"
+            name="%_UI_ExtensionsModelWizard_label"
+            class="essentialIFML.Extensions.presentation.ExtensionsModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/ExtensionsModelFile.gif">
+         <description>%_UI_ExtensionsModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated essentialIFML -->
+      <editor
+            id="essentialIFML.Extensions.presentation.ExtensionsEditorID"
+            name="%_UI_ExtensionsEditor_label"
+            icon="icons/full/obj16/ExtensionsModelFile.gif"
+            extensions="extensions"
+            class="essentialIFML.Extensions.presentation.ExtensionsEditor"
+            contributorClass="essentialIFML.Extensions.presentation.ExtensionsActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>
