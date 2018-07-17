@@ -1,0 +1,55 @@
+// Add imports here
+#import "platform:/resource/ContextML/model/contextML.ecore"
+#import "platform:/resource/EssentialIFML/model/essentialIFML.ecore"
+
+
+
+#schema library
+	
+#source {
+	contextML
+}
+
+#target { 
+	essentialIFML
+} 
+
+#correspondence {
+	Context2EssentialIFML{
+		#src->Context
+		#trg->EssentialIFMLModel
+	}
+	
+	CreateWindowsAndLinks{
+		#src->User
+		#trg->InteractionFlowModel
+	}
+	
+	Platform2IFML{
+		#src->Platform
+		#trg->InteractionFlowModel
+	}
+	UserAge2ScreenZoom{
+		#src->UserIsOld
+		#trg->ScreenZoom
+	}
+	
+	UserColorBlind2AdaptColorBlind{
+		#src->ColorBlind
+		#trg->LightBackgroundColor
+	}
+	
+	Platform2Language{
+		#src->Language
+		#trg->Language
+	}
+	
+	Role2LoginAction{
+		#src->Entity
+		#trg->ViewElementEvent
+	}
+}
+
+#attributeConditions {
+	
+}

@@ -1,0 +1,28 @@
+// Add imports here
+#import "platform:/resource/ContextML/model/contextML.ecore"
+#import "platform:/resource/EssentialIFML/model/essentialIFML.ecore"
+#schema libraryVerification
+	
+#source {
+	contextML
+}
+
+#target { 
+	essentialIFML
+} 
+
+#correspondence {
+	Context2EssentialIFML{
+		#src->Context
+		#trg->EssentialIFMLModel
+	}
+	
+	CreateWindowsAndLinks{
+		#src->User
+		#trg->InteractionFlowModel
+	}
+}
+
+#attributeConditions {
+	
+}

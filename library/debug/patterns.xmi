@@ -1,0 +1,2973 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:emf="http://gervarro.org/democles/constraint/emf.ecore" xmlns:relational="http://gervarro.org/democles/specification/constraint/relational.ecore" xmlns:specification="http://gervarro.org/democles/specification.ecore">
+  <specification:Pattern name="AdaptationColorBlindness__BWD">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="context">
+      <eClassifier xsi:type="ecore:EClass" href="../../ContextML/model/contextML.ecore#//Context"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="e">
+      <eClassifier xsi:type="ecore:EClass" href="../../ContextML/model/contextML.ecore#//User"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="allWindows">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/LightBackgroundColor"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="flowModel">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/InteractionFlowModel"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="ifml">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/IFMLModel"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="context2EssentialIFML">
+      <eClassifier xsi:type="ecore:EClass" href="../model/library.ecore#//Context2EssentialIFML"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="user2InteractionFLowModel">
+      <eClassifier xsi:type="ecore:EClass" href="../model/library.ecore#//CreateWindowsAndLinks"/>
+    </symbolicParameters>
+    <bodies>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="AdaptationColorBlindness__BWD_REFINEMENT_INVOCATIONS">
+        <parameters reference="/0/@symbolicParameters.0"/>
+        <parameters reference="/0/@symbolicParameters.1"/>
+        <parameters reference="/0/@symbolicParameters.2"/>
+        <parameters reference="/0/@symbolicParameters.3"/>
+        <parameters reference="/0/@symbolicParameters.4"/>
+        <parameters reference="/0/@symbolicParameters.5"/>
+        <parameters reference="/0/@symbolicParameters.6"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" invokedPattern="MarkedPattern__LOCAL_MARKED__TRG">
+        <parameters reference="/0/@symbolicParameters.2"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" invokedPattern="AdaptationColorBlindness__allWindows_changeBackgroundColor_incoming_DEC_TRG">
+        <parameters reference="/0/@symbolicParameters.2"/>
+        <parameters reference="/0/@symbolicParameters.3"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" invokedPattern="AdaptationColorBlindness_e_colorBlindEdge_Multiplicity__CONSTRAINT">
+        <parameters reference="/0/@symbolicParameters.1"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="AdaptationColorBlindness__BWD_REFINEMENT_INVOCATIONS">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="context">
+      <eClassifier xsi:type="ecore:EClass" href="../../ContextML/model/contextML.ecore#//Context"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="e">
+      <eClassifier xsi:type="ecore:EClass" href="../../ContextML/model/contextML.ecore#//User"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="allWindows">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/LightBackgroundColor"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="flowModel">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/InteractionFlowModel"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="ifml">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/IFMLModel"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="context2EssentialIFML">
+      <eClassifier xsi:type="ecore:EClass" href="../model/library.ecore#//Context2EssentialIFML"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="user2InteractionFLowModel">
+      <eClassifier xsi:type="ecore:EClass" href="../model/library.ecore#//CreateWindowsAndLinks"/>
+    </symbolicParameters>
+    <bodies>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="AdaptationColorBlindness__TRG">
+        <parameters reference="/1/@symbolicParameters.4"/>
+        <parameters reference="/1/@symbolicParameters.3"/>
+        <parameters reference="/1/@symbolicParameters.2"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="AdaptationColorBlindness__CONTEXT_CORR">
+        <parameters reference="/1/@symbolicParameters.0"/>
+        <parameters reference="/1/@symbolicParameters.1"/>
+        <parameters reference="/1/@symbolicParameters.4"/>
+        <parameters reference="/1/@symbolicParameters.3"/>
+        <parameters reference="/1/@symbolicParameters.5"/>
+        <parameters reference="/1/@symbolicParameters.6"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="AdaptationColorBlindness__CONTEXT_SRC">
+        <parameters reference="/1/@symbolicParameters.0"/>
+        <parameters reference="/1/@symbolicParameters.1"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="MarkedPattern__LOCAL_MARKED__TRG">
+        <parameters reference="/1/@symbolicParameters.3"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="MarkedPattern__LOCAL_MARKED__TRG">
+        <parameters reference="/1/@symbolicParameters.4"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="AdaptationColorBlindness__CONTEXT_CORR">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="context">
+      <eClassifier xsi:type="ecore:EClass" href="../../ContextML/model/contextML.ecore#//Context"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="e">
+      <eClassifier xsi:type="ecore:EClass" href="../../ContextML/model/contextML.ecore#//User"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="ifml">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/IFMLModel"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="flowModel">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/InteractionFlowModel"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="context2EssentialIFML">
+      <eClassifier xsi:type="ecore:EClass" href="../model/library.ecore#//Context2EssentialIFML"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="user2InteractionFLowModel">
+      <eClassifier xsi:type="ecore:EClass" href="../model/library.ecore#//CreateWindowsAndLinks"/>
+    </symbolicParameters>
+    <bodies>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/2/@symbolicParameters.4"/>
+        <parameters reference="/2/@symbolicParameters.0"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/library.ecore#//Context2EssentialIFML/source"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/2/@symbolicParameters.4"/>
+        <parameters reference="/2/@symbolicParameters.2"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/library.ecore#//Context2EssentialIFML/target"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/2/@symbolicParameters.5"/>
+        <parameters reference="/2/@symbolicParameters.1"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/library.ecore#//CreateWindowsAndLinks/source"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/2/@symbolicParameters.5"/>
+        <parameters reference="/2/@symbolicParameters.3"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/library.ecore#//CreateWindowsAndLinks/target"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="AdaptationColorBlindness__CONTEXT_SRC">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="context">
+      <eClassifier xsi:type="ecore:EClass" href="../../ContextML/model/contextML.ecore#//Context"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="e">
+      <eClassifier xsi:type="ecore:EClass" href="../../ContextML/model/contextML.ecore#//User"/>
+    </symbolicParameters>
+    <bodies>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/3/@symbolicParameters.0"/>
+        <parameters reference="/3/@symbolicParameters.1"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../ContextML/model/contextML.ecore#//Context/entity"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="AdaptationColorBlindness__CONTEXT_TRG">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="ifml">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/IFMLModel"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="flowModel">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/InteractionFlowModel"/>
+    </symbolicParameters>
+    <bodies>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/4/@symbolicParameters.0"/>
+        <parameters reference="/4/@symbolicParameters.1"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/IFMLModel/interactionFlowModel"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="AdaptationColorBlindness__TRG">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="ifml">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/IFMLModel"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="flowModel">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/InteractionFlowModel"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="allWindows">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/LightBackgroundColor"/>
+    </symbolicParameters>
+    <bodies>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/5/@symbolicParameters.1"/>
+        <parameters reference="/5/@symbolicParameters.2"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/InteractionFlowModel/changeBackgroundColor"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="AdaptationColorBlindness__CONTEXT_TRG">
+        <parameters reference="/5/@symbolicParameters.0"/>
+        <parameters reference="/5/@symbolicParameters.1"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="AdaptationColorBlindness__allWindows_changeBackgroundColor_incoming_DEC_TRG">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="allWindows">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/LightBackgroundColor"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="flowModel">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/InteractionFlowModel"/>
+    </symbolicParameters>
+    <bodies>
+      <localVariables xsi:type="emf:EMFVariable" name="allWindows_changeBackgroundColor_DECNode">
+        <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/InteractionFlowModel"/>
+      </localVariables>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="AdaptationColorBlindness__allWindows_changeBackgroundColor_incoming_SearchEdge_TRG">
+        <parameters reference="/6/@symbolicParameters.0"/>
+        <parameters reference="/6/@symbolicParameters.1"/>
+        <parameters reference="/6/@bodies.0/@localVariables.0"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="AdaptationColorBlindness__allWindows_changeBackgroundColor_incoming_SearchEdge_TRG">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="allWindows">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/LightBackgroundColor"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="flowModel">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/InteractionFlowModel"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="allWindows_changeBackgroundColor_DECNode">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/InteractionFlowModel"/>
+    </symbolicParameters>
+    <bodies>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/7/@symbolicParameters.1"/>
+        <parameters reference="/7/@symbolicParameters.0"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/InteractionFlowModel/changeBackgroundColor"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/7/@symbolicParameters.2"/>
+        <parameters reference="/7/@symbolicParameters.0"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/InteractionFlowModel/changeBackgroundColor"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/7/@symbolicParameters.1"/>
+        <parameters reference="/7/@symbolicParameters.2"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="AdaptationColorBlindness_e_colorBlindEdge_Multiplicity__CONSTRAINT">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="e">
+      <eClassifier xsi:type="ecore:EClass" href="../../ContextML/model/contextML.ecore#//User"/>
+    </symbolicParameters>
+    <bodies>
+      <localVariables xsi:type="emf:EMFVariable" name="colorBlind1">
+        <eClassifier xsi:type="ecore:EClass" href="../../ContextML/model/contextML.ecore#//UserIsColorBlind"/>
+      </localVariables>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/8/@symbolicParameters.0"/>
+        <parameters reference="/8/@bodies.0/@localVariables.0"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../ContextML/model/contextML.ecore#//User/colorBlind"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="AdaptationCreateAdminNavBar__BWD">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="context">
+      <eClassifier xsi:type="ecore:EClass" href="../../ContextML/model/contextML.ecore#//Context"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="e">
+      <eClassifier xsi:type="ecore:EClass" href="../../ContextML/model/contextML.ecore#//User"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="administration">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="bookReservations">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="flowModel">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/InteractionFlowModel"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="ifml">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/IFMLModel"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="lendingForm">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="searchBooks">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="students">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="context2EssentialIFML">
+      <eClassifier xsi:type="ecore:EClass" href="../model/library.ecore#//Context2EssentialIFML"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="user2InteractionFLowModel">
+      <eClassifier xsi:type="ecore:EClass" href="../model/library.ecore#//CreateWindowsAndLinks"/>
+    </symbolicParameters>
+    <bodies>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="AdaptationCreateAdminNavBar__BWD_REFINEMENT_INVOCATIONS">
+        <parameters reference="/9/@symbolicParameters.0"/>
+        <parameters reference="/9/@symbolicParameters.1"/>
+        <parameters reference="/9/@symbolicParameters.2"/>
+        <parameters reference="/9/@symbolicParameters.3"/>
+        <parameters reference="/9/@symbolicParameters.4"/>
+        <parameters reference="/9/@symbolicParameters.5"/>
+        <parameters reference="/9/@symbolicParameters.6"/>
+        <parameters reference="/9/@symbolicParameters.7"/>
+        <parameters reference="/9/@symbolicParameters.8"/>
+        <parameters reference="/9/@symbolicParameters.9"/>
+        <parameters reference="/9/@symbolicParameters.10"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" invokedPattern="AdaptationCreateAdminNavBar_e_roleEdge_Multiplicity__CONSTRAINT">
+        <parameters reference="/9/@symbolicParameters.1"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="AdaptationCreateAdminNavBar__BWD_REFINEMENT_INVOCATIONS">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="context">
+      <eClassifier xsi:type="ecore:EClass" href="../../ContextML/model/contextML.ecore#//Context"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="e">
+      <eClassifier xsi:type="ecore:EClass" href="../../ContextML/model/contextML.ecore#//User"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="administration">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="bookReservations">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="flowModel">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/InteractionFlowModel"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="ifml">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/IFMLModel"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="lendingForm">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="searchBooks">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="students">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="context2EssentialIFML">
+      <eClassifier xsi:type="ecore:EClass" href="../model/library.ecore#//Context2EssentialIFML"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="user2InteractionFLowModel">
+      <eClassifier xsi:type="ecore:EClass" href="../model/library.ecore#//CreateWindowsAndLinks"/>
+    </symbolicParameters>
+    <bodies>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="AdaptationCreateAdminNavBar__TRG">
+        <parameters reference="/10/@symbolicParameters.5"/>
+        <parameters reference="/10/@symbolicParameters.4"/>
+        <parameters reference="/10/@symbolicParameters.7"/>
+        <parameters reference="/10/@symbolicParameters.8"/>
+        <parameters reference="/10/@symbolicParameters.3"/>
+        <parameters reference="/10/@symbolicParameters.6"/>
+        <parameters reference="/10/@symbolicParameters.2"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="AdaptationCreateAdminNavBar__CONTEXT_CORR">
+        <parameters reference="/10/@symbolicParameters.0"/>
+        <parameters reference="/10/@symbolicParameters.1"/>
+        <parameters reference="/10/@symbolicParameters.5"/>
+        <parameters reference="/10/@symbolicParameters.4"/>
+        <parameters reference="/10/@symbolicParameters.9"/>
+        <parameters reference="/10/@symbolicParameters.10"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="AdaptationCreateAdminNavBar__CONTEXT_SRC">
+        <parameters reference="/10/@symbolicParameters.0"/>
+        <parameters reference="/10/@symbolicParameters.1"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="MarkedPattern__LOCAL_MARKED__TRG">
+        <parameters reference="/10/@symbolicParameters.2"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="MarkedPattern__LOCAL_MARKED__TRG">
+        <parameters reference="/10/@symbolicParameters.3"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="MarkedPattern__LOCAL_MARKED__TRG">
+        <parameters reference="/10/@symbolicParameters.4"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="MarkedPattern__LOCAL_MARKED__TRG">
+        <parameters reference="/10/@symbolicParameters.5"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="MarkedPattern__LOCAL_MARKED__TRG">
+        <parameters reference="/10/@symbolicParameters.6"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="MarkedPattern__LOCAL_MARKED__TRG">
+        <parameters reference="/10/@symbolicParameters.7"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="MarkedPattern__LOCAL_MARKED__TRG">
+        <parameters reference="/10/@symbolicParameters.8"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="AdaptationCreateAdminNavBar__CONTEXT_CORR">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="context">
+      <eClassifier xsi:type="ecore:EClass" href="../../ContextML/model/contextML.ecore#//Context"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="e">
+      <eClassifier xsi:type="ecore:EClass" href="../../ContextML/model/contextML.ecore#//User"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="ifml">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/IFMLModel"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="flowModel">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/InteractionFlowModel"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="context2EssentialIFML">
+      <eClassifier xsi:type="ecore:EClass" href="../model/library.ecore#//Context2EssentialIFML"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="user2InteractionFLowModel">
+      <eClassifier xsi:type="ecore:EClass" href="../model/library.ecore#//CreateWindowsAndLinks"/>
+    </symbolicParameters>
+    <bodies>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/11/@symbolicParameters.4"/>
+        <parameters reference="/11/@symbolicParameters.0"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/library.ecore#//Context2EssentialIFML/source"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/11/@symbolicParameters.4"/>
+        <parameters reference="/11/@symbolicParameters.2"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/library.ecore#//Context2EssentialIFML/target"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/11/@symbolicParameters.5"/>
+        <parameters reference="/11/@symbolicParameters.1"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/library.ecore#//CreateWindowsAndLinks/source"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/11/@symbolicParameters.5"/>
+        <parameters reference="/11/@symbolicParameters.3"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/library.ecore#//CreateWindowsAndLinks/target"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="AdaptationCreateAdminNavBar__CONTEXT_SRC">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="context">
+      <eClassifier xsi:type="ecore:EClass" href="../../ContextML/model/contextML.ecore#//Context"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="e">
+      <eClassifier xsi:type="ecore:EClass" href="../../ContextML/model/contextML.ecore#//User"/>
+    </symbolicParameters>
+    <bodies>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/12/@symbolicParameters.0"/>
+        <parameters reference="/12/@symbolicParameters.1"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../ContextML/model/contextML.ecore#//Context/entity"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="AdaptationCreateAdminNavBar__CONTEXT_TRG">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="ifml">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/IFMLModel"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="flowModel">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/InteractionFlowModel"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="searchBooks">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="students">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="bookReservations">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="lendingForm">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="administration">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer"/>
+    </symbolicParameters>
+    <bodies>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/13/@symbolicParameters.0"/>
+        <parameters reference="/13/@symbolicParameters.1"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/IFMLModel/interactionFlowModel"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/13/@symbolicParameters.2"/>
+        <parameters reference="/13/@symbolicParameters.3"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/13/@symbolicParameters.2"/>
+        <parameters reference="/13/@symbolicParameters.4"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/13/@symbolicParameters.2"/>
+        <parameters reference="/13/@symbolicParameters.5"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/13/@symbolicParameters.2"/>
+        <parameters reference="/13/@symbolicParameters.6"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/13/@symbolicParameters.3"/>
+        <parameters reference="/13/@symbolicParameters.4"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/13/@symbolicParameters.3"/>
+        <parameters reference="/13/@symbolicParameters.5"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/13/@symbolicParameters.3"/>
+        <parameters reference="/13/@symbolicParameters.6"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/13/@symbolicParameters.4"/>
+        <parameters reference="/13/@symbolicParameters.5"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/13/@symbolicParameters.4"/>
+        <parameters reference="/13/@symbolicParameters.6"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/13/@symbolicParameters.5"/>
+        <parameters reference="/13/@symbolicParameters.6"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="AdaptationCreateAdminNavBar__TRG">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="ifml">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/IFMLModel"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="flowModel">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/InteractionFlowModel"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="searchBooks">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="students">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="bookReservations">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="lendingForm">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="administration">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer"/>
+    </symbolicParameters>
+    <bodies>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/14/@symbolicParameters.1"/>
+        <parameters reference="/14/@symbolicParameters.2"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/InteractionFlowModel/navBarContainer"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/14/@symbolicParameters.1"/>
+        <parameters reference="/14/@symbolicParameters.3"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/InteractionFlowModel/navBarContainer"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/14/@symbolicParameters.1"/>
+        <parameters reference="/14/@symbolicParameters.4"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/InteractionFlowModel/navBarContainer"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/14/@symbolicParameters.1"/>
+        <parameters reference="/14/@symbolicParameters.5"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/InteractionFlowModel/navBarContainer"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/14/@symbolicParameters.1"/>
+        <parameters reference="/14/@symbolicParameters.6"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/InteractionFlowModel/navBarContainer"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="AdaptationCreateAdminNavBar__CONTEXT_TRG">
+        <parameters reference="/14/@symbolicParameters.0"/>
+        <parameters reference="/14/@symbolicParameters.1"/>
+        <parameters reference="/14/@symbolicParameters.2"/>
+        <parameters reference="/14/@symbolicParameters.3"/>
+        <parameters reference="/14/@symbolicParameters.4"/>
+        <parameters reference="/14/@symbolicParameters.5"/>
+        <parameters reference="/14/@symbolicParameters.6"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="AdaptationCreateAdminNavBar_e_roleEdge_Multiplicity__CONSTRAINT">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="e">
+      <eClassifier xsi:type="ecore:EClass" href="../../ContextML/model/contextML.ecore#//User"/>
+    </symbolicParameters>
+    <bodies>
+      <localVariables xsi:type="emf:EMFVariable" name="roleName1">
+        <eClassifier xsi:type="ecore:EClass" href="../../ContextML/model/contextML.ecore#//Admin"/>
+      </localVariables>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/15/@symbolicParameters.0"/>
+        <parameters reference="/15/@bodies.0/@localVariables.0"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../ContextML/model/contextML.ecore#//User/role"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="AdaptationCreateStudentNavBar__BWD">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="context">
+      <eClassifier xsi:type="ecore:EClass" href="../../ContextML/model/contextML.ecore#//Context"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="e">
+      <eClassifier xsi:type="ecore:EClass" href="../../ContextML/model/contextML.ecore#//User"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="flowModel">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/InteractionFlowModel"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="ifml">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/IFMLModel"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="lentBooks">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="searchBooks">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="context2EssentialIFML">
+      <eClassifier xsi:type="ecore:EClass" href="../model/library.ecore#//Context2EssentialIFML"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="user2InteractionFLowModel">
+      <eClassifier xsi:type="ecore:EClass" href="../model/library.ecore#//CreateWindowsAndLinks"/>
+    </symbolicParameters>
+    <bodies>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="AdaptationCreateStudentNavBar__BWD_REFINEMENT_INVOCATIONS">
+        <parameters reference="/16/@symbolicParameters.0"/>
+        <parameters reference="/16/@symbolicParameters.1"/>
+        <parameters reference="/16/@symbolicParameters.2"/>
+        <parameters reference="/16/@symbolicParameters.3"/>
+        <parameters reference="/16/@symbolicParameters.4"/>
+        <parameters reference="/16/@symbolicParameters.5"/>
+        <parameters reference="/16/@symbolicParameters.6"/>
+        <parameters reference="/16/@symbolicParameters.7"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" invokedPattern="AdaptationCreateStudentNavBar_e_roleEdge_Multiplicity__CONSTRAINT">
+        <parameters reference="/16/@symbolicParameters.1"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="AdaptationCreateStudentNavBar__BWD_REFINEMENT_INVOCATIONS">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="context">
+      <eClassifier xsi:type="ecore:EClass" href="../../ContextML/model/contextML.ecore#//Context"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="e">
+      <eClassifier xsi:type="ecore:EClass" href="../../ContextML/model/contextML.ecore#//User"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="flowModel">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/InteractionFlowModel"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="ifml">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/IFMLModel"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="lentBooks">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="searchBooks">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="context2EssentialIFML">
+      <eClassifier xsi:type="ecore:EClass" href="../model/library.ecore#//Context2EssentialIFML"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="user2InteractionFLowModel">
+      <eClassifier xsi:type="ecore:EClass" href="../model/library.ecore#//CreateWindowsAndLinks"/>
+    </symbolicParameters>
+    <bodies>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="AdaptationCreateStudentNavBar__TRG">
+        <parameters reference="/17/@symbolicParameters.3"/>
+        <parameters reference="/17/@symbolicParameters.2"/>
+        <parameters reference="/17/@symbolicParameters.5"/>
+        <parameters reference="/17/@symbolicParameters.4"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="AdaptationCreateStudentNavBar__CONTEXT_CORR">
+        <parameters reference="/17/@symbolicParameters.0"/>
+        <parameters reference="/17/@symbolicParameters.1"/>
+        <parameters reference="/17/@symbolicParameters.3"/>
+        <parameters reference="/17/@symbolicParameters.2"/>
+        <parameters reference="/17/@symbolicParameters.6"/>
+        <parameters reference="/17/@symbolicParameters.7"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="AdaptationCreateStudentNavBar__CONTEXT_SRC">
+        <parameters reference="/17/@symbolicParameters.0"/>
+        <parameters reference="/17/@symbolicParameters.1"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="MarkedPattern__LOCAL_MARKED__TRG">
+        <parameters reference="/17/@symbolicParameters.2"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="MarkedPattern__LOCAL_MARKED__TRG">
+        <parameters reference="/17/@symbolicParameters.3"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="MarkedPattern__LOCAL_MARKED__TRG">
+        <parameters reference="/17/@symbolicParameters.4"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="MarkedPattern__LOCAL_MARKED__TRG">
+        <parameters reference="/17/@symbolicParameters.5"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="AdaptationCreateStudentNavBar__CONTEXT_CORR">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="context">
+      <eClassifier xsi:type="ecore:EClass" href="../../ContextML/model/contextML.ecore#//Context"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="e">
+      <eClassifier xsi:type="ecore:EClass" href="../../ContextML/model/contextML.ecore#//User"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="ifml">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/IFMLModel"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="flowModel">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/InteractionFlowModel"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="context2EssentialIFML">
+      <eClassifier xsi:type="ecore:EClass" href="../model/library.ecore#//Context2EssentialIFML"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="user2InteractionFLowModel">
+      <eClassifier xsi:type="ecore:EClass" href="../model/library.ecore#//CreateWindowsAndLinks"/>
+    </symbolicParameters>
+    <bodies>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/18/@symbolicParameters.4"/>
+        <parameters reference="/18/@symbolicParameters.0"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/library.ecore#//Context2EssentialIFML/source"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/18/@symbolicParameters.4"/>
+        <parameters reference="/18/@symbolicParameters.2"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/library.ecore#//Context2EssentialIFML/target"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/18/@symbolicParameters.5"/>
+        <parameters reference="/18/@symbolicParameters.1"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/library.ecore#//CreateWindowsAndLinks/source"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/18/@symbolicParameters.5"/>
+        <parameters reference="/18/@symbolicParameters.3"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/library.ecore#//CreateWindowsAndLinks/target"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="AdaptationCreateStudentNavBar__CONTEXT_SRC">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="context">
+      <eClassifier xsi:type="ecore:EClass" href="../../ContextML/model/contextML.ecore#//Context"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="e">
+      <eClassifier xsi:type="ecore:EClass" href="../../ContextML/model/contextML.ecore#//User"/>
+    </symbolicParameters>
+    <bodies>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/19/@symbolicParameters.0"/>
+        <parameters reference="/19/@symbolicParameters.1"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../ContextML/model/contextML.ecore#//Context/entity"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="AdaptationCreateStudentNavBar__CONTEXT_TRG">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="ifml">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/IFMLModel"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="flowModel">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/InteractionFlowModel"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="searchBooks">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="lentBooks">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer"/>
+    </symbolicParameters>
+    <bodies>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/20/@symbolicParameters.0"/>
+        <parameters reference="/20/@symbolicParameters.1"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/IFMLModel/interactionFlowModel"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/20/@symbolicParameters.2"/>
+        <parameters reference="/20/@symbolicParameters.3"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="AdaptationCreateStudentNavBar__TRG">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="ifml">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/IFMLModel"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="flowModel">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/InteractionFlowModel"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="searchBooks">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="lentBooks">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer"/>
+    </symbolicParameters>
+    <bodies>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/21/@symbolicParameters.1"/>
+        <parameters reference="/21/@symbolicParameters.3"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/InteractionFlowModel/navBarContainer"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/21/@symbolicParameters.1"/>
+        <parameters reference="/21/@symbolicParameters.2"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/InteractionFlowModel/navBarContainer"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="AdaptationCreateStudentNavBar__CONTEXT_TRG">
+        <parameters reference="/21/@symbolicParameters.0"/>
+        <parameters reference="/21/@symbolicParameters.1"/>
+        <parameters reference="/21/@symbolicParameters.2"/>
+        <parameters reference="/21/@symbolicParameters.3"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="AdaptationCreateStudentNavBar_e_roleEdge_Multiplicity__CONSTRAINT">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="e">
+      <eClassifier xsi:type="ecore:EClass" href="../../ContextML/model/contextML.ecore#//User"/>
+    </symbolicParameters>
+    <bodies>
+      <localVariables xsi:type="emf:EMFVariable" name="roleName1">
+        <eClassifier xsi:type="ecore:EClass" href="../../ContextML/model/contextML.ecore#//Student"/>
+      </localVariables>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/22/@symbolicParameters.0"/>
+        <parameters reference="/22/@bodies.0/@localVariables.0"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../ContextML/model/contextML.ecore#//User/role"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="AdaptationEnglishLanguage__BWD">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="context">
+      <eClassifier xsi:type="ecore:EClass" href="../../ContextML/model/contextML.ecore#//Context"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="english">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/Language"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="flowModel">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/InteractionFlowModel"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="ifml">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/IFMLModel"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="context2EssentialIFML">
+      <eClassifier xsi:type="ecore:EClass" href="../model/library.ecore#//Context2EssentialIFML"/>
+    </symbolicParameters>
+    <bodies>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="AdaptationEnglishLanguage__BWD_REFINEMENT_INVOCATIONS">
+        <parameters reference="/23/@symbolicParameters.0"/>
+        <parameters reference="/23/@symbolicParameters.1"/>
+        <parameters reference="/23/@symbolicParameters.2"/>
+        <parameters reference="/23/@symbolicParameters.3"/>
+        <parameters reference="/23/@symbolicParameters.4"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" invokedPattern="MarkedPattern__LOCAL_MARKED__TRG">
+        <parameters reference="/23/@symbolicParameters.1"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" invokedPattern="AdaptationEnglishLanguage__english_setLanguage_incoming_DEC_TRG">
+        <parameters reference="/23/@symbolicParameters.1"/>
+        <parameters reference="/23/@symbolicParameters.2"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="AdaptationEnglishLanguage__BWD_REFINEMENT_INVOCATIONS">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="context">
+      <eClassifier xsi:type="ecore:EClass" href="../../ContextML/model/contextML.ecore#//Context"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="english">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/Language"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="flowModel">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/InteractionFlowModel"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="ifml">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/IFMLModel"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="context2EssentialIFML">
+      <eClassifier xsi:type="ecore:EClass" href="../model/library.ecore#//Context2EssentialIFML"/>
+    </symbolicParameters>
+    <bodies>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="AdaptationEnglishLanguage__TRG">
+        <parameters reference="/24/@symbolicParameters.3"/>
+        <parameters reference="/24/@symbolicParameters.2"/>
+        <parameters reference="/24/@symbolicParameters.1"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="AdaptationEnglishLanguage__CONTEXT_CORR">
+        <parameters reference="/24/@symbolicParameters.0"/>
+        <parameters reference="/24/@symbolicParameters.3"/>
+        <parameters reference="/24/@symbolicParameters.4"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="AdaptationEnglishLanguage__CONTEXT_SRC">
+        <parameters reference="/24/@symbolicParameters.0"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="MarkedPattern__LOCAL_MARKED__TRG">
+        <parameters reference="/24/@symbolicParameters.2"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="MarkedPattern__LOCAL_MARKED__TRG">
+        <parameters reference="/24/@symbolicParameters.3"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="AdaptationEnglishLanguage__CONTEXT_CORR">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="context">
+      <eClassifier xsi:type="ecore:EClass" href="../../ContextML/model/contextML.ecore#//Context"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="ifml">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/IFMLModel"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="context2EssentialIFML">
+      <eClassifier xsi:type="ecore:EClass" href="../model/library.ecore#//Context2EssentialIFML"/>
+    </symbolicParameters>
+    <bodies>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/25/@symbolicParameters.2"/>
+        <parameters reference="/25/@symbolicParameters.0"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/library.ecore#//Context2EssentialIFML/source"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/25/@symbolicParameters.2"/>
+        <parameters reference="/25/@symbolicParameters.1"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/library.ecore#//Context2EssentialIFML/target"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="AdaptationEnglishLanguage__CONTEXT_SRC">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="context">
+      <eClassifier xsi:type="ecore:EClass" href="../../ContextML/model/contextML.ecore#//Context"/>
+    </symbolicParameters>
+    <bodies/>
+  </specification:Pattern>
+  <specification:Pattern name="AdaptationEnglishLanguage__CONTEXT_TRG">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="ifml">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/IFMLModel"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="flowModel">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/InteractionFlowModel"/>
+    </symbolicParameters>
+    <bodies>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/27/@symbolicParameters.0"/>
+        <parameters reference="/27/@symbolicParameters.1"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/IFMLModel/interactionFlowModel"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="AdaptationEnglishLanguage__TRG">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="ifml">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/IFMLModel"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="flowModel">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/InteractionFlowModel"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="english">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/Language"/>
+    </symbolicParameters>
+    <bodies>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/28/@symbolicParameters.1"/>
+        <parameters reference="/28/@symbolicParameters.2"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/InteractionFlowModel/setLanguage"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="AdaptationEnglishLanguage__CONTEXT_TRG">
+        <parameters reference="/28/@symbolicParameters.0"/>
+        <parameters reference="/28/@symbolicParameters.1"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="AdaptationEnglishLanguage__english_setLanguage_incoming_DEC_TRG">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="english">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/Language"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="flowModel">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/InteractionFlowModel"/>
+    </symbolicParameters>
+    <bodies>
+      <localVariables xsi:type="emf:EMFVariable" name="english_setLanguage_DECNode">
+        <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/InteractionFlowModel"/>
+      </localVariables>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="AdaptationEnglishLanguage__english_setLanguage_incoming_SearchEdge_TRG">
+        <parameters reference="/29/@symbolicParameters.0"/>
+        <parameters reference="/29/@symbolicParameters.1"/>
+        <parameters reference="/29/@bodies.0/@localVariables.0"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="AdaptationEnglishLanguage__english_setLanguage_incoming_SearchEdge_TRG">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="english">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/Language"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="flowModel">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/InteractionFlowModel"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="english_setLanguage_DECNode">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/InteractionFlowModel"/>
+    </symbolicParameters>
+    <bodies>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/30/@symbolicParameters.1"/>
+        <parameters reference="/30/@symbolicParameters.0"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/InteractionFlowModel/setLanguage"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/30/@symbolicParameters.2"/>
+        <parameters reference="/30/@symbolicParameters.0"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/InteractionFlowModel/setLanguage"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/30/@symbolicParameters.1"/>
+        <parameters reference="/30/@symbolicParameters.2"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="AdaptationGermanLanguage__BWD">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="context">
+      <eClassifier xsi:type="ecore:EClass" href="../../ContextML/model/contextML.ecore#//Context"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="flowModel">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/InteractionFlowModel"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="german">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/Language"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="ifml">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/IFMLModel"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="context2EssentialIFML">
+      <eClassifier xsi:type="ecore:EClass" href="../model/library.ecore#//Context2EssentialIFML"/>
+    </symbolicParameters>
+    <bodies>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="AdaptationGermanLanguage__BWD_REFINEMENT_INVOCATIONS">
+        <parameters reference="/31/@symbolicParameters.0"/>
+        <parameters reference="/31/@symbolicParameters.1"/>
+        <parameters reference="/31/@symbolicParameters.2"/>
+        <parameters reference="/31/@symbolicParameters.3"/>
+        <parameters reference="/31/@symbolicParameters.4"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" invokedPattern="MarkedPattern__LOCAL_MARKED__TRG">
+        <parameters reference="/31/@symbolicParameters.2"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" invokedPattern="AdaptationGermanLanguage__german_setLanguage_incoming_DEC_TRG">
+        <parameters reference="/31/@symbolicParameters.1"/>
+        <parameters reference="/31/@symbolicParameters.2"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="AdaptationGermanLanguage__BWD_REFINEMENT_INVOCATIONS">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="context">
+      <eClassifier xsi:type="ecore:EClass" href="../../ContextML/model/contextML.ecore#//Context"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="flowModel">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/InteractionFlowModel"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="german">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/Language"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="ifml">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/IFMLModel"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="context2EssentialIFML">
+      <eClassifier xsi:type="ecore:EClass" href="../model/library.ecore#//Context2EssentialIFML"/>
+    </symbolicParameters>
+    <bodies>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="AdaptationGermanLanguage__TRG">
+        <parameters reference="/32/@symbolicParameters.3"/>
+        <parameters reference="/32/@symbolicParameters.1"/>
+        <parameters reference="/32/@symbolicParameters.2"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="AdaptationGermanLanguage__CONTEXT_CORR">
+        <parameters reference="/32/@symbolicParameters.0"/>
+        <parameters reference="/32/@symbolicParameters.3"/>
+        <parameters reference="/32/@symbolicParameters.4"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="AdaptationGermanLanguage__CONTEXT_SRC">
+        <parameters reference="/32/@symbolicParameters.0"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="MarkedPattern__LOCAL_MARKED__TRG">
+        <parameters reference="/32/@symbolicParameters.1"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="MarkedPattern__LOCAL_MARKED__TRG">
+        <parameters reference="/32/@symbolicParameters.3"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="AdaptationGermanLanguage__CONTEXT_CORR">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="context">
+      <eClassifier xsi:type="ecore:EClass" href="../../ContextML/model/contextML.ecore#//Context"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="ifml">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/IFMLModel"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="context2EssentialIFML">
+      <eClassifier xsi:type="ecore:EClass" href="../model/library.ecore#//Context2EssentialIFML"/>
+    </symbolicParameters>
+    <bodies>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/33/@symbolicParameters.2"/>
+        <parameters reference="/33/@symbolicParameters.0"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/library.ecore#//Context2EssentialIFML/source"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/33/@symbolicParameters.2"/>
+        <parameters reference="/33/@symbolicParameters.1"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/library.ecore#//Context2EssentialIFML/target"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="AdaptationGermanLanguage__CONTEXT_SRC">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="context">
+      <eClassifier xsi:type="ecore:EClass" href="../../ContextML/model/contextML.ecore#//Context"/>
+    </symbolicParameters>
+    <bodies/>
+  </specification:Pattern>
+  <specification:Pattern name="AdaptationGermanLanguage__CONTEXT_TRG">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="ifml">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/IFMLModel"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="flowModel">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/InteractionFlowModel"/>
+    </symbolicParameters>
+    <bodies>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/35/@symbolicParameters.0"/>
+        <parameters reference="/35/@symbolicParameters.1"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/IFMLModel/interactionFlowModel"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="AdaptationGermanLanguage__TRG">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="ifml">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/IFMLModel"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="flowModel">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/InteractionFlowModel"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="german">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/Language"/>
+    </symbolicParameters>
+    <bodies>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/36/@symbolicParameters.1"/>
+        <parameters reference="/36/@symbolicParameters.2"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/InteractionFlowModel/setLanguage"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="AdaptationGermanLanguage__CONTEXT_TRG">
+        <parameters reference="/36/@symbolicParameters.0"/>
+        <parameters reference="/36/@symbolicParameters.1"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="AdaptationGermanLanguage__german_setLanguage_incoming_DEC_TRG">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="flowModel">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/InteractionFlowModel"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="german">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/Language"/>
+    </symbolicParameters>
+    <bodies>
+      <localVariables xsi:type="emf:EMFVariable" name="german_setLanguage_DECNode">
+        <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/InteractionFlowModel"/>
+      </localVariables>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="AdaptationGermanLanguage__german_setLanguage_incoming_SearchEdge_TRG">
+        <parameters reference="/37/@symbolicParameters.0"/>
+        <parameters reference="/37/@symbolicParameters.1"/>
+        <parameters reference="/37/@bodies.0/@localVariables.0"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="AdaptationGermanLanguage__german_setLanguage_incoming_SearchEdge_TRG">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="flowModel">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/InteractionFlowModel"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="german">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/Language"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="german_setLanguage_DECNode">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/InteractionFlowModel"/>
+    </symbolicParameters>
+    <bodies>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/38/@symbolicParameters.0"/>
+        <parameters reference="/38/@symbolicParameters.1"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/InteractionFlowModel/setLanguage"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/38/@symbolicParameters.2"/>
+        <parameters reference="/38/@symbolicParameters.1"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/InteractionFlowModel/setLanguage"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/38/@symbolicParameters.0"/>
+        <parameters reference="/38/@symbolicParameters.2"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="AdaptationUserAge__BWD">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="context">
+      <eClassifier xsi:type="ecore:EClass" href="../../ContextML/model/contextML.ecore#//Context"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="e">
+      <eClassifier xsi:type="ecore:EClass" href="../../ContextML/model/contextML.ecore#//User"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="ZoomScreen">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ScreenZoom"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="flowModel">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/InteractionFlowModel"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="ifml">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/IFMLModel"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="context2EssentialIFML">
+      <eClassifier xsi:type="ecore:EClass" href="../model/library.ecore#//Context2EssentialIFML"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="user2InteractionFLowModel">
+      <eClassifier xsi:type="ecore:EClass" href="../model/library.ecore#//CreateWindowsAndLinks"/>
+    </symbolicParameters>
+    <bodies>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="AdaptationUserAge__BWD_REFINEMENT_INVOCATIONS">
+        <parameters reference="/39/@symbolicParameters.0"/>
+        <parameters reference="/39/@symbolicParameters.1"/>
+        <parameters reference="/39/@symbolicParameters.2"/>
+        <parameters reference="/39/@symbolicParameters.3"/>
+        <parameters reference="/39/@symbolicParameters.4"/>
+        <parameters reference="/39/@symbolicParameters.5"/>
+        <parameters reference="/39/@symbolicParameters.6"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" invokedPattern="MarkedPattern__LOCAL_MARKED__TRG">
+        <parameters reference="/39/@symbolicParameters.2"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" invokedPattern="AdaptationUserAge__ZoomScreen_screenZoom_incoming_DEC_TRG">
+        <parameters reference="/39/@symbolicParameters.2"/>
+        <parameters reference="/39/@symbolicParameters.3"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" invokedPattern="AdaptationUserAge_e_ageEdge_Multiplicity__CONSTRAINT">
+        <parameters reference="/39/@symbolicParameters.1"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="AdaptationUserAge__BWD_REFINEMENT_INVOCATIONS">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="context">
+      <eClassifier xsi:type="ecore:EClass" href="../../ContextML/model/contextML.ecore#//Context"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="e">
+      <eClassifier xsi:type="ecore:EClass" href="../../ContextML/model/contextML.ecore#//User"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="ZoomScreen">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ScreenZoom"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="flowModel">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/InteractionFlowModel"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="ifml">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/IFMLModel"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="context2EssentialIFML">
+      <eClassifier xsi:type="ecore:EClass" href="../model/library.ecore#//Context2EssentialIFML"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="user2InteractionFLowModel">
+      <eClassifier xsi:type="ecore:EClass" href="../model/library.ecore#//CreateWindowsAndLinks"/>
+    </symbolicParameters>
+    <bodies>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="AdaptationUserAge__TRG">
+        <parameters reference="/40/@symbolicParameters.4"/>
+        <parameters reference="/40/@symbolicParameters.3"/>
+        <parameters reference="/40/@symbolicParameters.2"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="AdaptationUserAge__CONTEXT_CORR">
+        <parameters reference="/40/@symbolicParameters.0"/>
+        <parameters reference="/40/@symbolicParameters.1"/>
+        <parameters reference="/40/@symbolicParameters.4"/>
+        <parameters reference="/40/@symbolicParameters.3"/>
+        <parameters reference="/40/@symbolicParameters.5"/>
+        <parameters reference="/40/@symbolicParameters.6"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="AdaptationUserAge__CONTEXT_SRC">
+        <parameters reference="/40/@symbolicParameters.0"/>
+        <parameters reference="/40/@symbolicParameters.1"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="MarkedPattern__LOCAL_MARKED__TRG">
+        <parameters reference="/40/@symbolicParameters.3"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="MarkedPattern__LOCAL_MARKED__TRG">
+        <parameters reference="/40/@symbolicParameters.4"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="AdaptationUserAge__CONTEXT_CORR">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="context">
+      <eClassifier xsi:type="ecore:EClass" href="../../ContextML/model/contextML.ecore#//Context"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="e">
+      <eClassifier xsi:type="ecore:EClass" href="../../ContextML/model/contextML.ecore#//User"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="ifml">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/IFMLModel"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="flowModel">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/InteractionFlowModel"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="context2EssentialIFML">
+      <eClassifier xsi:type="ecore:EClass" href="../model/library.ecore#//Context2EssentialIFML"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="user2InteractionFLowModel">
+      <eClassifier xsi:type="ecore:EClass" href="../model/library.ecore#//CreateWindowsAndLinks"/>
+    </symbolicParameters>
+    <bodies>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/41/@symbolicParameters.4"/>
+        <parameters reference="/41/@symbolicParameters.0"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/library.ecore#//Context2EssentialIFML/source"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/41/@symbolicParameters.4"/>
+        <parameters reference="/41/@symbolicParameters.2"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/library.ecore#//Context2EssentialIFML/target"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/41/@symbolicParameters.5"/>
+        <parameters reference="/41/@symbolicParameters.1"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/library.ecore#//CreateWindowsAndLinks/source"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/41/@symbolicParameters.5"/>
+        <parameters reference="/41/@symbolicParameters.3"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/library.ecore#//CreateWindowsAndLinks/target"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="AdaptationUserAge__CONTEXT_SRC">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="context">
+      <eClassifier xsi:type="ecore:EClass" href="../../ContextML/model/contextML.ecore#//Context"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="e">
+      <eClassifier xsi:type="ecore:EClass" href="../../ContextML/model/contextML.ecore#//User"/>
+    </symbolicParameters>
+    <bodies>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/42/@symbolicParameters.0"/>
+        <parameters reference="/42/@symbolicParameters.1"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../ContextML/model/contextML.ecore#//Context/entity"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="AdaptationUserAge__CONTEXT_TRG">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="ifml">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/IFMLModel"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="flowModel">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/InteractionFlowModel"/>
+    </symbolicParameters>
+    <bodies>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/43/@symbolicParameters.0"/>
+        <parameters reference="/43/@symbolicParameters.1"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/IFMLModel/interactionFlowModel"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="AdaptationUserAge__TRG">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="ifml">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/IFMLModel"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="flowModel">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/InteractionFlowModel"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="ZoomScreen">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ScreenZoom"/>
+    </symbolicParameters>
+    <bodies>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/44/@symbolicParameters.1"/>
+        <parameters reference="/44/@symbolicParameters.2"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/InteractionFlowModel/interactionFlowModelElements"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/44/@symbolicParameters.1"/>
+        <parameters reference="/44/@symbolicParameters.2"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/InteractionFlowModel/screenZoom"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="AdaptationUserAge__CONTEXT_TRG">
+        <parameters reference="/44/@symbolicParameters.0"/>
+        <parameters reference="/44/@symbolicParameters.1"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="AdaptationUserAge__ZoomScreen_screenZoom_incoming_DEC_TRG">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="ZoomScreen">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ScreenZoom"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="flowModel">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/InteractionFlowModel"/>
+    </symbolicParameters>
+    <bodies>
+      <localVariables xsi:type="emf:EMFVariable" name="ZoomScreen_screenZoom_DECNode">
+        <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/InteractionFlowModel"/>
+      </localVariables>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="AdaptationUserAge__ZoomScreen_screenZoom_incoming_SearchEdge_TRG">
+        <parameters reference="/45/@symbolicParameters.0"/>
+        <parameters reference="/45/@symbolicParameters.1"/>
+        <parameters reference="/45/@bodies.0/@localVariables.0"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="AdaptationUserAge__ZoomScreen_screenZoom_incoming_SearchEdge_TRG">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="ZoomScreen">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ScreenZoom"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="flowModel">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/InteractionFlowModel"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="ZoomScreen_screenZoom_DECNode">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/InteractionFlowModel"/>
+    </symbolicParameters>
+    <bodies>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/46/@symbolicParameters.1"/>
+        <parameters reference="/46/@symbolicParameters.0"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/InteractionFlowModel/screenZoom"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/46/@symbolicParameters.2"/>
+        <parameters reference="/46/@symbolicParameters.0"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/InteractionFlowModel/screenZoom"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/46/@symbolicParameters.1"/>
+        <parameters reference="/46/@symbolicParameters.2"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="AdaptationUserAge_e_ageEdge_Multiplicity__CONSTRAINT">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="e">
+      <eClassifier xsi:type="ecore:EClass" href="../../ContextML/model/contextML.ecore#//User"/>
+    </symbolicParameters>
+    <bodies>
+      <localVariables xsi:type="emf:EMFVariable" name="ageOfUser1">
+        <eClassifier xsi:type="ecore:EClass" href="../../ContextML/model/contextML.ecore#//UserIsOld"/>
+      </localVariables>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/47/@symbolicParameters.0"/>
+        <parameters reference="/47/@bodies.0/@localVariables.0"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../ContextML/model/contextML.ecore#//User/age"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="Context2IFML__BWD">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="ifml">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/IFMLModel"/>
+    </symbolicParameters>
+    <bodies>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="Context2IFML__BWD_REFINEMENT_INVOCATIONS">
+        <parameters reference="/48/@symbolicParameters.0"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" invokedPattern="MarkedPattern__LOCAL_MARKED__TRG">
+        <parameters reference="/48/@symbolicParameters.0"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="Context2IFML__BWD_REFINEMENT_INVOCATIONS">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="ifml">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/IFMLModel"/>
+    </symbolicParameters>
+    <bodies>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="Context2IFML__TRG">
+        <parameters reference="/49/@symbolicParameters.0"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="Context2IFML__TRG">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="ifml">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/IFMLModel"/>
+    </symbolicParameters>
+    <bodies/>
+  </specification:Pattern>
+  <specification:Pattern name="CreateWindows__BWD">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="context">
+      <eClassifier xsi:type="ecore:EClass" href="../../ContextML/model/contextML.ecore#//Context"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="bookISBN">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/SimpleField"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="bookReservations">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="dueDate">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/SimpleField"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="extendBook">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/OnSelectEvent"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="findClosestLocation">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/OnSubmitEvent"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="helpForm">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/Form"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="helpWindow">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="home">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="ifml">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/IFMLModel"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="interactionFlowModel">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/InteractionFlowModel"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="inventoryList">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/List"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="issueABook">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/OnSelectEvent"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="issueBook">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/OnSubmitEvent"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="issueBookSelected">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/OnSelectEvent"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="learnPlaces">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/Form"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="lendingForm">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/Form"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="lendingFormWindow">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="lentBooks">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/List"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="lentBooksWindow">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="location">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/SimpleField"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="login">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="loginEvent">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/OnSubmitEvent"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="loginForm">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/Form"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="password">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/SimpleField"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="question">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/SimpleField"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="reservationsList">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/List"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="reserveBook">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/OnSelectEvent"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="returnBook">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/OnSelectEvent"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="searchBooks">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="studentDetail">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/Details"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="studentDetails">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="studentID">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/SimpleField"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="studentList">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/List"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="students">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="submitQuestion">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/OnSubmitEvent"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="username">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/SimpleField"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="viewStudentDetails">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/OnSelectEvent"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="contextToEssentialIFML">
+      <eClassifier xsi:type="ecore:EClass" href="../model/library.ecore#//Context2EssentialIFML"/>
+    </symbolicParameters>
+    <bodies>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="CreateWindows__BWD_REFINEMENT_INVOCATIONS">
+        <parameters reference="/51/@symbolicParameters.0"/>
+        <parameters reference="/51/@symbolicParameters.1"/>
+        <parameters reference="/51/@symbolicParameters.2"/>
+        <parameters reference="/51/@symbolicParameters.3"/>
+        <parameters reference="/51/@symbolicParameters.4"/>
+        <parameters reference="/51/@symbolicParameters.5"/>
+        <parameters reference="/51/@symbolicParameters.6"/>
+        <parameters reference="/51/@symbolicParameters.7"/>
+        <parameters reference="/51/@symbolicParameters.8"/>
+        <parameters reference="/51/@symbolicParameters.9"/>
+        <parameters reference="/51/@symbolicParameters.10"/>
+        <parameters reference="/51/@symbolicParameters.11"/>
+        <parameters reference="/51/@symbolicParameters.12"/>
+        <parameters reference="/51/@symbolicParameters.13"/>
+        <parameters reference="/51/@symbolicParameters.14"/>
+        <parameters reference="/51/@symbolicParameters.15"/>
+        <parameters reference="/51/@symbolicParameters.16"/>
+        <parameters reference="/51/@symbolicParameters.17"/>
+        <parameters reference="/51/@symbolicParameters.18"/>
+        <parameters reference="/51/@symbolicParameters.19"/>
+        <parameters reference="/51/@symbolicParameters.20"/>
+        <parameters reference="/51/@symbolicParameters.21"/>
+        <parameters reference="/51/@symbolicParameters.22"/>
+        <parameters reference="/51/@symbolicParameters.23"/>
+        <parameters reference="/51/@symbolicParameters.24"/>
+        <parameters reference="/51/@symbolicParameters.25"/>
+        <parameters reference="/51/@symbolicParameters.26"/>
+        <parameters reference="/51/@symbolicParameters.27"/>
+        <parameters reference="/51/@symbolicParameters.28"/>
+        <parameters reference="/51/@symbolicParameters.29"/>
+        <parameters reference="/51/@symbolicParameters.30"/>
+        <parameters reference="/51/@symbolicParameters.31"/>
+        <parameters reference="/51/@symbolicParameters.32"/>
+        <parameters reference="/51/@symbolicParameters.33"/>
+        <parameters reference="/51/@symbolicParameters.34"/>
+        <parameters reference="/51/@symbolicParameters.35"/>
+        <parameters reference="/51/@symbolicParameters.36"/>
+        <parameters reference="/51/@symbolicParameters.37"/>
+        <parameters reference="/51/@symbolicParameters.38"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" invokedPattern="MarkedPattern__LOCAL_MARKED__TRG">
+        <parameters reference="/51/@symbolicParameters.1"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" invokedPattern="MarkedPattern__LOCAL_MARKED__TRG">
+        <parameters reference="/51/@symbolicParameters.2"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" invokedPattern="MarkedPattern__LOCAL_MARKED__TRG">
+        <parameters reference="/51/@symbolicParameters.3"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" invokedPattern="MarkedPattern__LOCAL_MARKED__TRG">
+        <parameters reference="/51/@symbolicParameters.4"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" invokedPattern="MarkedPattern__LOCAL_MARKED__TRG">
+        <parameters reference="/51/@symbolicParameters.5"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" invokedPattern="MarkedPattern__LOCAL_MARKED__TRG">
+        <parameters reference="/51/@symbolicParameters.6"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" invokedPattern="MarkedPattern__LOCAL_MARKED__TRG">
+        <parameters reference="/51/@symbolicParameters.7"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" invokedPattern="MarkedPattern__LOCAL_MARKED__TRG">
+        <parameters reference="/51/@symbolicParameters.8"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" invokedPattern="MarkedPattern__LOCAL_MARKED__TRG">
+        <parameters reference="/51/@symbolicParameters.10"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" invokedPattern="MarkedPattern__LOCAL_MARKED__TRG">
+        <parameters reference="/51/@symbolicParameters.11"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" invokedPattern="MarkedPattern__LOCAL_MARKED__TRG">
+        <parameters reference="/51/@symbolicParameters.12"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" invokedPattern="MarkedPattern__LOCAL_MARKED__TRG">
+        <parameters reference="/51/@symbolicParameters.13"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" invokedPattern="MarkedPattern__LOCAL_MARKED__TRG">
+        <parameters reference="/51/@symbolicParameters.14"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" invokedPattern="MarkedPattern__LOCAL_MARKED__TRG">
+        <parameters reference="/51/@symbolicParameters.15"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" invokedPattern="MarkedPattern__LOCAL_MARKED__TRG">
+        <parameters reference="/51/@symbolicParameters.16"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" invokedPattern="MarkedPattern__LOCAL_MARKED__TRG">
+        <parameters reference="/51/@symbolicParameters.17"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" invokedPattern="MarkedPattern__LOCAL_MARKED__TRG">
+        <parameters reference="/51/@symbolicParameters.18"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" invokedPattern="MarkedPattern__LOCAL_MARKED__TRG">
+        <parameters reference="/51/@symbolicParameters.19"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" invokedPattern="MarkedPattern__LOCAL_MARKED__TRG">
+        <parameters reference="/51/@symbolicParameters.20"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" invokedPattern="MarkedPattern__LOCAL_MARKED__TRG">
+        <parameters reference="/51/@symbolicParameters.21"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" invokedPattern="MarkedPattern__LOCAL_MARKED__TRG">
+        <parameters reference="/51/@symbolicParameters.22"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" invokedPattern="MarkedPattern__LOCAL_MARKED__TRG">
+        <parameters reference="/51/@symbolicParameters.23"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" invokedPattern="MarkedPattern__LOCAL_MARKED__TRG">
+        <parameters reference="/51/@symbolicParameters.24"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" invokedPattern="MarkedPattern__LOCAL_MARKED__TRG">
+        <parameters reference="/51/@symbolicParameters.25"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" invokedPattern="MarkedPattern__LOCAL_MARKED__TRG">
+        <parameters reference="/51/@symbolicParameters.26"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" invokedPattern="MarkedPattern__LOCAL_MARKED__TRG">
+        <parameters reference="/51/@symbolicParameters.27"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" invokedPattern="MarkedPattern__LOCAL_MARKED__TRG">
+        <parameters reference="/51/@symbolicParameters.28"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" invokedPattern="MarkedPattern__LOCAL_MARKED__TRG">
+        <parameters reference="/51/@symbolicParameters.29"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" invokedPattern="MarkedPattern__LOCAL_MARKED__TRG">
+        <parameters reference="/51/@symbolicParameters.30"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" invokedPattern="MarkedPattern__LOCAL_MARKED__TRG">
+        <parameters reference="/51/@symbolicParameters.31"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" invokedPattern="MarkedPattern__LOCAL_MARKED__TRG">
+        <parameters reference="/51/@symbolicParameters.32"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" invokedPattern="MarkedPattern__LOCAL_MARKED__TRG">
+        <parameters reference="/51/@symbolicParameters.33"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" invokedPattern="MarkedPattern__LOCAL_MARKED__TRG">
+        <parameters reference="/51/@symbolicParameters.34"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" invokedPattern="MarkedPattern__LOCAL_MARKED__TRG">
+        <parameters reference="/51/@symbolicParameters.35"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" invokedPattern="MarkedPattern__LOCAL_MARKED__TRG">
+        <parameters reference="/51/@symbolicParameters.36"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" invokedPattern="MarkedPattern__LOCAL_MARKED__TRG">
+        <parameters reference="/51/@symbolicParameters.37"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" invokedPattern="CreateWindows__bookReservations_viewElements_outgoing_DEC_TRG">
+        <parameters reference="/51/@symbolicParameters.2"/>
+        <parameters reference="/51/@symbolicParameters.26"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" invokedPattern="CreateWindows__helpWindow_viewElements_outgoing_DEC_TRG">
+        <parameters reference="/51/@symbolicParameters.6"/>
+        <parameters reference="/51/@symbolicParameters.7"/>
+        <parameters reference="/51/@symbolicParameters.15"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" invokedPattern="CreateWindows__home_viewElements_outgoing_DEC_TRG">
+        <parameters reference="/51/@symbolicParameters.8"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" invokedPattern="CreateWindows__interactionFlowModel_interactionFlowModel_incoming_DEC_TRG">
+        <parameters reference="/51/@symbolicParameters.9"/>
+        <parameters reference="/51/@symbolicParameters.10"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" invokedPattern="CreateWindows__lendingFormWindow_viewElements_outgoing_DEC_TRG">
+        <parameters reference="/51/@symbolicParameters.16"/>
+        <parameters reference="/51/@symbolicParameters.17"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" invokedPattern="CreateWindows__lentBooksWindow_viewElements_outgoing_DEC_TRG">
+        <parameters reference="/51/@symbolicParameters.18"/>
+        <parameters reference="/51/@symbolicParameters.19"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" invokedPattern="CreateWindows__login_viewElements_outgoing_DEC_TRG">
+        <parameters reference="/51/@symbolicParameters.21"/>
+        <parameters reference="/51/@symbolicParameters.23"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" invokedPattern="CreateWindows__searchBooks_viewElements_outgoing_DEC_TRG">
+        <parameters reference="/51/@symbolicParameters.11"/>
+        <parameters reference="/51/@symbolicParameters.29"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" invokedPattern="CreateWindows__studentDetails_viewElements_outgoing_DEC_TRG">
+        <parameters reference="/51/@symbolicParameters.30"/>
+        <parameters reference="/51/@symbolicParameters.31"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" invokedPattern="CreateWindows__students_viewElements_outgoing_DEC_TRG">
+        <parameters reference="/51/@symbolicParameters.33"/>
+        <parameters reference="/51/@symbolicParameters.34"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="CreateWindows__BWD_REFINEMENT_INVOCATIONS">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="context">
+      <eClassifier xsi:type="ecore:EClass" href="../../ContextML/model/contextML.ecore#//Context"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="bookISBN">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/SimpleField"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="bookReservations">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="dueDate">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/SimpleField"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="extendBook">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/OnSelectEvent"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="findClosestLocation">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/OnSubmitEvent"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="helpForm">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/Form"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="helpWindow">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="home">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="ifml">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/IFMLModel"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="interactionFlowModel">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/InteractionFlowModel"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="inventoryList">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/List"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="issueABook">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/OnSelectEvent"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="issueBook">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/OnSubmitEvent"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="issueBookSelected">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/OnSelectEvent"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="learnPlaces">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/Form"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="lendingForm">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/Form"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="lendingFormWindow">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="lentBooks">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/List"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="lentBooksWindow">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="location">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/SimpleField"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="login">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="loginEvent">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/OnSubmitEvent"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="loginForm">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/Form"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="password">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/SimpleField"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="question">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/SimpleField"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="reservationsList">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/List"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="reserveBook">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/OnSelectEvent"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="returnBook">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/OnSelectEvent"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="searchBooks">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="studentDetail">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/Details"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="studentDetails">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="studentID">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/SimpleField"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="studentList">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/List"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="students">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="submitQuestion">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/OnSubmitEvent"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="username">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/SimpleField"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="viewStudentDetails">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/OnSelectEvent"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="contextToEssentialIFML">
+      <eClassifier xsi:type="ecore:EClass" href="../model/library.ecore#//Context2EssentialIFML"/>
+    </symbolicParameters>
+    <bodies>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="CreateWindows__TRG">
+        <parameters reference="/52/@symbolicParameters.9"/>
+        <parameters reference="/52/@symbolicParameters.10"/>
+        <parameters reference="/52/@symbolicParameters.29"/>
+        <parameters reference="/52/@symbolicParameters.11"/>
+        <parameters reference="/52/@symbolicParameters.12"/>
+        <parameters reference="/52/@symbolicParameters.27"/>
+        <parameters reference="/52/@symbolicParameters.28"/>
+        <parameters reference="/52/@symbolicParameters.21"/>
+        <parameters reference="/52/@symbolicParameters.23"/>
+        <parameters reference="/52/@symbolicParameters.36"/>
+        <parameters reference="/52/@symbolicParameters.24"/>
+        <parameters reference="/52/@symbolicParameters.22"/>
+        <parameters reference="/52/@symbolicParameters.8"/>
+        <parameters reference="/52/@symbolicParameters.17"/>
+        <parameters reference="/52/@symbolicParameters.16"/>
+        <parameters reference="/52/@symbolicParameters.1"/>
+        <parameters reference="/52/@symbolicParameters.32"/>
+        <parameters reference="/52/@symbolicParameters.3"/>
+        <parameters reference="/52/@symbolicParameters.13"/>
+        <parameters reference="/52/@symbolicParameters.19"/>
+        <parameters reference="/52/@symbolicParameters.18"/>
+        <parameters reference="/52/@symbolicParameters.4"/>
+        <parameters reference="/52/@symbolicParameters.34"/>
+        <parameters reference="/52/@symbolicParameters.33"/>
+        <parameters reference="/52/@symbolicParameters.37"/>
+        <parameters reference="/52/@symbolicParameters.31"/>
+        <parameters reference="/52/@symbolicParameters.30"/>
+        <parameters reference="/52/@symbolicParameters.2"/>
+        <parameters reference="/52/@symbolicParameters.26"/>
+        <parameters reference="/52/@symbolicParameters.14"/>
+        <parameters reference="/52/@symbolicParameters.7"/>
+        <parameters reference="/52/@symbolicParameters.6"/>
+        <parameters reference="/52/@symbolicParameters.25"/>
+        <parameters reference="/52/@symbolicParameters.35"/>
+        <parameters reference="/52/@symbolicParameters.15"/>
+        <parameters reference="/52/@symbolicParameters.20"/>
+        <parameters reference="/52/@symbolicParameters.5"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="CreateWindows__CONTEXT_CORR">
+        <parameters reference="/52/@symbolicParameters.0"/>
+        <parameters reference="/52/@symbolicParameters.9"/>
+        <parameters reference="/52/@symbolicParameters.38"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="CreateWindows__CONTEXT_SRC">
+        <parameters reference="/52/@symbolicParameters.0"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="MarkedPattern__LOCAL_MARKED__TRG">
+        <parameters reference="/52/@symbolicParameters.9"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="CreateWindows__CONTEXT_CORR">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="context">
+      <eClassifier xsi:type="ecore:EClass" href="../../ContextML/model/contextML.ecore#//Context"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="ifml">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/IFMLModel"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="contextToEssentialIFML">
+      <eClassifier xsi:type="ecore:EClass" href="../model/library.ecore#//Context2EssentialIFML"/>
+    </symbolicParameters>
+    <bodies>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/53/@symbolicParameters.2"/>
+        <parameters reference="/53/@symbolicParameters.0"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/library.ecore#//Context2EssentialIFML/source"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/53/@symbolicParameters.2"/>
+        <parameters reference="/53/@symbolicParameters.1"/>
+        <eModelElement xsi:type="ecore:EReference" href="../model/library.ecore#//Context2EssentialIFML/target"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="CreateWindows__CONTEXT_SRC">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="context">
+      <eClassifier xsi:type="ecore:EClass" href="../../ContextML/model/contextML.ecore#//Context"/>
+    </symbolicParameters>
+    <bodies/>
+  </specification:Pattern>
+  <specification:Pattern name="CreateWindows__CONTEXT_TRG">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="ifml">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/IFMLModel"/>
+    </symbolicParameters>
+    <bodies/>
+  </specification:Pattern>
+  <specification:Pattern name="CreateWindows__TRG">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="ifml">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/IFMLModel"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="interactionFlowModel">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/InteractionFlowModel"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="searchBooks">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="inventoryList">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/List"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="issueABook">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/OnSelectEvent"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="reserveBook">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/OnSelectEvent"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="returnBook">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/OnSelectEvent"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="login">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="loginForm">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/Form"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="username">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/SimpleField"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="password">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/SimpleField"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="loginEvent">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/OnSubmitEvent"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="home">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="lendingFormWindow">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="lendingForm">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/Form"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="bookISBN">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/SimpleField"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="studentID">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/SimpleField"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="dueDate">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/SimpleField"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="issueBook">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/OnSubmitEvent"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="lentBooksWindow">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="lentBooks">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/List"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="extendBook">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/OnSelectEvent"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="students">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="studentList">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/List"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="viewStudentDetails">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/OnSelectEvent"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="studentDetails">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="studentDetail">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/Details"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="bookReservations">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="reservationsList">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/List"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="issueBookSelected">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/OnSelectEvent"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="helpWindow">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="helpForm">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/Form"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="question">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/SimpleField"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="submitQuestion">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/OnSubmitEvent"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="learnPlaces">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/Form"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="location">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/SimpleField"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="findClosestLocation">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/OnSubmitEvent"/>
+    </symbolicParameters>
+    <bodies>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/56/@symbolicParameters.0"/>
+        <parameters reference="/56/@symbolicParameters.1"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/IFMLModel/interactionFlowModel"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/56/@symbolicParameters.1"/>
+        <parameters reference="/56/@symbolicParameters.7"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/InteractionFlowModel/interactionFlowModelElements"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/56/@symbolicParameters.1"/>
+        <parameters reference="/56/@symbolicParameters.12"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/InteractionFlowModel/interactionFlowModelElements"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/56/@symbolicParameters.1"/>
+        <parameters reference="/56/@symbolicParameters.13"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/InteractionFlowModel/interactionFlowModelElements"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/56/@symbolicParameters.1"/>
+        <parameters reference="/56/@symbolicParameters.19"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/InteractionFlowModel/interactionFlowModelElements"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/56/@symbolicParameters.1"/>
+        <parameters reference="/56/@symbolicParameters.22"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/InteractionFlowModel/interactionFlowModelElements"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/56/@symbolicParameters.1"/>
+        <parameters reference="/56/@symbolicParameters.25"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/InteractionFlowModel/interactionFlowModelElements"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/56/@symbolicParameters.1"/>
+        <parameters reference="/56/@symbolicParameters.27"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/InteractionFlowModel/interactionFlowModelElements"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/56/@symbolicParameters.1"/>
+        <parameters reference="/56/@symbolicParameters.30"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/InteractionFlowModel/interactionFlowModelElements"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/56/@symbolicParameters.1"/>
+        <parameters reference="/56/@symbolicParameters.2"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/InteractionFlowModel/interactionFlowModelElements"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/56/@symbolicParameters.2"/>
+        <parameters reference="/56/@symbolicParameters.3"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer/viewElements"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/56/@symbolicParameters.3"/>
+        <parameters reference="/56/@symbolicParameters.4"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewElement/viewElementEvents"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/56/@symbolicParameters.3"/>
+        <parameters reference="/56/@symbolicParameters.5"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewElement/viewElementEvents"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/56/@symbolicParameters.3"/>
+        <parameters reference="/56/@symbolicParameters.6"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewElement/viewElementEvents"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/56/@symbolicParameters.7"/>
+        <parameters reference="/56/@symbolicParameters.8"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer/viewElements"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/56/@symbolicParameters.8"/>
+        <parameters reference="/56/@symbolicParameters.9"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewComponent/viewComponentParts"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/56/@symbolicParameters.8"/>
+        <parameters reference="/56/@symbolicParameters.10"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewComponent/viewComponentParts"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/56/@symbolicParameters.8"/>
+        <parameters reference="/56/@symbolicParameters.11"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewElement/viewElementEvents"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/56/@symbolicParameters.13"/>
+        <parameters reference="/56/@symbolicParameters.14"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer/viewElements"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/56/@symbolicParameters.14"/>
+        <parameters reference="/56/@symbolicParameters.15"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewComponent/viewComponentParts"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/56/@symbolicParameters.14"/>
+        <parameters reference="/56/@symbolicParameters.16"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewComponent/viewComponentParts"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/56/@symbolicParameters.14"/>
+        <parameters reference="/56/@symbolicParameters.17"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewComponent/viewComponentParts"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/56/@symbolicParameters.14"/>
+        <parameters reference="/56/@symbolicParameters.18"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewElement/viewElementEvents"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/56/@symbolicParameters.19"/>
+        <parameters reference="/56/@symbolicParameters.20"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer/viewElements"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/56/@symbolicParameters.20"/>
+        <parameters reference="/56/@symbolicParameters.21"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewElement/viewElementEvents"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/56/@symbolicParameters.22"/>
+        <parameters reference="/56/@symbolicParameters.23"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer/viewElements"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/56/@symbolicParameters.23"/>
+        <parameters reference="/56/@symbolicParameters.24"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewElement/viewElementEvents"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/56/@symbolicParameters.25"/>
+        <parameters reference="/56/@symbolicParameters.26"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer/viewElements"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/56/@symbolicParameters.27"/>
+        <parameters reference="/56/@symbolicParameters.28"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer/viewElements"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/56/@symbolicParameters.28"/>
+        <parameters reference="/56/@symbolicParameters.29"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewElement/viewElementEvents"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/56/@symbolicParameters.30"/>
+        <parameters reference="/56/@symbolicParameters.31"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer/viewElements"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/56/@symbolicParameters.30"/>
+        <parameters reference="/56/@symbolicParameters.34"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer/viewElements"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/56/@symbolicParameters.31"/>
+        <parameters reference="/56/@symbolicParameters.32"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewComponent/viewComponentParts"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/56/@symbolicParameters.31"/>
+        <parameters reference="/56/@symbolicParameters.33"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewElement/viewElementEvents"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/56/@symbolicParameters.34"/>
+        <parameters reference="/56/@symbolicParameters.35"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewComponent/viewComponentParts"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/56/@symbolicParameters.34"/>
+        <parameters reference="/56/@symbolicParameters.36"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewElement/viewElementEvents"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/56/@symbolicParameters.3"/>
+        <parameters reference="/56/@symbolicParameters.2"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewElement/viewContainer"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/56/@symbolicParameters.8"/>
+        <parameters reference="/56/@symbolicParameters.7"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewElement/viewContainer"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/56/@symbolicParameters.14"/>
+        <parameters reference="/56/@symbolicParameters.13"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewElement/viewContainer"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/56/@symbolicParameters.20"/>
+        <parameters reference="/56/@symbolicParameters.19"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewElement/viewContainer"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/56/@symbolicParameters.23"/>
+        <parameters reference="/56/@symbolicParameters.22"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewElement/viewContainer"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/56/@symbolicParameters.26"/>
+        <parameters reference="/56/@symbolicParameters.25"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewElement/viewContainer"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/56/@symbolicParameters.28"/>
+        <parameters reference="/56/@symbolicParameters.27"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewElement/viewContainer"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/56/@symbolicParameters.31"/>
+        <parameters reference="/56/@symbolicParameters.30"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewElement/viewContainer"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/56/@symbolicParameters.34"/>
+        <parameters reference="/56/@symbolicParameters.30"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewElement/viewContainer"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/56/@symbolicParameters.2"/>
+        <parameters reference="/56/@symbolicParameters.7"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/56/@symbolicParameters.2"/>
+        <parameters reference="/56/@symbolicParameters.12"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/56/@symbolicParameters.2"/>
+        <parameters reference="/56/@symbolicParameters.13"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/56/@symbolicParameters.2"/>
+        <parameters reference="/56/@symbolicParameters.19"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/56/@symbolicParameters.2"/>
+        <parameters reference="/56/@symbolicParameters.22"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/56/@symbolicParameters.2"/>
+        <parameters reference="/56/@symbolicParameters.25"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/56/@symbolicParameters.2"/>
+        <parameters reference="/56/@symbolicParameters.27"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/56/@symbolicParameters.2"/>
+        <parameters reference="/56/@symbolicParameters.30"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/56/@symbolicParameters.4"/>
+        <parameters reference="/56/@symbolicParameters.5"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/56/@symbolicParameters.4"/>
+        <parameters reference="/56/@symbolicParameters.6"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/56/@symbolicParameters.5"/>
+        <parameters reference="/56/@symbolicParameters.6"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/56/@symbolicParameters.7"/>
+        <parameters reference="/56/@symbolicParameters.12"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/56/@symbolicParameters.7"/>
+        <parameters reference="/56/@symbolicParameters.13"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/56/@symbolicParameters.7"/>
+        <parameters reference="/56/@symbolicParameters.19"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/56/@symbolicParameters.7"/>
+        <parameters reference="/56/@symbolicParameters.22"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/56/@symbolicParameters.7"/>
+        <parameters reference="/56/@symbolicParameters.25"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/56/@symbolicParameters.7"/>
+        <parameters reference="/56/@symbolicParameters.27"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/56/@symbolicParameters.7"/>
+        <parameters reference="/56/@symbolicParameters.30"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/56/@symbolicParameters.9"/>
+        <parameters reference="/56/@symbolicParameters.10"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/56/@symbolicParameters.12"/>
+        <parameters reference="/56/@symbolicParameters.13"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/56/@symbolicParameters.12"/>
+        <parameters reference="/56/@symbolicParameters.19"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/56/@symbolicParameters.12"/>
+        <parameters reference="/56/@symbolicParameters.22"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/56/@symbolicParameters.12"/>
+        <parameters reference="/56/@symbolicParameters.25"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/56/@symbolicParameters.12"/>
+        <parameters reference="/56/@symbolicParameters.27"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/56/@symbolicParameters.12"/>
+        <parameters reference="/56/@symbolicParameters.30"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/56/@symbolicParameters.13"/>
+        <parameters reference="/56/@symbolicParameters.19"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/56/@symbolicParameters.13"/>
+        <parameters reference="/56/@symbolicParameters.22"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/56/@symbolicParameters.13"/>
+        <parameters reference="/56/@symbolicParameters.25"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/56/@symbolicParameters.13"/>
+        <parameters reference="/56/@symbolicParameters.27"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/56/@symbolicParameters.13"/>
+        <parameters reference="/56/@symbolicParameters.30"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/56/@symbolicParameters.15"/>
+        <parameters reference="/56/@symbolicParameters.16"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/56/@symbolicParameters.15"/>
+        <parameters reference="/56/@symbolicParameters.17"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/56/@symbolicParameters.16"/>
+        <parameters reference="/56/@symbolicParameters.17"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/56/@symbolicParameters.19"/>
+        <parameters reference="/56/@symbolicParameters.22"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/56/@symbolicParameters.19"/>
+        <parameters reference="/56/@symbolicParameters.25"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/56/@symbolicParameters.19"/>
+        <parameters reference="/56/@symbolicParameters.27"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/56/@symbolicParameters.19"/>
+        <parameters reference="/56/@symbolicParameters.30"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/56/@symbolicParameters.22"/>
+        <parameters reference="/56/@symbolicParameters.25"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/56/@symbolicParameters.22"/>
+        <parameters reference="/56/@symbolicParameters.27"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/56/@symbolicParameters.22"/>
+        <parameters reference="/56/@symbolicParameters.30"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/56/@symbolicParameters.25"/>
+        <parameters reference="/56/@symbolicParameters.27"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/56/@symbolicParameters.25"/>
+        <parameters reference="/56/@symbolicParameters.30"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/56/@symbolicParameters.27"/>
+        <parameters reference="/56/@symbolicParameters.30"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/56/@symbolicParameters.31"/>
+        <parameters reference="/56/@symbolicParameters.34"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="CreateWindows__CONTEXT_TRG">
+        <parameters reference="/56/@symbolicParameters.0"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="CreateWindows__bookReservations_viewElements_outgoing_DEC_TRG">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="bookReservations">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="reservationsList">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/List"/>
+    </symbolicParameters>
+    <bodies>
+      <localVariables xsi:type="emf:EMFVariable" name="bookReservations_viewElements_DECNode">
+        <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewElement"/>
+      </localVariables>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="CreateWindows__bookReservations_viewElements_outgoing_SearchEdge_TRG">
+        <parameters reference="/57/@symbolicParameters.0"/>
+        <parameters reference="/57/@symbolicParameters.1"/>
+        <parameters reference="/57/@bodies.0/@localVariables.0"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="CreateWindows__bookReservations_viewElements_outgoing_SearchEdge_TRG">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="bookReservations">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="reservationsList">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/List"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="bookReservations_viewElements_DECNode">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewElement"/>
+    </symbolicParameters>
+    <bodies>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/58/@symbolicParameters.0"/>
+        <parameters reference="/58/@symbolicParameters.1"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer/viewElements"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/58/@symbolicParameters.0"/>
+        <parameters reference="/58/@symbolicParameters.2"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer/viewElements"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/58/@symbolicParameters.1"/>
+        <parameters reference="/58/@symbolicParameters.2"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="CreateWindows__helpWindow_viewElements_outgoing_DEC_TRG">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="helpForm">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/Form"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="helpWindow">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="learnPlaces">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/Form"/>
+    </symbolicParameters>
+    <bodies>
+      <localVariables xsi:type="emf:EMFVariable" name="helpWindow_viewElements_DECNode">
+        <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewElement"/>
+      </localVariables>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="CreateWindows__helpWindow_viewElements_outgoing_SearchEdge_TRG">
+        <parameters reference="/59/@symbolicParameters.0"/>
+        <parameters reference="/59/@symbolicParameters.1"/>
+        <parameters reference="/59/@symbolicParameters.2"/>
+        <parameters reference="/59/@bodies.0/@localVariables.0"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="CreateWindows__helpWindow_viewElements_outgoing_SearchEdge_TRG">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="helpForm">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/Form"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="helpWindow">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="learnPlaces">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/Form"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="helpWindow_viewElements_DECNode">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewElement"/>
+    </symbolicParameters>
+    <bodies>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/60/@symbolicParameters.1"/>
+        <parameters reference="/60/@symbolicParameters.0"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer/viewElements"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/60/@symbolicParameters.1"/>
+        <parameters reference="/60/@symbolicParameters.2"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer/viewElements"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/60/@symbolicParameters.1"/>
+        <parameters reference="/60/@symbolicParameters.3"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer/viewElements"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/60/@symbolicParameters.0"/>
+        <parameters reference="/60/@symbolicParameters.3"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/60/@symbolicParameters.2"/>
+        <parameters reference="/60/@symbolicParameters.3"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="CreateWindows__home_viewElements_outgoing_DEC_TRG">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="home">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer"/>
+    </symbolicParameters>
+    <bodies>
+      <localVariables xsi:type="emf:EMFVariable" name="home_viewElements_DECNode">
+        <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewElement"/>
+      </localVariables>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="CreateWindows__home_viewElements_outgoing_SearchEdge_TRG">
+        <parameters reference="/61/@symbolicParameters.0"/>
+        <parameters reference="/61/@bodies.0/@localVariables.0"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="CreateWindows__home_viewElements_outgoing_SearchEdge_TRG">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="home">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="home_viewElements_DECNode">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewElement"/>
+    </symbolicParameters>
+    <bodies>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/62/@symbolicParameters.0"/>
+        <parameters reference="/62/@symbolicParameters.1"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer/viewElements"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="CreateWindows__interactionFlowModel_interactionFlowModel_incoming_DEC_TRG">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="ifml">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/IFMLModel"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="interactionFlowModel">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/InteractionFlowModel"/>
+    </symbolicParameters>
+    <bodies>
+      <localVariables xsi:type="emf:EMFVariable" name="interactionFlowModel_interactionFlowModel_DECNode">
+        <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/IFMLModel"/>
+      </localVariables>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="CreateWindows__interactionFlowModel_interactionFlowModel_incoming_SearchEdge_TRG">
+        <parameters reference="/63/@symbolicParameters.0"/>
+        <parameters reference="/63/@symbolicParameters.1"/>
+        <parameters reference="/63/@bodies.0/@localVariables.0"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="CreateWindows__interactionFlowModel_interactionFlowModel_incoming_SearchEdge_TRG">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="ifml">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/IFMLModel"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="interactionFlowModel">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/InteractionFlowModel"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="interactionFlowModel_interactionFlowModel_DECNode">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/IFMLModel"/>
+    </symbolicParameters>
+    <bodies>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/64/@symbolicParameters.0"/>
+        <parameters reference="/64/@symbolicParameters.1"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/IFMLModel/interactionFlowModel"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/64/@symbolicParameters.2"/>
+        <parameters reference="/64/@symbolicParameters.1"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/IFMLModel/interactionFlowModel"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/64/@symbolicParameters.0"/>
+        <parameters reference="/64/@symbolicParameters.2"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="CreateWindows__lendingFormWindow_viewElements_outgoing_DEC_TRG">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="lendingForm">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/Form"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="lendingFormWindow">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer"/>
+    </symbolicParameters>
+    <bodies>
+      <localVariables xsi:type="emf:EMFVariable" name="lendingFormWindow_viewElements_DECNode">
+        <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewElement"/>
+      </localVariables>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="CreateWindows__lendingFormWindow_viewElements_outgoing_SearchEdge_TRG">
+        <parameters reference="/65/@symbolicParameters.0"/>
+        <parameters reference="/65/@symbolicParameters.1"/>
+        <parameters reference="/65/@bodies.0/@localVariables.0"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="CreateWindows__lendingFormWindow_viewElements_outgoing_SearchEdge_TRG">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="lendingForm">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/Form"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="lendingFormWindow">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="lendingFormWindow_viewElements_DECNode">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewElement"/>
+    </symbolicParameters>
+    <bodies>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/66/@symbolicParameters.1"/>
+        <parameters reference="/66/@symbolicParameters.0"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer/viewElements"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/66/@symbolicParameters.1"/>
+        <parameters reference="/66/@symbolicParameters.2"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer/viewElements"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/66/@symbolicParameters.0"/>
+        <parameters reference="/66/@symbolicParameters.2"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="CreateWindows__lentBooksWindow_viewElements_outgoing_DEC_TRG">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="lentBooks">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/List"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="lentBooksWindow">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer"/>
+    </symbolicParameters>
+    <bodies>
+      <localVariables xsi:type="emf:EMFVariable" name="lentBooksWindow_viewElements_DECNode">
+        <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewElement"/>
+      </localVariables>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="CreateWindows__lentBooksWindow_viewElements_outgoing_SearchEdge_TRG">
+        <parameters reference="/67/@symbolicParameters.0"/>
+        <parameters reference="/67/@symbolicParameters.1"/>
+        <parameters reference="/67/@bodies.0/@localVariables.0"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="CreateWindows__lentBooksWindow_viewElements_outgoing_SearchEdge_TRG">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="lentBooks">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/List"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="lentBooksWindow">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="lentBooksWindow_viewElements_DECNode">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewElement"/>
+    </symbolicParameters>
+    <bodies>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/68/@symbolicParameters.1"/>
+        <parameters reference="/68/@symbolicParameters.0"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer/viewElements"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/68/@symbolicParameters.1"/>
+        <parameters reference="/68/@symbolicParameters.2"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer/viewElements"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/68/@symbolicParameters.0"/>
+        <parameters reference="/68/@symbolicParameters.2"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="CreateWindows__login_viewElements_outgoing_DEC_TRG">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="login">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="loginForm">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/Form"/>
+    </symbolicParameters>
+    <bodies>
+      <localVariables xsi:type="emf:EMFVariable" name="login_viewElements_DECNode">
+        <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewElement"/>
+      </localVariables>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="CreateWindows__login_viewElements_outgoing_SearchEdge_TRG">
+        <parameters reference="/69/@symbolicParameters.0"/>
+        <parameters reference="/69/@symbolicParameters.1"/>
+        <parameters reference="/69/@bodies.0/@localVariables.0"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="CreateWindows__login_viewElements_outgoing_SearchEdge_TRG">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="login">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="loginForm">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/Form"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="login_viewElements_DECNode">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewElement"/>
+    </symbolicParameters>
+    <bodies>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/70/@symbolicParameters.0"/>
+        <parameters reference="/70/@symbolicParameters.1"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer/viewElements"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/70/@symbolicParameters.0"/>
+        <parameters reference="/70/@symbolicParameters.2"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer/viewElements"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/70/@symbolicParameters.1"/>
+        <parameters reference="/70/@symbolicParameters.2"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="CreateWindows__searchBooks_viewElements_outgoing_DEC_TRG">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="inventoryList">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/List"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="searchBooks">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer"/>
+    </symbolicParameters>
+    <bodies>
+      <localVariables xsi:type="emf:EMFVariable" name="searchBooks_viewElements_DECNode">
+        <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewElement"/>
+      </localVariables>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="CreateWindows__searchBooks_viewElements_outgoing_SearchEdge_TRG">
+        <parameters reference="/71/@symbolicParameters.0"/>
+        <parameters reference="/71/@symbolicParameters.1"/>
+        <parameters reference="/71/@bodies.0/@localVariables.0"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="CreateWindows__searchBooks_viewElements_outgoing_SearchEdge_TRG">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="inventoryList">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/List"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="searchBooks">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="searchBooks_viewElements_DECNode">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewElement"/>
+    </symbolicParameters>
+    <bodies>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/72/@symbolicParameters.1"/>
+        <parameters reference="/72/@symbolicParameters.0"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer/viewElements"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/72/@symbolicParameters.1"/>
+        <parameters reference="/72/@symbolicParameters.2"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer/viewElements"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/72/@symbolicParameters.0"/>
+        <parameters reference="/72/@symbolicParameters.2"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="CreateWindows__studentDetails_viewElements_outgoing_DEC_TRG">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="studentDetail">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/Details"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="studentDetails">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer"/>
+    </symbolicParameters>
+    <bodies>
+      <localVariables xsi:type="emf:EMFVariable" name="studentDetails_viewElements_DECNode">
+        <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewElement"/>
+      </localVariables>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="CreateWindows__studentDetails_viewElements_outgoing_SearchEdge_TRG">
+        <parameters reference="/73/@symbolicParameters.0"/>
+        <parameters reference="/73/@symbolicParameters.1"/>
+        <parameters reference="/73/@bodies.0/@localVariables.0"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="CreateWindows__studentDetails_viewElements_outgoing_SearchEdge_TRG">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="studentDetail">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/Details"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="studentDetails">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="studentDetails_viewElements_DECNode">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewElement"/>
+    </symbolicParameters>
+    <bodies>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/74/@symbolicParameters.1"/>
+        <parameters reference="/74/@symbolicParameters.0"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer/viewElements"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/74/@symbolicParameters.1"/>
+        <parameters reference="/74/@symbolicParameters.2"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer/viewElements"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/74/@symbolicParameters.0"/>
+        <parameters reference="/74/@symbolicParameters.2"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="CreateWindows__students_viewElements_outgoing_DEC_TRG">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="studentList">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/List"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="students">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer"/>
+    </symbolicParameters>
+    <bodies>
+      <localVariables xsi:type="emf:EMFVariable" name="students_viewElements_DECNode">
+        <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewElement"/>
+      </localVariables>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="CreateWindows__students_viewElements_outgoing_SearchEdge_TRG">
+        <parameters reference="/75/@symbolicParameters.0"/>
+        <parameters reference="/75/@symbolicParameters.1"/>
+        <parameters reference="/75/@bodies.0/@localVariables.0"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="CreateWindows__students_viewElements_outgoing_SearchEdge_TRG">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="studentList">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Extensions/List"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="students">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="students_viewElements_DECNode">
+      <eClassifier xsi:type="ecore:EClass" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewElement"/>
+    </symbolicParameters>
+    <bodies>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/76/@symbolicParameters.1"/>
+        <parameters reference="/76/@symbolicParameters.0"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer/viewElements"/>
+      </constraints>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/76/@symbolicParameters.1"/>
+        <parameters reference="/76/@symbolicParameters.2"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../IFMLEditor/model/IFML-Metamodel.ecore#//Core/ViewContainer/viewElements"/>
+      </constraints>
+      <constraints xsi:type="relational:Unequal">
+        <parameters reference="/76/@symbolicParameters.0"/>
+        <parameters reference="/76/@symbolicParameters.2"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="MarkedPattern__LOCAL_MARKED__TRG">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="checkedObject">
+      <eClassifier xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+    </symbolicParameters>
+    <bodies>
+      <localVariables xsi:type="emf:EMFVariable" name="protocol">
+        <eClassifier xsi:type="ecore:EClass" href="../../../plugin/org.emoflon.ibex.tgg.core.runtime/model/Runtime.ecore#//TGGRuleApplication"/>
+      </localVariables>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/77/@bodies.0/@localVariables.0"/>
+        <parameters reference="/77/@symbolicParameters.0"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../../plugin/org.emoflon.ibex.tgg.core.runtime/model/Runtime.ecore#//TGGRuleApplication/createdTrg"/>
+      </constraints>
+      <constraints xsi:type="specification:PatternInvocationConstraint" positive="true" invokedPattern="MarkedPattern__TRG">
+        <parameters reference="/77/@bodies.0/@localVariables.0"/>
+        <parameters reference="/77/@symbolicParameters.0"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+  <specification:Pattern name="MarkedPattern__TRG">
+    <symbolicParameters xsi:type="emf:EMFVariable" name="protocol">
+      <eClassifier xsi:type="ecore:EClass" href="../../../plugin/org.emoflon.ibex.tgg.core.runtime/model/Runtime.ecore#//TGGRuleApplication"/>
+    </symbolicParameters>
+    <symbolicParameters xsi:type="emf:EMFVariable" name="checkedObject">
+      <eClassifier xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+    </symbolicParameters>
+    <bodies>
+      <constraints xsi:type="emf:Reference">
+        <parameters reference="/78/@symbolicParameters.0"/>
+        <parameters reference="/78/@symbolicParameters.1"/>
+        <eModelElement xsi:type="ecore:EReference" href="../../../plugin/org.emoflon.ibex.tgg.core.runtime/model/Runtime.ecore#//TGGRuleApplication/createdTrg"/>
+      </constraints>
+    </bodies>
+  </specification:Pattern>
+</xmi:XMI>

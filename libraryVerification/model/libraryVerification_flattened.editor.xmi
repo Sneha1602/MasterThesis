@@ -1,0 +1,770 @@
+<?xml version="1.0" encoding="ASCII"?>
+<tgg:TripleGraphGrammarFile xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tgg="http://www.moflon.org/ide/tgg/mosl/TGG">
+  <imports name="platform:/resource/ContextML/model/contextML.ecore"/>
+  <imports name="platform:/resource/EssentialIFML/model/essentialIFML.ecore"/>
+  <schema name="libraryVerification">
+    <sourceTypes href="platform:/resource/ContextML/model/contextML.ecore#/"/>
+    <targetTypes href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#/"/>
+    <correspondenceTypes name="Context2EssentialIFML">
+      <source href="platform:/resource/ContextML/model/contextML.ecore#//Context"/>
+      <target href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/EssentialIFMLModel"/>
+    </correspondenceTypes>
+    <correspondenceTypes name="CreateWindowsAndLinks">
+      <source href="platform:/resource/ContextML/model/contextML.ecore#//User"/>
+      <target href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/InteractionFlowModel"/>
+    </correspondenceTypes>
+  </schema>
+  <rules name="Context2Ifml" schema="//@schema">
+    <sourcePatterns name="context">
+      <op value="++"/>
+      <type href="platform:/resource/ContextML/model/contextML.ecore#//Context"/>
+    </sourcePatterns>
+    <targetPatterns name="ifml">
+      <op value="++"/>
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/EssentialIFMLModel"/>
+    </targetPatterns>
+    <correspondencePatterns name="context2EssentialIFML" type="//@schema/@correspondenceTypes.0" source="//@rules.0/@sourcePatterns.0" target="//@rules.0/@targetPatterns.0">
+      <op value="++"/>
+    </correspondencePatterns>
+  </rules>
+  <rules name="CreateBookReservations" abstractRule="true" schema="//@schema">
+    <sourcePatterns name="u">
+      <op value="++"/>
+      <type href="platform:/resource/ContextML/model/contextML.ecore#//User"/>
+    </sourcePatterns>
+    <targetPatterns name="bookReservations">
+      <op value="++"/>
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewContainer"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/Element/id"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;bookReservations&quot;"/>
+      </attributeAssignments>
+      <linkVariablePatterns target="//@rules.1/@targetPatterns.3">
+        <op value="++"/>
+        <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewContainer/viewElements"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="interactionFlowModel">
+      <op value="++"/>
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/InteractionFlowModel"/>
+      <linkVariablePatterns target="//@rules.1/@targetPatterns.0">
+        <op value="++"/>
+        <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/InteractionFlowModel/interactionFlowModelElements"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="issueBookSelected">
+      <op value="++"/>
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Extensions/OnSelectEvent"/>
+    </targetPatterns>
+    <targetPatterns name="reservationsList">
+      <op value="++"/>
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Extensions/List"/>
+      <linkVariablePatterns target="//@rules.1/@targetPatterns.2">
+        <op value="++"/>
+        <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewElement/viewElementEvents"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <correspondencePatterns name="user2InteractionFLowModel" type="//@schema/@correspondenceTypes.1" source="//@rules.1/@sourcePatterns.0" target="//@rules.1/@targetPatterns.1">
+      <op value="++"/>
+    </correspondencePatterns>
+  </rules>
+  <rules name="CreateHelpWindow" abstractRule="true" schema="//@schema">
+    <sourcePatterns name="u">
+      <op value="++"/>
+      <type href="platform:/resource/ContextML/model/contextML.ecore#//User"/>
+    </sourcePatterns>
+    <targetPatterns name="findClosestLocation">
+      <op value="++"/>
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Extensions/OnSubmitEvent"/>
+    </targetPatterns>
+    <targetPatterns name="helpForm">
+      <op value="++"/>
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Extensions/Form"/>
+      <linkVariablePatterns target="//@rules.2/@targetPatterns.6">
+        <op value="++"/>
+        <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewComponent/viewComponentParts"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.2/@targetPatterns.7">
+        <op value="++"/>
+        <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewElement/viewElementEvents"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="helpWindow">
+      <op value="++"/>
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewContainer"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/Element/id"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;helpWindow&quot;"/>
+      </attributeAssignments>
+      <linkVariablePatterns target="//@rules.2/@targetPatterns.1">
+        <op value="++"/>
+        <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewContainer/viewElements"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.2/@targetPatterns.4">
+        <op value="++"/>
+        <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewContainer/viewElements"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="interactionFlowModel">
+      <op value="++"/>
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/InteractionFlowModel"/>
+      <linkVariablePatterns target="//@rules.2/@targetPatterns.2">
+        <op value="++"/>
+        <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/InteractionFlowModel/interactionFlowModelElements"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="learnPlaces">
+      <op value="++"/>
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Extensions/Form"/>
+      <linkVariablePatterns target="//@rules.2/@targetPatterns.5">
+        <op value="++"/>
+        <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewComponent/viewComponentParts"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.2/@targetPatterns.0">
+        <op value="++"/>
+        <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewElement/viewElementEvents"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="location">
+      <op value="++"/>
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Extensions/SimpleField"/>
+    </targetPatterns>
+    <targetPatterns name="question">
+      <op value="++"/>
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Extensions/SimpleField"/>
+    </targetPatterns>
+    <targetPatterns name="submitQuestion">
+      <op value="++"/>
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Extensions/OnSubmitEvent"/>
+    </targetPatterns>
+    <correspondencePatterns name="user2InteractionFLowModel" type="//@schema/@correspondenceTypes.1" source="//@rules.2/@sourcePatterns.0" target="//@rules.2/@targetPatterns.3">
+      <op value="++"/>
+    </correspondencePatterns>
+  </rules>
+  <rules name="CreateLendingFormWindow" abstractRule="true" schema="//@schema">
+    <sourcePatterns name="u">
+      <op value="++"/>
+      <type href="platform:/resource/ContextML/model/contextML.ecore#//User"/>
+    </sourcePatterns>
+    <targetPatterns name="bookISBN">
+      <op value="++"/>
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Extensions/SimpleField"/>
+    </targetPatterns>
+    <targetPatterns name="dueDate">
+      <op value="++"/>
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Extensions/SimpleField"/>
+    </targetPatterns>
+    <targetPatterns name="interactionFlowModel">
+      <op value="++"/>
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/InteractionFlowModel"/>
+      <linkVariablePatterns target="//@rules.3/@targetPatterns.5">
+        <op value="++"/>
+        <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/InteractionFlowModel/interactionFlowModelElements"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="issueBook">
+      <op value="++"/>
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Extensions/OnSubmitEvent"/>
+    </targetPatterns>
+    <targetPatterns name="lendingForm">
+      <op value="++"/>
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Extensions/Form"/>
+      <linkVariablePatterns target="//@rules.3/@targetPatterns.0">
+        <op value="++"/>
+        <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewComponent/viewComponentParts"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.3/@targetPatterns.6">
+        <op value="++"/>
+        <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewComponent/viewComponentParts"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.3/@targetPatterns.1">
+        <op value="++"/>
+        <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewComponent/viewComponentParts"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.3/@targetPatterns.3">
+        <op value="++"/>
+        <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewElement/viewElementEvents"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="lendingFormWindow">
+      <op value="++"/>
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewContainer"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/Element/id"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;lendingFormWindow&quot;"/>
+      </attributeAssignments>
+      <linkVariablePatterns target="//@rules.3/@targetPatterns.4">
+        <op value="++"/>
+        <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewContainer/viewElements"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="studentID">
+      <op value="++"/>
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Extensions/SimpleField"/>
+    </targetPatterns>
+    <correspondencePatterns name="user2InteractionFLowModel" type="//@schema/@correspondenceTypes.1" source="//@rules.3/@sourcePatterns.0" target="//@rules.3/@targetPatterns.2">
+      <op value="++"/>
+    </correspondencePatterns>
+  </rules>
+  <rules name="CreateLentBooksWindow" abstractRule="true" schema="//@schema">
+    <sourcePatterns name="u">
+      <op value="++"/>
+      <type href="platform:/resource/ContextML/model/contextML.ecore#//User"/>
+    </sourcePatterns>
+    <targetPatterns name="extendBook">
+      <op value="++"/>
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Extensions/OnSelectEvent"/>
+    </targetPatterns>
+    <targetPatterns name="interactionFlowModel">
+      <op value="++"/>
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/InteractionFlowModel"/>
+      <linkVariablePatterns target="//@rules.4/@targetPatterns.3">
+        <op value="++"/>
+        <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/InteractionFlowModel/interactionFlowModelElements"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="lentBooks">
+      <op value="++"/>
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Extensions/List"/>
+      <linkVariablePatterns target="//@rules.4/@targetPatterns.0">
+        <op value="++"/>
+        <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewElement/viewElementEvents"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="lentBooksWindow">
+      <op value="++"/>
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewContainer"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/Element/id"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;lentBooksWindow&quot;"/>
+      </attributeAssignments>
+      <linkVariablePatterns target="//@rules.4/@targetPatterns.2">
+        <op value="++"/>
+        <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewContainer/viewElements"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <correspondencePatterns name="user2InteractionFLowModel" type="//@schema/@correspondenceTypes.1" source="//@rules.4/@sourcePatterns.0" target="//@rules.4/@targetPatterns.1">
+      <op value="++"/>
+    </correspondencePatterns>
+  </rules>
+  <rules name="CreateLoginWindow" abstractRule="true" schema="//@schema">
+    <sourcePatterns name="u">
+      <op value="++"/>
+      <type href="platform:/resource/ContextML/model/contextML.ecore#//User"/>
+    </sourcePatterns>
+    <targetPatterns name="interactionFlowModel">
+      <op value="++"/>
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/InteractionFlowModel"/>
+      <linkVariablePatterns target="//@rules.5/@targetPatterns.3">
+        <op value="++"/>
+        <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/InteractionFlowModel/interactionFlowModelElements"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="loginEvent">
+      <op value="++"/>
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Extensions/OnSubmitEvent"/>
+    </targetPatterns>
+    <targetPatterns name="loginForm">
+      <op value="++"/>
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Extensions/Form"/>
+      <linkVariablePatterns target="//@rules.5/@targetPatterns.5">
+        <op value="++"/>
+        <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewComponent/viewComponentParts"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.5/@targetPatterns.4">
+        <op value="++"/>
+        <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewComponent/viewComponentParts"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.5/@targetPatterns.1">
+        <op value="++"/>
+        <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewElement/viewElementEvents"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="loginWindow">
+      <op value="++"/>
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewContainer"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/Element/id"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;loginWindow&quot;"/>
+      </attributeAssignments>
+      <linkVariablePatterns target="//@rules.5/@targetPatterns.2">
+        <op value="++"/>
+        <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewContainer/viewElements"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="password">
+      <op value="++"/>
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Extensions/SimpleField"/>
+    </targetPatterns>
+    <targetPatterns name="username">
+      <op value="++"/>
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Extensions/SimpleField"/>
+    </targetPatterns>
+    <correspondencePatterns name="user2InteractionFLowModel" type="//@schema/@correspondenceTypes.1" source="//@rules.5/@sourcePatterns.0" target="//@rules.5/@targetPatterns.0">
+      <op value="++"/>
+    </correspondencePatterns>
+  </rules>
+  <rules name="CreateSearchBooks" abstractRule="true" schema="//@schema">
+    <sourcePatterns name="u">
+      <op value="++"/>
+      <type href="platform:/resource/ContextML/model/contextML.ecore#//User"/>
+    </sourcePatterns>
+    <targetPatterns name="interactionFlowModel">
+      <op value="++"/>
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/InteractionFlowModel"/>
+      <linkVariablePatterns target="//@rules.6/@targetPatterns.5">
+        <op value="++"/>
+        <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/InteractionFlowModel/interactionFlowModelElements"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="inventoryList">
+      <op value="++"/>
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Extensions/List"/>
+      <linkVariablePatterns target="//@rules.6/@targetPatterns.2">
+        <op value="++"/>
+        <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewElement/viewElementEvents"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.6/@targetPatterns.3">
+        <op value="++"/>
+        <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewElement/viewElementEvents"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.6/@targetPatterns.4">
+        <op value="++"/>
+        <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewElement/viewElementEvents"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="issueABook">
+      <op value="++"/>
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Extensions/OnSelectEvent"/>
+    </targetPatterns>
+    <targetPatterns name="reserveBook">
+      <op value="++"/>
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Extensions/OnSelectEvent"/>
+    </targetPatterns>
+    <targetPatterns name="returnBook">
+      <op value="++"/>
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Extensions/OnSelectEvent"/>
+    </targetPatterns>
+    <targetPatterns name="searchBooks">
+      <op value="++"/>
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewContainer"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/Element/id"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;searchBooks&quot;"/>
+      </attributeAssignments>
+      <linkVariablePatterns target="//@rules.6/@targetPatterns.1">
+        <op value="++"/>
+        <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewContainer/viewElements"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <correspondencePatterns name="user2InteractionFLowModel" type="//@schema/@correspondenceTypes.1" source="//@rules.6/@sourcePatterns.0" target="//@rules.6/@targetPatterns.0">
+      <op value="++"/>
+    </correspondencePatterns>
+  </rules>
+  <rules name="CreateStudentDetails" abstractRule="true" schema="//@schema">
+    <sourcePatterns name="u">
+      <op value="++"/>
+      <type href="platform:/resource/ContextML/model/contextML.ecore#//User"/>
+    </sourcePatterns>
+    <targetPatterns name="interactionFlowModel">
+      <op value="++"/>
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/InteractionFlowModel"/>
+      <linkVariablePatterns target="//@rules.7/@targetPatterns.2">
+        <op value="++"/>
+        <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/InteractionFlowModel/interactionFlowModelElements"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="studentDetail">
+      <op value="++"/>
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Extensions/Details"/>
+    </targetPatterns>
+    <targetPatterns name="studentDetails">
+      <op value="++"/>
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewContainer"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/Element/id"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;studentDetails&quot;"/>
+      </attributeAssignments>
+      <linkVariablePatterns target="//@rules.7/@targetPatterns.1">
+        <op value="++"/>
+        <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewContainer/viewElements"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <correspondencePatterns name="user2InteractionFLowModel" type="//@schema/@correspondenceTypes.1" source="//@rules.7/@sourcePatterns.0" target="//@rules.7/@targetPatterns.0">
+      <op value="++"/>
+    </correspondencePatterns>
+  </rules>
+  <rules name="CreateStudents" abstractRule="true" schema="//@schema">
+    <sourcePatterns name="u">
+      <op value="++"/>
+      <type href="platform:/resource/ContextML/model/contextML.ecore#//User"/>
+    </sourcePatterns>
+    <targetPatterns name="interactionFlowModel">
+      <op value="++"/>
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/InteractionFlowModel"/>
+      <linkVariablePatterns target="//@rules.8/@targetPatterns.2">
+        <op value="++"/>
+        <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/InteractionFlowModel/interactionFlowModelElements"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="studentList">
+      <op value="++"/>
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Extensions/List"/>
+      <linkVariablePatterns target="//@rules.8/@targetPatterns.3">
+        <op value="++"/>
+        <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewElement/viewElementEvents"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="students">
+      <op value="++"/>
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewContainer"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/Element/id"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;students&quot;"/>
+      </attributeAssignments>
+      <linkVariablePatterns target="//@rules.8/@targetPatterns.1">
+        <op value="++"/>
+        <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewContainer/viewElements"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="viewStudentDetails">
+      <op value="++"/>
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Extensions/OnSelectEvent"/>
+    </targetPatterns>
+    <correspondencePatterns name="user2InteractionFLowModel" type="//@schema/@correspondenceTypes.1" source="//@rules.8/@sourcePatterns.0" target="//@rules.8/@targetPatterns.0">
+      <op value="++"/>
+    </correspondencePatterns>
+  </rules>
+  <rules name="CreateWindows" schema="//@schema">
+    <sourcePatterns name="context">
+      <type href="platform:/resource/ContextML/model/contextML.ecore#//Context"/>
+      <linkVariablePatterns target="//@rules.9/@sourcePatterns.1">
+        <op value="++"/>
+        <type href="platform:/resource/ContextML/model/contextML.ecore#//Context/entity"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="u">
+      <op value="++"/>
+      <type href="platform:/resource/ContextML/model/contextML.ecore#//User"/>
+    </sourcePatterns>
+    <targetPatterns name="bookISBN">
+      <op value="++"/>
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Extensions/SimpleField"/>
+    </targetPatterns>
+    <targetPatterns name="bookReservations">
+      <op value="++"/>
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewContainer"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/Element/id"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;bookReservations&quot;"/>
+      </attributeAssignments>
+      <linkVariablePatterns target="//@rules.9/@targetPatterns.24">
+        <op value="++"/>
+        <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewContainer/viewElements"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="dueDate">
+      <op value="++"/>
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Extensions/SimpleField"/>
+    </targetPatterns>
+    <targetPatterns name="extendBook">
+      <op value="++"/>
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Extensions/OnSelectEvent"/>
+    </targetPatterns>
+    <targetPatterns name="findClosestLocation">
+      <op value="++"/>
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Extensions/OnSubmitEvent"/>
+    </targetPatterns>
+    <targetPatterns name="helpForm">
+      <op value="++"/>
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Extensions/Form"/>
+      <linkVariablePatterns target="//@rules.9/@targetPatterns.23">
+        <op value="++"/>
+        <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewComponent/viewComponentParts"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.9/@targetPatterns.33">
+        <op value="++"/>
+        <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewElement/viewElementEvents"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="helpWindow">
+      <op value="++"/>
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewContainer"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/Element/id"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;helpWindow&quot;"/>
+      </attributeAssignments>
+      <linkVariablePatterns target="//@rules.9/@targetPatterns.5">
+        <op value="++"/>
+        <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewContainer/viewElements"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.9/@targetPatterns.13">
+        <op value="++"/>
+        <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewContainer/viewElements"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="ifml">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/EssentialIFMLModel"/>
+      <linkVariablePatterns target="//@rules.9/@targetPatterns.8">
+        <op value="++"/>
+        <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/EssentialIFMLModel/interactionFlowModel"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="interactionFlowModel">
+      <op value="++"/>
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/InteractionFlowModel"/>
+      <linkVariablePatterns target="//@rules.9/@targetPatterns.1">
+        <op value="++"/>
+        <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/InteractionFlowModel/interactionFlowModelElements"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.9/@targetPatterns.29">
+        <op value="++"/>
+        <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/InteractionFlowModel/interactionFlowModelElements"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.9/@targetPatterns.32">
+        <op value="++"/>
+        <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/InteractionFlowModel/interactionFlowModelElements"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.9/@targetPatterns.17">
+        <op value="++"/>
+        <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/InteractionFlowModel/interactionFlowModelElements"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.9/@targetPatterns.15">
+        <op value="++"/>
+        <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/InteractionFlowModel/interactionFlowModelElements"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.9/@targetPatterns.21">
+        <op value="++"/>
+        <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/InteractionFlowModel/interactionFlowModelElements"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.9/@targetPatterns.6">
+        <op value="++"/>
+        <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/InteractionFlowModel/interactionFlowModelElements"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.9/@targetPatterns.27">
+        <op value="++"/>
+        <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/InteractionFlowModel/interactionFlowModelElements"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="inventoryList">
+      <op value="++"/>
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Extensions/List"/>
+      <linkVariablePatterns target="//@rules.9/@targetPatterns.10">
+        <op value="++"/>
+        <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewElement/viewElementEvents"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.9/@targetPatterns.25">
+        <op value="++"/>
+        <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewElement/viewElementEvents"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.9/@targetPatterns.26">
+        <op value="++"/>
+        <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewElement/viewElementEvents"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="issueABook">
+      <op value="++"/>
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Extensions/OnSelectEvent"/>
+    </targetPatterns>
+    <targetPatterns name="issueBook">
+      <op value="++"/>
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Extensions/OnSubmitEvent"/>
+    </targetPatterns>
+    <targetPatterns name="issueBookSelected">
+      <op value="++"/>
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Extensions/OnSelectEvent"/>
+    </targetPatterns>
+    <targetPatterns name="learnPlaces">
+      <op value="++"/>
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Extensions/Form"/>
+      <linkVariablePatterns target="//@rules.9/@targetPatterns.18">
+        <op value="++"/>
+        <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewComponent/viewComponentParts"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.9/@targetPatterns.4">
+        <op value="++"/>
+        <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewElement/viewElementEvents"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="lendingForm">
+      <op value="++"/>
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Extensions/Form"/>
+      <linkVariablePatterns target="//@rules.9/@targetPatterns.0">
+        <op value="++"/>
+        <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewComponent/viewComponentParts"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.9/@targetPatterns.30">
+        <op value="++"/>
+        <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewComponent/viewComponentParts"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.9/@targetPatterns.2">
+        <op value="++"/>
+        <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewComponent/viewComponentParts"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.9/@targetPatterns.11">
+        <op value="++"/>
+        <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewElement/viewElementEvents"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="lendingFormWindow">
+      <op value="++"/>
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewContainer"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/Element/id"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;lendingFormWindow&quot;"/>
+      </attributeAssignments>
+      <linkVariablePatterns target="//@rules.9/@targetPatterns.14">
+        <op value="++"/>
+        <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewContainer/viewElements"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="lentBooks">
+      <op value="++"/>
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Extensions/List"/>
+      <linkVariablePatterns target="//@rules.9/@targetPatterns.3">
+        <op value="++"/>
+        <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewElement/viewElementEvents"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="lentBooksWindow">
+      <op value="++"/>
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewContainer"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/Element/id"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;lentBooksWindow&quot;"/>
+      </attributeAssignments>
+      <linkVariablePatterns target="//@rules.9/@targetPatterns.16">
+        <op value="++"/>
+        <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewContainer/viewElements"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="location">
+      <op value="++"/>
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Extensions/SimpleField"/>
+    </targetPatterns>
+    <targetPatterns name="loginEvent">
+      <op value="++"/>
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Extensions/OnSubmitEvent"/>
+    </targetPatterns>
+    <targetPatterns name="loginForm">
+      <op value="++"/>
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Extensions/Form"/>
+      <linkVariablePatterns target="//@rules.9/@targetPatterns.34">
+        <op value="++"/>
+        <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewComponent/viewComponentParts"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.9/@targetPatterns.22">
+        <op value="++"/>
+        <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewComponent/viewComponentParts"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.9/@targetPatterns.19">
+        <op value="++"/>
+        <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewElement/viewElementEvents"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="loginWindow">
+      <op value="++"/>
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewContainer"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/Element/id"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;loginWindow&quot;"/>
+      </attributeAssignments>
+      <linkVariablePatterns target="//@rules.9/@targetPatterns.20">
+        <op value="++"/>
+        <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewContainer/viewElements"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="password">
+      <op value="++"/>
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Extensions/SimpleField"/>
+    </targetPatterns>
+    <targetPatterns name="question">
+      <op value="++"/>
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Extensions/SimpleField"/>
+    </targetPatterns>
+    <targetPatterns name="reservationsList">
+      <op value="++"/>
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Extensions/List"/>
+      <linkVariablePatterns target="//@rules.9/@targetPatterns.12">
+        <op value="++"/>
+        <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewElement/viewElementEvents"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="reserveBook">
+      <op value="++"/>
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Extensions/OnSelectEvent"/>
+    </targetPatterns>
+    <targetPatterns name="returnBook">
+      <op value="++"/>
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Extensions/OnSelectEvent"/>
+    </targetPatterns>
+    <targetPatterns name="searchBooks">
+      <op value="++"/>
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewContainer"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/Element/id"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;searchBooks&quot;"/>
+      </attributeAssignments>
+      <linkVariablePatterns target="//@rules.9/@targetPatterns.9">
+        <op value="++"/>
+        <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewContainer/viewElements"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="studentDetail">
+      <op value="++"/>
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Extensions/Details"/>
+    </targetPatterns>
+    <targetPatterns name="studentDetails">
+      <op value="++"/>
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewContainer"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/Element/id"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;studentDetails&quot;"/>
+      </attributeAssignments>
+      <linkVariablePatterns target="//@rules.9/@targetPatterns.28">
+        <op value="++"/>
+        <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewContainer/viewElements"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="studentID">
+      <op value="++"/>
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Extensions/SimpleField"/>
+    </targetPatterns>
+    <targetPatterns name="studentList">
+      <op value="++"/>
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Extensions/List"/>
+      <linkVariablePatterns target="//@rules.9/@targetPatterns.35">
+        <op value="++"/>
+        <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewElement/viewElementEvents"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="students">
+      <op value="++"/>
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewContainer"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/Element/id"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="&quot;students&quot;"/>
+      </attributeAssignments>
+      <linkVariablePatterns target="//@rules.9/@targetPatterns.31">
+        <op value="++"/>
+        <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewContainer/viewElements"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="submitQuestion">
+      <op value="++"/>
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Extensions/OnSubmitEvent"/>
+    </targetPatterns>
+    <targetPatterns name="username">
+      <op value="++"/>
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Extensions/SimpleField"/>
+    </targetPatterns>
+    <targetPatterns name="viewStudentDetails">
+      <op value="++"/>
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Extensions/OnSelectEvent"/>
+    </targetPatterns>
+    <correspondencePatterns name="contextToEssentialIFML" type="//@schema/@correspondenceTypes.0" source="//@rules.9/@sourcePatterns.0" target="//@rules.9/@targetPatterns.7"/>
+    <correspondencePatterns name="user2InteractionFLowModel" type="//@schema/@correspondenceTypes.1" source="//@rules.9/@sourcePatterns.1" target="//@rules.9/@targetPatterns.8">
+      <op value="++"/>
+    </correspondencePatterns>
+  </rules>
+</tgg:TripleGraphGrammarFile>

@@ -1,0 +1,51 @@
+#using library.*
+#using AttrCondDefLibrary.*
+
+#rule AdaptationEnglishLanguage #with library
+
+#source { 
+	context:Context{
+		-entity -> e
+	}
+	e:Platform {
+		  ++ -lang -> deviceLanguage
+	}
+
+	++ deviceLanguage: English
+}
+
+
+
+#target {
+	ifml: EssentialIFMLModel{
+		 - interactionFlowModel -> flowModel
+
+	}
+		
+	flowModel: InteractionFlowModel{
+		++ -setLanguage -> english
+}
+
+	 ++english : Language
+	
+}
+	
+	
+
+
+#correspondence {
+	context2EssentialIFML :Context2EssentialIFML{
+		#src->context
+		#trg->ifml
+	}
+	
+	platform2IFML :Platform2IFML{
+		#src->e
+		#trg->flowModel
+	}
+	
+}
+
+#attributeConditions {
+	
+}

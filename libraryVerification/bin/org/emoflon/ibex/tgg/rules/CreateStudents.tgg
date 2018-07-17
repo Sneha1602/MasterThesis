@@ -1,0 +1,38 @@
+#using libraryVerification.*
+#using AttrCondDefLibrary.*
+
+#abstract #rule CreateStudents #with libraryVerification
+
+#source {
+	++u:User
+}
+
+#target {
+	++interactionFlowModel:InteractionFlowModel{
+		++ -interactionFlowModelElements -> students
+	}
+
+	++students:ViewContainer{
+		id:="students"
+		++-viewElements -> studentList
+	}
+
+	++studentList:List{
+		++-viewElementEvents -> viewStudentDetails
+	}
+
+	++viewStudentDetails:OnSelectEvent
+}
+
+#correspondence {
+	++user2InteractionFLowModel :CreateWindowsAndLinks{
+		#src->u
+		#trg->interactionFlowModel
+	}
+}
+
+#attributeConditions {
+	
+}
+
+

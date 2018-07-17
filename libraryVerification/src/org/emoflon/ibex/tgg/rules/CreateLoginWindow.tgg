@@ -1,0 +1,44 @@
+#using libraryVerification.*
+#using AttrCondDefLibrary.*
+
+#abstract #rule CreateLoginWindow #with libraryVerification
+
+#source {
+	++u:User
+}
+
+#target {
+	++interactionFlowModel:InteractionFlowModel{
+		++-interactionFlowModelElements -> loginWindow
+	}
+
+	++loginWindow:ViewContainer{
+		id :="loginWindow"
+		++ -viewElements -> loginForm
+	}
+
+	++loginForm:Form{
+		++ -viewComponentParts -> username
+		++ -viewComponentParts -> password
+		++ -viewElementEvents -> loginEvent
+	}
+
+	++username:SimpleField
+
+	++password:SimpleField
+
+	++loginEvent:OnSubmitEvent
+}
+
+#correspondence {
+	++user2InteractionFLowModel :CreateWindowsAndLinks{
+		#src->u
+		#trg->interactionFlowModel
+	}
+}
+
+#attributeConditions {
+	
+}
+
+

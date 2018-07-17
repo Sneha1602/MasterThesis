@@ -1,0 +1,34 @@
+#using libraryVerification.*
+#using AttrCondDefLibrary.*
+
+#abstract #rule CreateLentBooksWindow #with libraryVerification
+
+#source { 
+		++u:User
+}
+
+#target {
+	++interactionFlowModel:InteractionFlowModel{
+		++-interactionFlowModelElements -> lentBooksWindow
+	}
+	++lentBooksWindow: ViewContainer{
+		id:="lentBooksWindow"
+		++ -viewElements ->lentBooks
+	}
+	++lentBooks: List{
+		++-viewElementEvents ->extendBook
+	}
+	
+	++extendBook: OnSelectEvent	
+}
+
+#correspondence {
+	++user2InteractionFLowModel :CreateWindowsAndLinks{
+		#src->u
+		#trg->interactionFlowModel
+	}
+}
+
+#attributeConditions {
+	
+}

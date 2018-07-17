@@ -1,0 +1,34 @@
+#using libraryVerification.*
+#using AttrCondDefLibrary.*
+
+#abstract #rule CreateStudentDetails #with libraryVerification
+
+#source {
+	++u:User
+}
+
+#target {
+	++interactionFlowModel:InteractionFlowModel{
+		++-interactionFlowModelElements -> studentDetails
+	}
+
+	++studentDetails:ViewContainer{
+		id:="studentDetails"
+		++ -viewElements -> studentDetail
+	}
+
+	++studentDetail:Details
+}
+
+#correspondence {
+	++user2InteractionFLowModel :CreateWindowsAndLinks{
+		#src->u
+		#trg->interactionFlowModel
+	}
+}
+
+#attributeConditions {
+	
+}
+
+

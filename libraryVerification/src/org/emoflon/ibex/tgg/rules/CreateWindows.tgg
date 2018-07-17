@@ -1,0 +1,56 @@
+#using libraryVerification.*
+#using AttrCondDefLibrary.*
+
+#rule CreateWindows #extends CreateLoginWindow, CreateBookReservations, CreateHelpWindow, CreateLendingFormWindow, CreateLentBooksWindow, CreateStudentDetails, CreateSearchBooks, CreateStudents #with libraryVerification 
+
+#source {
+	context:Context{
+		++-entity -> u
+	}
+
+	++u:User
+}
+
+#target {
+	ifml:EssentialIFMLModel{
+		++ -interactionFlowModel -> interactionFlowModel
+	}
+
+	++interactionFlowModel:InteractionFlowModel{
+		
+		++ -interactionFlowModelElements -> students
+		++ -interactionFlowModelElements -> loginWindow
+		
+		++ -interactionFlowModelElements -> searchBooks
+	}
+	++loginWindow: ViewContainer{
+		id:="loginWindow"
+	}
+	
+	++students: ViewContainer{
+		id:="students"
+	}
+	
+	++searchBooks: ViewContainer{
+		id:="searchBooks"
+	}
+	
+}
+
+#correspondence {
+	contextToEssentialIFML :Context2EssentialIFML{
+		#src->context
+		#trg->ifml
+	}
+	
+	++user2InteractionFLowModel :CreateWindowsAndLinks{
+		#src->u
+		#trg->interactionFlowModel
+	}
+}
+
+#attributeConditions {
+	
+}
+
+

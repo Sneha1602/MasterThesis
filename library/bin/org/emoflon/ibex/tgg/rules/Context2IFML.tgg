@@ -1,0 +1,23 @@
+#using library.*
+#using AttrCondDefLibrary.*
+
+#rule Context2IFML #with library
+
+#source { 
+	++context:Context
+}
+
+#target {
+	++ifml: EssentialIFMLModel
+}
+
+#correspondence {
+	++context2EssentialIFML :Context2EssentialIFML{
+		#src->context
+		#trg->ifml
+	}
+}
+
+#attributeConditions {
+	
+}

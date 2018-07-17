@@ -1,0 +1,50 @@
+#using library.*
+#using AttrCondDefLibrary.*
+
+#rule AdaptationCreateStudentNavBar #with library
+
+#source {
+	context:Context{
+		-entity -> e
+	}
+
+	e:User {
+		++ -role -> roleName
+	}
+
+	++roleName:Student
+}
+
+#target {
+	ifml: EssentialIFMLModel{
+		 - interactionFlowModel -> flowModel
+
+	}
+		
+	flowModel: InteractionFlowModel{
+		++ -navBarContainer -> lentBooks
+		++ -navBarContainer -> searchBooks
+	}
+
+	searchBooks:ViewContainer
+
+	lentBooks:ViewContainer
+}
+
+#correspondence {
+	context2EssentialIFML :Context2EssentialIFML{
+		#src->context
+		#trg->ifml
+	}
+	
+	user2InteractionFLowModel :CreateWindowsAndLinks{
+		#src->e
+		#trg->flowModel
+	}
+}
+
+#attributeConditions {
+	
+}
+
+

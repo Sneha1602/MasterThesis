@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:libraryVerification="platform:/resource/libraryVerification/model/libraryVerification.ecore">
+  <libraryVerification:Context2EssentialIFML>
+    <source href="src.xmi#/"/>
+    <target href="trg.xmi#/"/>
+  </libraryVerification:Context2EssentialIFML>
+  <libraryVerification:CreateWindowsAndLinks>
+    <source href="src.xmi#//@entity.0"/>
+    <target href="trg.xmi#//@interactionFlowModel"/>
+  </libraryVerification:CreateWindowsAndLinks>
+</xmi:XMI>

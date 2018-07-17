@@ -1,0 +1,51 @@
+#using library.*
+#using AttrCondDefLibrary.*
+
+#rule AdaptationUserAge #with library
+
+#source {
+	context:Context{
+		-entity -> e
+	}
+
+	e:User {
+		++ -age -> ageOfUser
+	}
+
+	++ageOfUser:UserIsOld
+}
+
+#target {
+	ifml:EssentialIFMLModel{
+		- interactionFlowModel -> flowModel
+	}
+
+	flowModel:InteractionFlowModel{
+		++ - screenZoom -> zoomScreen
+	}
+
+	++zoomScreen:ScreenZoom
+}
+
+#correspondence {
+	context2EssentialIFML :Context2EssentialIFML{
+		#src->context
+		#trg->ifml
+	}
+
+	++userAge2ScreenZoom :UserAge2ScreenZoom{
+		#src->ageOfUser
+		#trg->zoomScreen
+	}
+
+	user2InteractionFLowModel :CreateWindowsAndLinks{
+		#src->e
+		#trg->flowModel
+	}
+}
+
+#attributeConditions {
+	
+}
+
+

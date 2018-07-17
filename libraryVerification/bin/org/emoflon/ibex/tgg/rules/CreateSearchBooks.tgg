@@ -1,0 +1,39 @@
+#using libraryVerification.*
+#using AttrCondDefLibrary.*
+
+#abstract #rule CreateSearchBooks #with libraryVerification
+
+#source { 
+	++u:User
+}
+
+#target {
+	++interactionFlowModel:InteractionFlowModel{
+		++-interactionFlowModelElements -> searchBooks
+	}
+	++searchBooks: ViewContainer{
+		id:="searchBooks"
+		++ -viewElements -> inventoryList
+	}
+	
+	++inventoryList : List{
+		++-viewElementEvents -> issueABook
+		++-viewElementEvents -> reserveBook
+		++-viewElementEvents-> returnBook
+	}
+	
+	++issueABook: OnSelectEvent
+	++reserveBook: OnSelectEvent
+	++returnBook: OnSelectEvent
+}
+
+#correspondence {
+	++user2InteractionFLowModel :CreateWindowsAndLinks{
+		#src->u
+		#trg->interactionFlowModel
+	}
+}
+
+#attributeConditions {
+	
+}

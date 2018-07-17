@@ -1,0 +1,54 @@
+#using library.*
+#using AttrCondDefLibrary.*
+
+#rule AdaptationCreateAdminNavBar #with library
+
+#source {
+	context:Context{
+		-entity -> e
+	}
+
+	e:User {
+		++ -role -> roleName
+	}
+
+	++roleName:Admin
+}
+
+#target {
+	ifml: EssentialIFMLModel{
+		 - interactionFlowModel -> flowModel
+
+	}
+		
+	flowModel: InteractionFlowModel{
+		++ -navBarContainer -> searchBooks
+		++ -navBarContainer -> students
+		++ -navBarContainer -> bookReservations
+		++ -navBarContainer -> lendingForm
+		++ -navBarContainer -> administration
+	}
+	
+	searchBooks: ViewContainer
+	students: ViewContainer
+	bookReservations: ViewContainer
+	lendingForm:  ViewContainer
+	administration: ViewContainer
+}
+
+#correspondence {
+	context2EssentialIFML :Context2EssentialIFML{
+		#src->context
+		#trg->ifml
+	}
+	user2InteractionFLowModel :CreateWindowsAndLinks{
+		#src->e
+		#trg->flowModel
+	}
+}
+
+#attributeConditions {
+	
+}
+
+

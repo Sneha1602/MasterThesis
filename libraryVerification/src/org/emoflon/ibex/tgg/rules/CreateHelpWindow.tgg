@@ -1,0 +1,43 @@
+#using libraryVerification.*
+#using AttrCondDefLibrary.*
+
+#abstract #rule CreateHelpWindow #with libraryVerification
+
+#source { 
+	++ u:User
+}
+
+#target {
+	++ interactionFlowModel:InteractionFlowModel{
+		++ -interactionFlowModelElements -> helpWindow
+	}
+	++ helpWindow:ViewContainer{
+		id := "helpWindow"
+		++ -viewElements -> helpForm
+		++ -viewElements -> learnPlaces
+	}
+	++helpForm:Form{
+		++ -viewComponentParts -> question	
+		++ -viewElementEvents -> submitQuestion
+	}
+	++question: SimpleField
+	++submitQuestion: OnSubmitEvent
+	
+	++learnPlaces:Form{
+		++ -viewComponentParts -> location	
+		++ -viewElementEvents -> findClosestLocation
+	}
+	++location: SimpleField
+	++findClosestLocation: OnSubmitEvent
+}
+
+#correspondence {
+	++ user2InteractionFLowModel :CreateWindowsAndLinks{
+		#src->u
+		#trg->interactionFlowModel
+	}
+}
+
+#attributeConditions {
+	
+}

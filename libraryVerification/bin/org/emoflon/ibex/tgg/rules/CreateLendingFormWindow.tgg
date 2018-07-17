@@ -1,0 +1,47 @@
+#using libraryVerification.*
+#using AttrCondDefLibrary.*
+
+#abstract #rule CreateLendingFormWindow #with libraryVerification
+
+#source {
+	++u:User
+}
+
+#target {
+	++interactionFlowModel:InteractionFlowModel{
+		++-interactionFlowModelElements -> lendingFormWindow
+	}
+
+	++lendingFormWindow:ViewContainer {
+		id:="lendingFormWindow"
+		++ -viewElements -> lendingForm
+	}
+
+	++lendingForm:Form{
+		++ -viewComponentParts -> bookISBN
+		++ -viewComponentParts -> studentID
+		++ -viewComponentParts -> dueDate
+		++ -viewElementEvents -> issueBook
+	}
+
+	++bookISBN:SimpleField
+
+	++studentID:SimpleField
+
+	++dueDate:SimpleField
+
+	++issueBook:OnSubmitEvent
+}
+
+#correspondence {
+	++user2InteractionFLowModel :CreateWindowsAndLinks{
+		#src->u
+		#trg->interactionFlowModel
+	}
+}
+
+#attributeConditions {
+	
+}
+
+

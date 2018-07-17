@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="ASCII"?>
+<org.emoflon.ibex.tgg.core.language:TGG xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:org.emoflon.ibex.tgg.core.language="platform:/plugin/org.emoflon.ibex.tgg.core.language/model/Language.ecore#/" xmlns:org.emoflon.ibex.tgg.core.language.misc.expressions="platform:/plugin/org.emoflon.ibex.tgg.core.language/model/Language.ecore#/misc/expressions" name="libraryVerification">
+  <src href="platform:/resource/ContextML/model/contextML.ecore#/"/>
+  <trg href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#/"/>
+  <corr href="platform:/resource/libraryVerification/model/libraryVerification.ecore#/"/>
+  <rules name="Context2Ifml">
+    <nodes name="context" bindingType="CREATE" incomingCorrsSource="//@rules.0/@nodes.2">
+      <type href="platform:/resource/ContextML/model/contextML.ecore#//Context"/>
+    </nodes>
+    <nodes name="ifml" domainType="TRG" bindingType="CREATE" incomingCorrsTarget="//@rules.0/@nodes.2">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/EssentialIFMLModel"/>
+    </nodes>
+    <nodes xsi:type="org.emoflon.ibex.tgg.core.language:TGGRuleCorr" name="context2EssentialIFML" domainType="CORR" bindingType="CREATE" source="//@rules.0/@nodes.0" target="//@rules.0/@nodes.1">
+      <type href="platform:/resource/libraryVerification/model/libraryVerification.ecore#//Context2EssentialIFML"/>
+    </nodes>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="CreateBookReservations" abstract="true">
+    <nodes name="u" bindingType="CREATE" incomingCorrsSource="//@rules.1/@nodes.5">
+      <type href="platform:/resource/ContextML/model/contextML.ecore#//User"/>
+    </nodes>
+    <nodes name="interactionFlowModel" domainType="TRG" bindingType="CREATE" outgoingEdges="//@rules.1/@edges.0" incomingCorrsTarget="//@rules.1/@nodes.5">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/InteractionFlowModel"/>
+    </nodes>
+    <nodes name="bookReservations" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.1/@edges.0 //@rules.1/@edges.3" outgoingEdges="//@rules.1/@edges.1">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewContainer"/>
+      <attrExpr>
+        <attribute href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/Element/id"/>
+        <valueExpr xsi:type="org.emoflon.ibex.tgg.core.language.misc.expressions:TGGLiteralExpression" value="&quot;bookReservations&quot;"/>
+      </attrExpr>
+    </nodes>
+    <nodes name="reservationsList" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.1/@edges.1" outgoingEdges="//@rules.1/@edges.2 //@rules.1/@edges.3">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Extensions/List"/>
+    </nodes>
+    <nodes name="issueBookSelected" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.1/@edges.2">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Extensions/OnSelectEvent"/>
+    </nodes>
+    <nodes xsi:type="org.emoflon.ibex.tgg.core.language:TGGRuleCorr" name="user2InteractionFLowModel" domainType="CORR" bindingType="CREATE" source="//@rules.1/@nodes.0" target="//@rules.1/@nodes.1">
+      <type href="platform:/resource/libraryVerification/model/libraryVerification.ecore#//CreateWindowsAndLinks"/>
+    </nodes>
+    <edges name="interactionFlowModel__interactionFlowModelElements__bookReservations_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.1" trgNode="//@rules.1/@nodes.2">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/InteractionFlowModel/interactionFlowModelElements"/>
+    </edges>
+    <edges name="bookReservations__viewElements__reservationsList_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.2" trgNode="//@rules.1/@nodes.3">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewContainer/viewElements"/>
+    </edges>
+    <edges name="reservationsList__viewElementEvents__issueBookSelected_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.3" trgNode="//@rules.1/@nodes.4">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewElement/viewElementEvents"/>
+    </edges>
+    <edges name="reservationsList__viewContainer__bookReservations_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.3" trgNode="//@rules.1/@nodes.2">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewElement/viewContainer"/>
+    </edges>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="CreateHelpWindow" abstract="true">
+    <nodes name="u" bindingType="CREATE" incomingCorrsSource="//@rules.2/@nodes.9">
+      <type href="platform:/resource/ContextML/model/contextML.ecore#//User"/>
+    </nodes>
+    <nodes name="interactionFlowModel" domainType="TRG" bindingType="CREATE" outgoingEdges="//@rules.2/@edges.0" incomingCorrsTarget="//@rules.2/@nodes.9">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/InteractionFlowModel"/>
+    </nodes>
+    <nodes name="helpWindow" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.2/@edges.0 //@rules.2/@edges.7 //@rules.2/@edges.8" outgoingEdges="//@rules.2/@edges.1 //@rules.2/@edges.2">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewContainer"/>
+      <attrExpr>
+        <attribute href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/Element/id"/>
+        <valueExpr xsi:type="org.emoflon.ibex.tgg.core.language.misc.expressions:TGGLiteralExpression" value="&quot;helpWindow&quot;"/>
+      </attrExpr>
+    </nodes>
+    <nodes name="helpForm" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.2/@edges.1" outgoingEdges="//@rules.2/@edges.3 //@rules.2/@edges.4 //@rules.2/@edges.7">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Extensions/Form"/>
+    </nodes>
+    <nodes name="question" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.2/@edges.3">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Extensions/SimpleField"/>
+    </nodes>
+    <nodes name="submitQuestion" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.2/@edges.4">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Extensions/OnSubmitEvent"/>
+    </nodes>
+    <nodes name="learnPlaces" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.2/@edges.2" outgoingEdges="//@rules.2/@edges.5 //@rules.2/@edges.6 //@rules.2/@edges.8">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Extensions/Form"/>
+    </nodes>
+    <nodes name="location" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.2/@edges.5">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Extensions/SimpleField"/>
+    </nodes>
+    <nodes name="findClosestLocation" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.2/@edges.6">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Extensions/OnSubmitEvent"/>
+    </nodes>
+    <nodes xsi:type="org.emoflon.ibex.tgg.core.language:TGGRuleCorr" name="user2InteractionFLowModel" domainType="CORR" bindingType="CREATE" source="//@rules.2/@nodes.0" target="//@rules.2/@nodes.1">
+      <type href="platform:/resource/libraryVerification/model/libraryVerification.ecore#//CreateWindowsAndLinks"/>
+    </nodes>
+    <edges name="interactionFlowModel__interactionFlowModelElements__helpWindow_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.2/@nodes.1" trgNode="//@rules.2/@nodes.2">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/InteractionFlowModel/interactionFlowModelElements"/>
+    </edges>
+    <edges name="helpWindow__viewElements__helpForm_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.2/@nodes.2" trgNode="//@rules.2/@nodes.3">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewContainer/viewElements"/>
+    </edges>
+    <edges name="helpWindow__viewElements__learnPlaces_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.2/@nodes.2" trgNode="//@rules.2/@nodes.6">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewContainer/viewElements"/>
+    </edges>
+    <edges name="helpForm__viewComponentParts__question_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.2/@nodes.3" trgNode="//@rules.2/@nodes.4">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewComponent/viewComponentParts"/>
+    </edges>
+    <edges name="helpForm__viewElementEvents__submitQuestion_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.2/@nodes.3" trgNode="//@rules.2/@nodes.5">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewElement/viewElementEvents"/>
+    </edges>
+    <edges name="learnPlaces__viewComponentParts__location_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.2/@nodes.6" trgNode="//@rules.2/@nodes.7">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewComponent/viewComponentParts"/>
+    </edges>
+    <edges name="learnPlaces__viewElementEvents__findClosestLocation_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.2/@nodes.6" trgNode="//@rules.2/@nodes.8">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewElement/viewElementEvents"/>
+    </edges>
+    <edges name="helpForm__viewContainer__helpWindow_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.2/@nodes.3" trgNode="//@rules.2/@nodes.2">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewElement/viewContainer"/>
+    </edges>
+    <edges name="learnPlaces__viewContainer__helpWindow_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.2/@nodes.6" trgNode="//@rules.2/@nodes.2">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewElement/viewContainer"/>
+    </edges>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="CreateLendingFormWindow" abstract="true">
+    <nodes name="u" bindingType="CREATE" incomingCorrsSource="//@rules.3/@nodes.8">
+      <type href="platform:/resource/ContextML/model/contextML.ecore#//User"/>
+    </nodes>
+    <nodes name="interactionFlowModel" domainType="TRG" bindingType="CREATE" outgoingEdges="//@rules.3/@edges.0" incomingCorrsTarget="//@rules.3/@nodes.8">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/InteractionFlowModel"/>
+    </nodes>
+    <nodes name="lendingFormWindow" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.3/@edges.0 //@rules.3/@edges.6" outgoingEdges="//@rules.3/@edges.1">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewContainer"/>
+      <attrExpr>
+        <attribute href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/Element/id"/>
+        <valueExpr xsi:type="org.emoflon.ibex.tgg.core.language.misc.expressions:TGGLiteralExpression" value="&quot;lendingFormWindow&quot;"/>
+      </attrExpr>
+    </nodes>
+    <nodes name="lendingForm" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.3/@edges.1" outgoingEdges="//@rules.3/@edges.2 //@rules.3/@edges.3 //@rules.3/@edges.4 //@rules.3/@edges.5 //@rules.3/@edges.6">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Extensions/Form"/>
+    </nodes>
+    <nodes name="bookISBN" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.3/@edges.2">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Extensions/SimpleField"/>
+    </nodes>
+    <nodes name="studentID" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.3/@edges.3">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Extensions/SimpleField"/>
+    </nodes>
+    <nodes name="dueDate" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.3/@edges.4">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Extensions/SimpleField"/>
+    </nodes>
+    <nodes name="issueBook" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.3/@edges.5">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Extensions/OnSubmitEvent"/>
+    </nodes>
+    <nodes xsi:type="org.emoflon.ibex.tgg.core.language:TGGRuleCorr" name="user2InteractionFLowModel" domainType="CORR" bindingType="CREATE" source="//@rules.3/@nodes.0" target="//@rules.3/@nodes.1">
+      <type href="platform:/resource/libraryVerification/model/libraryVerification.ecore#//CreateWindowsAndLinks"/>
+    </nodes>
+    <edges name="interactionFlowModel__interactionFlowModelElements__lendingFormWindow_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.3/@nodes.1" trgNode="//@rules.3/@nodes.2">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/InteractionFlowModel/interactionFlowModelElements"/>
+    </edges>
+    <edges name="lendingFormWindow__viewElements__lendingForm_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.3/@nodes.2" trgNode="//@rules.3/@nodes.3">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewContainer/viewElements"/>
+    </edges>
+    <edges name="lendingForm__viewComponentParts__bookISBN_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.3/@nodes.3" trgNode="//@rules.3/@nodes.4">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewComponent/viewComponentParts"/>
+    </edges>
+    <edges name="lendingForm__viewComponentParts__studentID_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.3/@nodes.3" trgNode="//@rules.3/@nodes.5">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewComponent/viewComponentParts"/>
+    </edges>
+    <edges name="lendingForm__viewComponentParts__dueDate_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.3/@nodes.3" trgNode="//@rules.3/@nodes.6">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewComponent/viewComponentParts"/>
+    </edges>
+    <edges name="lendingForm__viewElementEvents__issueBook_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.3/@nodes.3" trgNode="//@rules.3/@nodes.7">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewElement/viewElementEvents"/>
+    </edges>
+    <edges name="lendingForm__viewContainer__lendingFormWindow_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.3/@nodes.3" trgNode="//@rules.3/@nodes.2">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewElement/viewContainer"/>
+    </edges>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="CreateLentBooksWindow" abstract="true">
+    <nodes name="u" bindingType="CREATE" incomingCorrsSource="//@rules.4/@nodes.5">
+      <type href="platform:/resource/ContextML/model/contextML.ecore#//User"/>
+    </nodes>
+    <nodes name="interactionFlowModel" domainType="TRG" bindingType="CREATE" outgoingEdges="//@rules.4/@edges.0" incomingCorrsTarget="//@rules.4/@nodes.5">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/InteractionFlowModel"/>
+    </nodes>
+    <nodes name="lentBooksWindow" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.4/@edges.0 //@rules.4/@edges.3" outgoingEdges="//@rules.4/@edges.1">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewContainer"/>
+      <attrExpr>
+        <attribute href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/Element/id"/>
+        <valueExpr xsi:type="org.emoflon.ibex.tgg.core.language.misc.expressions:TGGLiteralExpression" value="&quot;lentBooksWindow&quot;"/>
+      </attrExpr>
+    </nodes>
+    <nodes name="lentBooks" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.4/@edges.1" outgoingEdges="//@rules.4/@edges.2 //@rules.4/@edges.3">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Extensions/List"/>
+    </nodes>
+    <nodes name="extendBook" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.4/@edges.2">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Extensions/OnSelectEvent"/>
+    </nodes>
+    <nodes xsi:type="org.emoflon.ibex.tgg.core.language:TGGRuleCorr" name="user2InteractionFLowModel" domainType="CORR" bindingType="CREATE" source="//@rules.4/@nodes.0" target="//@rules.4/@nodes.1">
+      <type href="platform:/resource/libraryVerification/model/libraryVerification.ecore#//CreateWindowsAndLinks"/>
+    </nodes>
+    <edges name="interactionFlowModel__interactionFlowModelElements__lentBooksWindow_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.4/@nodes.1" trgNode="//@rules.4/@nodes.2">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/InteractionFlowModel/interactionFlowModelElements"/>
+    </edges>
+    <edges name="lentBooksWindow__viewElements__lentBooks_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.4/@nodes.2" trgNode="//@rules.4/@nodes.3">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewContainer/viewElements"/>
+    </edges>
+    <edges name="lentBooks__viewElementEvents__extendBook_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.4/@nodes.3" trgNode="//@rules.4/@nodes.4">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewElement/viewElementEvents"/>
+    </edges>
+    <edges name="lentBooks__viewContainer__lentBooksWindow_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.4/@nodes.3" trgNode="//@rules.4/@nodes.2">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewElement/viewContainer"/>
+    </edges>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="CreateLoginWindow" abstract="true">
+    <nodes name="u" bindingType="CREATE" incomingCorrsSource="//@rules.5/@nodes.7">
+      <type href="platform:/resource/ContextML/model/contextML.ecore#//User"/>
+    </nodes>
+    <nodes name="interactionFlowModel" domainType="TRG" bindingType="CREATE" outgoingEdges="//@rules.5/@edges.0" incomingCorrsTarget="//@rules.5/@nodes.7">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/InteractionFlowModel"/>
+    </nodes>
+    <nodes name="loginWindow" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.5/@edges.0 //@rules.5/@edges.5" outgoingEdges="//@rules.5/@edges.1">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewContainer"/>
+      <attrExpr>
+        <attribute href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/Element/id"/>
+        <valueExpr xsi:type="org.emoflon.ibex.tgg.core.language.misc.expressions:TGGLiteralExpression" value="&quot;loginWindow&quot;"/>
+      </attrExpr>
+    </nodes>
+    <nodes name="loginForm" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.5/@edges.1" outgoingEdges="//@rules.5/@edges.2 //@rules.5/@edges.3 //@rules.5/@edges.4 //@rules.5/@edges.5">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Extensions/Form"/>
+    </nodes>
+    <nodes name="username" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.5/@edges.2">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Extensions/SimpleField"/>
+    </nodes>
+    <nodes name="password" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.5/@edges.3">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Extensions/SimpleField"/>
+    </nodes>
+    <nodes name="loginEvent" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.5/@edges.4">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Extensions/OnSubmitEvent"/>
+    </nodes>
+    <nodes xsi:type="org.emoflon.ibex.tgg.core.language:TGGRuleCorr" name="user2InteractionFLowModel" domainType="CORR" bindingType="CREATE" source="//@rules.5/@nodes.0" target="//@rules.5/@nodes.1">
+      <type href="platform:/resource/libraryVerification/model/libraryVerification.ecore#//CreateWindowsAndLinks"/>
+    </nodes>
+    <edges name="interactionFlowModel__interactionFlowModelElements__loginWindow_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.5/@nodes.1" trgNode="//@rules.5/@nodes.2">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/InteractionFlowModel/interactionFlowModelElements"/>
+    </edges>
+    <edges name="loginWindow__viewElements__loginForm_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.5/@nodes.2" trgNode="//@rules.5/@nodes.3">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewContainer/viewElements"/>
+    </edges>
+    <edges name="loginForm__viewComponentParts__username_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.5/@nodes.3" trgNode="//@rules.5/@nodes.4">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewComponent/viewComponentParts"/>
+    </edges>
+    <edges name="loginForm__viewComponentParts__password_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.5/@nodes.3" trgNode="//@rules.5/@nodes.5">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewComponent/viewComponentParts"/>
+    </edges>
+    <edges name="loginForm__viewElementEvents__loginEvent_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.5/@nodes.3" trgNode="//@rules.5/@nodes.6">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewElement/viewElementEvents"/>
+    </edges>
+    <edges name="loginForm__viewContainer__loginWindow_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.5/@nodes.3" trgNode="//@rules.5/@nodes.2">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewElement/viewContainer"/>
+    </edges>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="CreateSearchBooks" abstract="true">
+    <nodes name="u" bindingType="CREATE" incomingCorrsSource="//@rules.6/@nodes.7">
+      <type href="platform:/resource/ContextML/model/contextML.ecore#//User"/>
+    </nodes>
+    <nodes name="interactionFlowModel" domainType="TRG" bindingType="CREATE" outgoingEdges="//@rules.6/@edges.0" incomingCorrsTarget="//@rules.6/@nodes.7">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/InteractionFlowModel"/>
+    </nodes>
+    <nodes name="searchBooks" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.6/@edges.0 //@rules.6/@edges.5" outgoingEdges="//@rules.6/@edges.1">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewContainer"/>
+      <attrExpr>
+        <attribute href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/Element/id"/>
+        <valueExpr xsi:type="org.emoflon.ibex.tgg.core.language.misc.expressions:TGGLiteralExpression" value="&quot;searchBooks&quot;"/>
+      </attrExpr>
+    </nodes>
+    <nodes name="inventoryList" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.6/@edges.1" outgoingEdges="//@rules.6/@edges.2 //@rules.6/@edges.3 //@rules.6/@edges.4 //@rules.6/@edges.5">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Extensions/List"/>
+    </nodes>
+    <nodes name="issueABook" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.6/@edges.2">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Extensions/OnSelectEvent"/>
+    </nodes>
+    <nodes name="reserveBook" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.6/@edges.3">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Extensions/OnSelectEvent"/>
+    </nodes>
+    <nodes name="returnBook" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.6/@edges.4">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Extensions/OnSelectEvent"/>
+    </nodes>
+    <nodes xsi:type="org.emoflon.ibex.tgg.core.language:TGGRuleCorr" name="user2InteractionFLowModel" domainType="CORR" bindingType="CREATE" source="//@rules.6/@nodes.0" target="//@rules.6/@nodes.1">
+      <type href="platform:/resource/libraryVerification/model/libraryVerification.ecore#//CreateWindowsAndLinks"/>
+    </nodes>
+    <edges name="interactionFlowModel__interactionFlowModelElements__searchBooks_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.6/@nodes.1" trgNode="//@rules.6/@nodes.2">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/InteractionFlowModel/interactionFlowModelElements"/>
+    </edges>
+    <edges name="searchBooks__viewElements__inventoryList_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.6/@nodes.2" trgNode="//@rules.6/@nodes.3">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewContainer/viewElements"/>
+    </edges>
+    <edges name="inventoryList__viewElementEvents__issueABook_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.6/@nodes.3" trgNode="//@rules.6/@nodes.4">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewElement/viewElementEvents"/>
+    </edges>
+    <edges name="inventoryList__viewElementEvents__reserveBook_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.6/@nodes.3" trgNode="//@rules.6/@nodes.5">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewElement/viewElementEvents"/>
+    </edges>
+    <edges name="inventoryList__viewElementEvents__returnBook_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.6/@nodes.3" trgNode="//@rules.6/@nodes.6">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewElement/viewElementEvents"/>
+    </edges>
+    <edges name="inventoryList__viewContainer__searchBooks_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.6/@nodes.3" trgNode="//@rules.6/@nodes.2">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewElement/viewContainer"/>
+    </edges>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="CreateStudentDetails" abstract="true">
+    <nodes name="u" bindingType="CREATE" incomingCorrsSource="//@rules.7/@nodes.4">
+      <type href="platform:/resource/ContextML/model/contextML.ecore#//User"/>
+    </nodes>
+    <nodes name="interactionFlowModel" domainType="TRG" bindingType="CREATE" outgoingEdges="//@rules.7/@edges.0" incomingCorrsTarget="//@rules.7/@nodes.4">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/InteractionFlowModel"/>
+    </nodes>
+    <nodes name="studentDetails" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.7/@edges.0 //@rules.7/@edges.2" outgoingEdges="//@rules.7/@edges.1">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewContainer"/>
+      <attrExpr>
+        <attribute href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/Element/id"/>
+        <valueExpr xsi:type="org.emoflon.ibex.tgg.core.language.misc.expressions:TGGLiteralExpression" value="&quot;studentDetails&quot;"/>
+      </attrExpr>
+    </nodes>
+    <nodes name="studentDetail" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.7/@edges.1" outgoingEdges="//@rules.7/@edges.2">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Extensions/Details"/>
+    </nodes>
+    <nodes xsi:type="org.emoflon.ibex.tgg.core.language:TGGRuleCorr" name="user2InteractionFLowModel" domainType="CORR" bindingType="CREATE" source="//@rules.7/@nodes.0" target="//@rules.7/@nodes.1">
+      <type href="platform:/resource/libraryVerification/model/libraryVerification.ecore#//CreateWindowsAndLinks"/>
+    </nodes>
+    <edges name="interactionFlowModel__interactionFlowModelElements__studentDetails_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.7/@nodes.1" trgNode="//@rules.7/@nodes.2">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/InteractionFlowModel/interactionFlowModelElements"/>
+    </edges>
+    <edges name="studentDetails__viewElements__studentDetail_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.7/@nodes.2" trgNode="//@rules.7/@nodes.3">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewContainer/viewElements"/>
+    </edges>
+    <edges name="studentDetail__viewContainer__studentDetails_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.7/@nodes.3" trgNode="//@rules.7/@nodes.2">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewElement/viewContainer"/>
+    </edges>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="CreateStudents" abstract="true">
+    <nodes name="u" bindingType="CREATE" incomingCorrsSource="//@rules.8/@nodes.5">
+      <type href="platform:/resource/ContextML/model/contextML.ecore#//User"/>
+    </nodes>
+    <nodes name="interactionFlowModel" domainType="TRG" bindingType="CREATE" outgoingEdges="//@rules.8/@edges.0" incomingCorrsTarget="//@rules.8/@nodes.5">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/InteractionFlowModel"/>
+    </nodes>
+    <nodes name="students" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.8/@edges.0 //@rules.8/@edges.3" outgoingEdges="//@rules.8/@edges.1">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewContainer"/>
+      <attrExpr>
+        <attribute href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/Element/id"/>
+        <valueExpr xsi:type="org.emoflon.ibex.tgg.core.language.misc.expressions:TGGLiteralExpression" value="&quot;students&quot;"/>
+      </attrExpr>
+    </nodes>
+    <nodes name="studentList" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.8/@edges.1" outgoingEdges="//@rules.8/@edges.2 //@rules.8/@edges.3">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Extensions/List"/>
+    </nodes>
+    <nodes name="viewStudentDetails" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.8/@edges.2">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Extensions/OnSelectEvent"/>
+    </nodes>
+    <nodes xsi:type="org.emoflon.ibex.tgg.core.language:TGGRuleCorr" name="user2InteractionFLowModel" domainType="CORR" bindingType="CREATE" source="//@rules.8/@nodes.0" target="//@rules.8/@nodes.1">
+      <type href="platform:/resource/libraryVerification/model/libraryVerification.ecore#//CreateWindowsAndLinks"/>
+    </nodes>
+    <edges name="interactionFlowModel__interactionFlowModelElements__students_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.8/@nodes.1" trgNode="//@rules.8/@nodes.2">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/InteractionFlowModel/interactionFlowModelElements"/>
+    </edges>
+    <edges name="students__viewElements__studentList_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.8/@nodes.2" trgNode="//@rules.8/@nodes.3">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewContainer/viewElements"/>
+    </edges>
+    <edges name="studentList__viewElementEvents__viewStudentDetails_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.8/@nodes.3" trgNode="//@rules.8/@nodes.4">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewElement/viewElementEvents"/>
+    </edges>
+    <edges name="studentList__viewContainer__students_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.8/@nodes.3" trgNode="//@rules.8/@nodes.2">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewElement/viewContainer"/>
+    </edges>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="CreateWindows" refines="//@rules.5 //@rules.1 //@rules.2 //@rules.3 //@rules.4 //@rules.7 //@rules.6 //@rules.8">
+    <nodes name="context" outgoingEdges="//@rules.9/@edges.0" incomingCorrsSource="//@rules.9/@nodes.7">
+      <type href="platform:/resource/ContextML/model/contextML.ecore#//Context"/>
+    </nodes>
+    <nodes name="u" bindingType="CREATE" incomingEdges="//@rules.9/@edges.0" incomingCorrsSource="//@rules.9/@nodes.8">
+      <type href="platform:/resource/ContextML/model/contextML.ecore#//User"/>
+    </nodes>
+    <nodes name="ifml" domainType="TRG" outgoingEdges="//@rules.9/@edges.1" incomingCorrsTarget="//@rules.9/@nodes.7">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/EssentialIFMLModel"/>
+    </nodes>
+    <nodes name="interactionFlowModel" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.9/@edges.1" outgoingEdges="//@rules.9/@edges.2 //@rules.9/@edges.3 //@rules.9/@edges.4" incomingCorrsTarget="//@rules.9/@nodes.8">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/InteractionFlowModel"/>
+    </nodes>
+    <nodes name="loginWindow" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.9/@edges.3">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewContainer"/>
+      <attrExpr>
+        <attribute href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/Element/id"/>
+        <valueExpr xsi:type="org.emoflon.ibex.tgg.core.language.misc.expressions:TGGLiteralExpression" value="&quot;loginWindow&quot;"/>
+      </attrExpr>
+    </nodes>
+    <nodes name="students" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.9/@edges.2">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewContainer"/>
+      <attrExpr>
+        <attribute href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/Element/id"/>
+        <valueExpr xsi:type="org.emoflon.ibex.tgg.core.language.misc.expressions:TGGLiteralExpression" value="&quot;students&quot;"/>
+      </attrExpr>
+    </nodes>
+    <nodes name="searchBooks" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.9/@edges.4">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewContainer"/>
+      <attrExpr>
+        <attribute href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/Element/id"/>
+        <valueExpr xsi:type="org.emoflon.ibex.tgg.core.language.misc.expressions:TGGLiteralExpression" value="&quot;searchBooks&quot;"/>
+      </attrExpr>
+    </nodes>
+    <nodes xsi:type="org.emoflon.ibex.tgg.core.language:TGGRuleCorr" name="contextToEssentialIFML" domainType="CORR" source="//@rules.9/@nodes.0" target="//@rules.9/@nodes.2">
+      <type href="platform:/resource/libraryVerification/model/libraryVerification.ecore#//Context2EssentialIFML"/>
+    </nodes>
+    <nodes xsi:type="org.emoflon.ibex.tgg.core.language:TGGRuleCorr" name="user2InteractionFLowModel" domainType="CORR" bindingType="CREATE" source="//@rules.9/@nodes.1" target="//@rules.9/@nodes.3">
+      <type href="platform:/resource/libraryVerification/model/libraryVerification.ecore#//CreateWindowsAndLinks"/>
+    </nodes>
+    <edges name="context__entity__u_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.9/@nodes.0" trgNode="//@rules.9/@nodes.1">
+      <type href="platform:/resource/ContextML/model/contextML.ecore#//Context/entity"/>
+    </edges>
+    <edges name="ifml__interactionFlowModel__interactionFlowModel_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.9/@nodes.2" trgNode="//@rules.9/@nodes.3">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/EssentialIFMLModel/interactionFlowModel"/>
+    </edges>
+    <edges name="interactionFlowModel__interactionFlowModelElements__students_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.9/@nodes.3" trgNode="//@rules.9/@nodes.5">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/InteractionFlowModel/interactionFlowModelElements"/>
+    </edges>
+    <edges name="interactionFlowModel__interactionFlowModelElements__loginWindow_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.9/@nodes.3" trgNode="//@rules.9/@nodes.4">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/InteractionFlowModel/interactionFlowModelElements"/>
+    </edges>
+    <edges name="interactionFlowModel__interactionFlowModelElements__searchBooks_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.9/@nodes.3" trgNode="//@rules.9/@nodes.6">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/InteractionFlowModel/interactionFlowModelElements"/>
+    </edges>
+    <attributeConditionLibrary/>
+  </rules>
+  <attributeConstraintDefinitionLibrary/>
+</org.emoflon.ibex.tgg.core.language:TGG>

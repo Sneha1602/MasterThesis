@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="ASCII"?>
+<contextML:Context xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:contextML="platform:/resource/ContextML/model/contextML.ecore">
+  <entity xsi:type="contextML:User"/>
+</contextML:Context>

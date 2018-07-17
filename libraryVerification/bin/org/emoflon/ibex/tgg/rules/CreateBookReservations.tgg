@@ -1,0 +1,35 @@
+#using libraryVerification.*
+#using AttrCondDefLibrary.*
+
+#abstract #rule CreateBookReservations #with libraryVerification
+
+#source { 
+		++ u:User
+}
+
+#target {
+	++ interactionFlowModel:InteractionFlowModel{
+		++ -interactionFlowModelElements -> bookReservations
+	}
+	++ bookReservations:ViewContainer{
+		id :="bookReservations"
+		++-viewElements -> reservationsList
+	}
+	++reservationsList:List{
+		++-viewElementEvents ->issueBookSelected
+	}
+	
+	++issueBookSelected: OnSelectEvent
+	
+}
+
+#correspondence {
+	++ user2InteractionFLowModel :CreateWindowsAndLinks{
+		#src->u
+		#trg->interactionFlowModel
+	}
+}
+
+#attributeConditions {
+	
+}

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:org.emoflon.ibex.tgg.core.runtime="platform:/plugin/org.emoflon.ibex.tgg.core.runtime/model/Runtime.ecore">
+  <org.emoflon.ibex.tgg.core.runtime:TGGRuleApplication name="Context2Ifml" final="true">
+    <createdSrc href="src.xmi#/"/>
+    <createdTrg href="trg.xmi#/"/>
+    <createdCorr href="corr.xmi#/0"/>
+    <nodeMappings key="context">
+      <value href="src.xmi#/"/>
+    </nodeMappings>
+    <nodeMappings key="ifml">
+      <value href="trg.xmi#/"/>
+    </nodeMappings>
+    <nodeMappings key="context2EssentialIFML">
+      <value href="corr.xmi#/0"/>
+    </nodeMappings>
+  </org.emoflon.ibex.tgg.core.runtime:TGGRuleApplication>
+  <org.emoflon.ibex.tgg.core.runtime:TGGRuleApplication name="CreateWindows" final="true">
+    <createdSrc href="src.xmi#//@entity.0"/>
+    <createdTrg href="trg.xmi#//@interactionFlowModel/@interactionFlowModelElements.4/@viewElements.0/@viewComponentParts.0"/>
+    <createdTrg href="trg.xmi#//@interactionFlowModel/@interactionFlowModelElements.0"/>
+    <createdTrg href="trg.xmi#//@interactionFlowModel/@interactionFlowModelElements.4/@viewElements.0/@viewComponentParts.2"/>
+    <createdTrg href="trg.xmi#//@interactionFlowModel/@interactionFlowModelElements.3/@viewElements.0/@viewElementEvents.0"/>
+    <createdTrg href="trg.xmi#//@interactionFlowModel/@interactionFlowModelElements.6/@viewElements.1/@viewElementEvents.0"/>
+    <createdTrg href="trg.xmi#//@interactionFlowModel/@interactionFlowModelElements.6/@viewElements.0"/>
+    <createdTrg href="trg.xmi#//@interactionFlowModel/@interactionFlowModelElements.6"/>
+    <createdTrg href="trg.xmi#//@interactionFlowModel"/>
+    <createdTrg href="trg.xmi#//@interactionFlowModel/@interactionFlowModelElements.7/@viewElements.0"/>
+    <createdTrg href="trg.xmi#//@interactionFlowModel/@interactionFlowModelElements.7/@viewElements.0/@viewElementEvents.0"/>
+    <createdTrg href="trg.xmi#//@interactionFlowModel/@interactionFlowModelElements.4/@viewElements.0/@viewElementEvents.0"/>
+    <createdTrg href="trg.xmi#//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.0/@viewElementEvents.0"/>
+    <createdTrg href="trg.xmi#//@interactionFlowModel/@interactionFlowModelElements.6/@viewElements.1"/>
+    <createdTrg href="trg.xmi#//@interactionFlowModel/@interactionFlowModelElements.4/@viewElements.0"/>
+    <createdTrg href="trg.xmi#//@interactionFlowModel/@interactionFlowModelElements.4"/>
+    <createdTrg href="trg.xmi#//@interactionFlowModel/@interactionFlowModelElements.3/@viewElements.0"/>
+    <createdTrg href="trg.xmi#//@interactionFlowModel/@interactionFlowModelElements.3"/>
+    <createdTrg href="trg.xmi#//@interactionFlowModel/@interactionFlowModelElements.6/@viewElements.1/@viewComponentParts.0"/>
+    <createdTrg href="trg.xmi#//@interactionFlowModel/@interactionFlowModelElements.5/@viewElements.0/@viewElementEvents.0"/>
+    <createdTrg href="trg.xmi#//@interactionFlowModel/@interactionFlowModelElements.5/@viewElements.0"/>
+    <createdTrg href="trg.xmi#//@interactionFlowModel/@interactionFlowModelElements.5"/>
+    <createdTrg href="trg.xmi#//@interactionFlowModel/@interactionFlowModelElements.5/@viewElements.0/@viewComponentParts.1"/>
+    <createdTrg href="trg.xmi#//@interactionFlowModel/@interactionFlowModelElements.6/@viewElements.0/@viewComponentParts.0"/>
+    <createdTrg href="trg.xmi#//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.0"/>
+    <createdTrg href="trg.xmi#//@interactionFlowModel/@interactionFlowModelElements.7/@viewElements.0/@viewElementEvents.1"/>
+    <createdTrg href="trg.xmi#//@interactionFlowModel/@interactionFlowModelElements.7/@viewElements.0/@viewElementEvents.2"/>
+    <createdTrg href="trg.xmi#//@interactionFlowModel/@interactionFlowModelElements.7"/>
+    <createdTrg href="trg.xmi#//@interactionFlowModel/@interactionFlowModelElements.1/@viewElements.0"/>
+    <createdTrg href="trg.xmi#//@interactionFlowModel/@interactionFlowModelElements.1"/>
+    <createdTrg href="trg.xmi#//@interactionFlowModel/@interactionFlowModelElements.4/@viewElements.0/@viewComponentParts.1"/>
+    <createdTrg href="trg.xmi#//@interactionFlowModel/@interactionFlowModelElements.2/@viewElements.0"/>
+    <createdTrg href="trg.xmi#//@interactionFlowModel/@interactionFlowModelElements.2"/>
+    <createdTrg href="trg.xmi#//@interactionFlowModel/@interactionFlowModelElements.6/@viewElements.0/@viewElementEvents.0"/>
+    <createdTrg href="trg.xmi#//@interactionFlowModel/@interactionFlowModelElements.5/@viewElements.0/@viewComponentParts.0"/>
+    <createdTrg href="trg.xmi#//@interactionFlowModel/@interactionFlowModelElements.2/@viewElements.0/@viewElementEvents.0"/>
+    <createdCorr href="corr.xmi#/1"/>
+    <contextSrc href="src.xmi#/"/>
+    <contextTrg href="trg.xmi#/"/>
+    <nodeMappings key="u">
+      <value href="src.xmi#//@entity.0"/>
+    </nodeMappings>
+    <nodeMappings key="ifml">
+      <value href="trg.xmi#/"/>
+    </nodeMappings>
+    <nodeMappings key="context">
+      <value href="src.xmi#/"/>
+    </nodeMappings>
+    <nodeMappings key="contextToEssentialIFML">
+      <value href="corr.xmi#/0"/>
+    </nodeMappings>
+    <nodeMappings key="bookISBN">
+      <value href="trg.xmi#//@interactionFlowModel/@interactionFlowModelElements.4/@viewElements.0/@viewComponentParts.0"/>
+    </nodeMappings>
+    <nodeMappings key="bookReservations">
+      <value href="trg.xmi#//@interactionFlowModel/@interactionFlowModelElements.0"/>
+    </nodeMappings>
+    <nodeMappings key="dueDate">
+      <value href="trg.xmi#//@interactionFlowModel/@interactionFlowModelElements.4/@viewElements.0/@viewComponentParts.2"/>
+    </nodeMappings>
+    <nodeMappings key="extendBook">
+      <value href="trg.xmi#//@interactionFlowModel/@interactionFlowModelElements.3/@viewElements.0/@viewElementEvents.0"/>
+    </nodeMappings>
+    <nodeMappings key="findClosestLocation">
+      <value href="trg.xmi#//@interactionFlowModel/@interactionFlowModelElements.6/@viewElements.1/@viewElementEvents.0"/>
+    </nodeMappings>
+    <nodeMappings key="helpForm">
+      <value href="trg.xmi#//@interactionFlowModel/@interactionFlowModelElements.6/@viewElements.0"/>
+    </nodeMappings>
+    <nodeMappings key="helpWindow">
+      <value href="trg.xmi#//@interactionFlowModel/@interactionFlowModelElements.6"/>
+    </nodeMappings>
+    <nodeMappings key="interactionFlowModel">
+      <value href="trg.xmi#//@interactionFlowModel"/>
+    </nodeMappings>
+    <nodeMappings key="inventoryList">
+      <value href="trg.xmi#//@interactionFlowModel/@interactionFlowModelElements.7/@viewElements.0"/>
+    </nodeMappings>
+    <nodeMappings key="issueABook">
+      <value href="trg.xmi#//@interactionFlowModel/@interactionFlowModelElements.7/@viewElements.0/@viewElementEvents.0"/>
+    </nodeMappings>
+    <nodeMappings key="issueBook">
+      <value href="trg.xmi#//@interactionFlowModel/@interactionFlowModelElements.4/@viewElements.0/@viewElementEvents.0"/>
+    </nodeMappings>
+    <nodeMappings key="issueBookSelected">
+      <value href="trg.xmi#//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.0/@viewElementEvents.0"/>
+    </nodeMappings>
+    <nodeMappings key="learnPlaces">
+      <value href="trg.xmi#//@interactionFlowModel/@interactionFlowModelElements.6/@viewElements.1"/>
+    </nodeMappings>
+    <nodeMappings key="lendingForm">
+      <value href="trg.xmi#//@interactionFlowModel/@interactionFlowModelElements.4/@viewElements.0"/>
+    </nodeMappings>
+    <nodeMappings key="lendingFormWindow">
+      <value href="trg.xmi#//@interactionFlowModel/@interactionFlowModelElements.4"/>
+    </nodeMappings>
+    <nodeMappings key="lentBooks">
+      <value href="trg.xmi#//@interactionFlowModel/@interactionFlowModelElements.3/@viewElements.0"/>
+    </nodeMappings>
+    <nodeMappings key="lentBooksWindow">
+      <value href="trg.xmi#//@interactionFlowModel/@interactionFlowModelElements.3"/>
+    </nodeMappings>
+    <nodeMappings key="location">
+      <value href="trg.xmi#//@interactionFlowModel/@interactionFlowModelElements.6/@viewElements.1/@viewComponentParts.0"/>
+    </nodeMappings>
+    <nodeMappings key="loginEvent">
+      <value href="trg.xmi#//@interactionFlowModel/@interactionFlowModelElements.5/@viewElements.0/@viewElementEvents.0"/>
+    </nodeMappings>
+    <nodeMappings key="loginForm">
+      <value href="trg.xmi#//@interactionFlowModel/@interactionFlowModelElements.5/@viewElements.0"/>
+    </nodeMappings>
+    <nodeMappings key="loginWindow">
+      <value href="trg.xmi#//@interactionFlowModel/@interactionFlowModelElements.5"/>
+    </nodeMappings>
+    <nodeMappings key="password">
+      <value href="trg.xmi#//@interactionFlowModel/@interactionFlowModelElements.5/@viewElements.0/@viewComponentParts.1"/>
+    </nodeMappings>
+    <nodeMappings key="question">
+      <value href="trg.xmi#//@interactionFlowModel/@interactionFlowModelElements.6/@viewElements.0/@viewComponentParts.0"/>
+    </nodeMappings>
+    <nodeMappings key="reservationsList">
+      <value href="trg.xmi#//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.0"/>
+    </nodeMappings>
+    <nodeMappings key="reserveBook">
+      <value href="trg.xmi#//@interactionFlowModel/@interactionFlowModelElements.7/@viewElements.0/@viewElementEvents.1"/>
+    </nodeMappings>
+    <nodeMappings key="returnBook">
+      <value href="trg.xmi#//@interactionFlowModel/@interactionFlowModelElements.7/@viewElements.0/@viewElementEvents.2"/>
+    </nodeMappings>
+    <nodeMappings key="searchBooks">
+      <value href="trg.xmi#//@interactionFlowModel/@interactionFlowModelElements.7"/>
+    </nodeMappings>
+    <nodeMappings key="studentDetail">
+      <value href="trg.xmi#//@interactionFlowModel/@interactionFlowModelElements.1/@viewElements.0"/>
+    </nodeMappings>
+    <nodeMappings key="studentDetails">
+      <value href="trg.xmi#//@interactionFlowModel/@interactionFlowModelElements.1"/>
+    </nodeMappings>
+    <nodeMappings key="studentID">
+      <value href="trg.xmi#//@interactionFlowModel/@interactionFlowModelElements.4/@viewElements.0/@viewComponentParts.1"/>
+    </nodeMappings>
+    <nodeMappings key="studentList">
+      <value href="trg.xmi#//@interactionFlowModel/@interactionFlowModelElements.2/@viewElements.0"/>
+    </nodeMappings>
+    <nodeMappings key="students">
+      <value href="trg.xmi#//@interactionFlowModel/@interactionFlowModelElements.2"/>
+    </nodeMappings>
+    <nodeMappings key="submitQuestion">
+      <value href="trg.xmi#//@interactionFlowModel/@interactionFlowModelElements.6/@viewElements.0/@viewElementEvents.0"/>
+    </nodeMappings>
+    <nodeMappings key="username">
+      <value href="trg.xmi#//@interactionFlowModel/@interactionFlowModelElements.5/@viewElements.0/@viewComponentParts.0"/>
+    </nodeMappings>
+    <nodeMappings key="viewStudentDetails">
+      <value href="trg.xmi#//@interactionFlowModel/@interactionFlowModelElements.2/@viewElements.0/@viewElementEvents.0"/>
+    </nodeMappings>
+    <nodeMappings key="user2InteractionFLowModel">
+      <value href="corr.xmi#/1"/>
+    </nodeMappings>
+  </org.emoflon.ibex.tgg.core.runtime:TGGRuleApplication>
+</xmi:XMI>

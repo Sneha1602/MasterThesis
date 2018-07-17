@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="ASCII"?>
+<core:EssentialIFMLModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core" xmlns:ext="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Extensions">
+  <interactionFlowModel>
+    <interactionFlowModelElements xsi:type="core:ViewContainer" id="bookReservations">
+      <viewElements xsi:type="ext:List">
+        <viewElementEvents xsi:type="ext:OnSelectEvent"/>
+      </viewElements>
+    </interactionFlowModelElements>
+    <interactionFlowModelElements xsi:type="core:ViewContainer" id="studentDetails">
+      <viewElements xsi:type="ext:Details"/>
+    </interactionFlowModelElements>
+    <interactionFlowModelElements xsi:type="core:ViewContainer" id="students">
+      <viewElements xsi:type="ext:List">
+        <viewElementEvents xsi:type="ext:OnSelectEvent"/>
+      </viewElements>
+    </interactionFlowModelElements>
+    <interactionFlowModelElements xsi:type="core:ViewContainer" id="lentBooksWindow">
+      <viewElements xsi:type="ext:List">
+        <viewElementEvents xsi:type="ext:OnSelectEvent"/>
+      </viewElements>
+    </interactionFlowModelElements>
+    <interactionFlowModelElements xsi:type="core:ViewContainer" id="lendingFormWindow">
+      <viewElements xsi:type="ext:Form">
+        <viewElementEvents xsi:type="ext:OnSubmitEvent"/>
+        <viewComponentParts xsi:type="ext:SimpleField"/>
+        <viewComponentParts xsi:type="ext:SimpleField"/>
+        <viewComponentParts xsi:type="ext:SimpleField"/>
+      </viewElements>
+    </interactionFlowModelElements>
+    <interactionFlowModelElements xsi:type="core:ViewContainer" id="loginWindow">
+      <viewElements xsi:type="ext:Form">
+        <viewElementEvents xsi:type="ext:OnSubmitEvent"/>
+        <viewComponentParts xsi:type="ext:SimpleField"/>
+        <viewComponentParts xsi:type="ext:SimpleField"/>
+      </viewElements>
+    </interactionFlowModelElements>
+    <interactionFlowModelElements xsi:type="core:ViewContainer" id="helpWindow">
+      <viewElements xsi:type="ext:Form">
+        <viewElementEvents xsi:type="ext:OnSubmitEvent"/>
+        <viewComponentParts xsi:type="ext:SimpleField"/>
+      </viewElements>
+      <viewElements xsi:type="ext:Form">
+        <viewElementEvents xsi:type="ext:OnSubmitEvent"/>
+        <viewComponentParts xsi:type="ext:SimpleField"/>
+      </viewElements>
+    </interactionFlowModelElements>
+    <interactionFlowModelElements xsi:type="core:ViewContainer" id="searchBooks">
+      <viewElements xsi:type="ext:List">
+        <viewElementEvents xsi:type="ext:OnSelectEvent"/>
+        <viewElementEvents xsi:type="ext:OnSelectEvent"/>
+        <viewElementEvents xsi:type="ext:OnSelectEvent"/>
+      </viewElements>
+    </interactionFlowModelElements>
+  </interactionFlowModel>
+</core:EssentialIFMLModel>

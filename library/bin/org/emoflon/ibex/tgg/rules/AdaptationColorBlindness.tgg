@@ -1,0 +1,50 @@
+#using library.*
+#using AttrCondDefLibrary.*
+
+#rule AdaptationColorBlindness #with library
+
+#source { 
+	context:Context{
+		-entity -> e
+	}
+	e:User {
+		  ++ -colorBlind -> colorBlind
+	}
+
+	++ colorBlind: UserIsColorBlind
+}
+
+#target {
+	ifml: EssentialIFMLModel{
+		 - interactionFlowModel -> flowModel
+
+	}
+		
+	flowModel: InteractionFlowModel{
+		++ -changeBackgroundColor -> allWindows
+}
+
+	 ++allWindows : LightBackgroundColor
+	
+}
+
+#correspondence {
+	context2EssentialIFML :Context2EssentialIFML{
+		#src->context
+		#trg->ifml
+	}
+	
+	++userColorBlind2AdaptColorBlind:UserColorBlind2AdaptColorBlind{
+		#src->colorBlind
+		#trg->allWindows
+	}
+	
+	user2InteractionFLowModel :CreateWindowsAndLinks{
+		#src->e
+		#trg->flowModel
+	}
+}
+
+#attributeConditions {
+	
+}

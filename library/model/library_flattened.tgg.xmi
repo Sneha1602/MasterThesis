@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="ASCII"?>
+<org.emoflon.ibex.tgg.core.language:TGG xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:org.emoflon.ibex.tgg.core.language="platform:/plugin/org.emoflon.ibex.tgg.core.language/model/Language.ecore#/" name="library">
+  <src href="platform:/resource/ContextML/model/contextML.ecore#/"/>
+  <trg href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#/"/>
+  <corr href="platform:/resource/library/model/library.ecore#/"/>
+  <rules name="AdaptationColorBlindness">
+    <nodes name="colorBlind" bindingType="CREATE" incomingEdges="//@rules.0/@edges.1" incomingCorrsSource="//@rules.0/@nodes.8">
+      <type href="platform:/resource/ContextML/model/contextML.ecore#//UserIsColorBlind"/>
+    </nodes>
+    <nodes name="context" outgoingEdges="//@rules.0/@edges.0" incomingCorrsSource="//@rules.0/@nodes.6">
+      <type href="platform:/resource/ContextML/model/contextML.ecore#//Context"/>
+    </nodes>
+    <nodes name="e" incomingEdges="//@rules.0/@edges.0" outgoingEdges="//@rules.0/@edges.1" incomingCorrsSource="//@rules.0/@nodes.7">
+      <type href="platform:/resource/ContextML/model/contextML.ecore#//User"/>
+    </nodes>
+    <nodes name="allWindows" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.0/@edges.2" incomingCorrsTarget="//@rules.0/@nodes.8">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/LightBackgroundColor"/>
+    </nodes>
+    <nodes name="flowModel" domainType="TRG" incomingEdges="//@rules.0/@edges.3" outgoingEdges="//@rules.0/@edges.2" incomingCorrsTarget="//@rules.0/@nodes.7">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/InteractionFlowModel"/>
+    </nodes>
+    <nodes name="ifml" domainType="TRG" outgoingEdges="//@rules.0/@edges.3" incomingCorrsTarget="//@rules.0/@nodes.6">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/EssentialIFMLModel"/>
+    </nodes>
+    <nodes xsi:type="org.emoflon.ibex.tgg.core.language:TGGRuleCorr" name="context2EssentialIFML" domainType="CORR" source="//@rules.0/@nodes.1" target="//@rules.0/@nodes.5">
+      <type href="platform:/resource/library/model/library.ecore#//Context2EssentialIFML"/>
+    </nodes>
+    <nodes xsi:type="org.emoflon.ibex.tgg.core.language:TGGRuleCorr" name="user2InteractionFLowModel" domainType="CORR" source="//@rules.0/@nodes.2" target="//@rules.0/@nodes.4">
+      <type href="platform:/resource/library/model/library.ecore#//CreateWindowsAndLinks"/>
+    </nodes>
+    <nodes xsi:type="org.emoflon.ibex.tgg.core.language:TGGRuleCorr" name="userColorBlind2AdaptColorBlind" domainType="CORR" bindingType="CREATE" source="//@rules.0/@nodes.0" target="//@rules.0/@nodes.3">
+      <type href="platform:/resource/library/model/library.ecore#//UserColorBlind2AdaptColorBlind"/>
+    </nodes>
+    <edges name="context__entity__e_eMoflonEdge" srcNode="//@rules.0/@nodes.1" trgNode="//@rules.0/@nodes.2">
+      <type href="platform:/resource/ContextML/model/contextML.ecore#//Context/entity"/>
+    </edges>
+    <edges name="e__colorBlind__colorBlind_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.0/@nodes.2" trgNode="//@rules.0/@nodes.0">
+      <type href="platform:/resource/ContextML/model/contextML.ecore#//User/colorBlind"/>
+    </edges>
+    <edges name="flowModel__changeBackgroundColor__allWindows_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.0/@nodes.4" trgNode="//@rules.0/@nodes.3">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/InteractionFlowModel/changeBackgroundColor"/>
+    </edges>
+    <edges name="ifml__interactionFlowModel__flowModel_eMoflonEdge" domainType="TRG" srcNode="//@rules.0/@nodes.5" trgNode="//@rules.0/@nodes.4">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/EssentialIFMLModel/interactionFlowModel"/>
+    </edges>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="AdaptationCreateAdminNavBar">
+    <nodes name="context" outgoingEdges="//@rules.1/@edges.0" incomingCorrsSource="//@rules.1/@nodes.10">
+      <type href="platform:/resource/ContextML/model/contextML.ecore#//Context"/>
+    </nodes>
+    <nodes name="e" incomingEdges="//@rules.1/@edges.0" outgoingEdges="//@rules.1/@edges.1" incomingCorrsSource="//@rules.1/@nodes.11">
+      <type href="platform:/resource/ContextML/model/contextML.ecore#//User"/>
+    </nodes>
+    <nodes name="roleName" bindingType="CREATE" incomingEdges="//@rules.1/@edges.1">
+      <type href="platform:/resource/ContextML/model/contextML.ecore#//Admin"/>
+    </nodes>
+    <nodes name="administration" domainType="TRG" incomingEdges="//@rules.1/@edges.6">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewContainer"/>
+    </nodes>
+    <nodes name="bookReservations" domainType="TRG" incomingEdges="//@rules.1/@edges.4">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewContainer"/>
+    </nodes>
+    <nodes name="flowModel" domainType="TRG" incomingEdges="//@rules.1/@edges.7" outgoingEdges="//@rules.1/@edges.2 //@rules.1/@edges.3 //@rules.1/@edges.4 //@rules.1/@edges.5 //@rules.1/@edges.6" incomingCorrsTarget="//@rules.1/@nodes.11">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/InteractionFlowModel"/>
+    </nodes>
+    <nodes name="ifml" domainType="TRG" outgoingEdges="//@rules.1/@edges.7" incomingCorrsTarget="//@rules.1/@nodes.10">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/EssentialIFMLModel"/>
+    </nodes>
+    <nodes name="lendingForm" domainType="TRG" incomingEdges="//@rules.1/@edges.5">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewContainer"/>
+    </nodes>
+    <nodes name="searchBooks" domainType="TRG" incomingEdges="//@rules.1/@edges.2">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewContainer"/>
+    </nodes>
+    <nodes name="students" domainType="TRG" incomingEdges="//@rules.1/@edges.3">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewContainer"/>
+    </nodes>
+    <nodes xsi:type="org.emoflon.ibex.tgg.core.language:TGGRuleCorr" name="context2EssentialIFML" domainType="CORR" source="//@rules.1/@nodes.0" target="//@rules.1/@nodes.6">
+      <type href="platform:/resource/library/model/library.ecore#//Context2EssentialIFML"/>
+    </nodes>
+    <nodes xsi:type="org.emoflon.ibex.tgg.core.language:TGGRuleCorr" name="user2InteractionFLowModel" domainType="CORR" source="//@rules.1/@nodes.1" target="//@rules.1/@nodes.5">
+      <type href="platform:/resource/library/model/library.ecore#//CreateWindowsAndLinks"/>
+    </nodes>
+    <edges name="context__entity__e_eMoflonEdge" srcNode="//@rules.1/@nodes.0" trgNode="//@rules.1/@nodes.1">
+      <type href="platform:/resource/ContextML/model/contextML.ecore#//Context/entity"/>
+    </edges>
+    <edges name="e__role__roleName_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.1/@nodes.1" trgNode="//@rules.1/@nodes.2">
+      <type href="platform:/resource/ContextML/model/contextML.ecore#//User/role"/>
+    </edges>
+    <edges name="flowModel__navBarContainer__searchBooks_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.5" trgNode="//@rules.1/@nodes.8">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/InteractionFlowModel/navBarContainer"/>
+    </edges>
+    <edges name="flowModel__navBarContainer__students_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.5" trgNode="//@rules.1/@nodes.9">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/InteractionFlowModel/navBarContainer"/>
+    </edges>
+    <edges name="flowModel__navBarContainer__bookReservations_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.5" trgNode="//@rules.1/@nodes.4">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/InteractionFlowModel/navBarContainer"/>
+    </edges>
+    <edges name="flowModel__navBarContainer__lendingForm_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.5" trgNode="//@rules.1/@nodes.7">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/InteractionFlowModel/navBarContainer"/>
+    </edges>
+    <edges name="flowModel__navBarContainer__administration_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.1/@nodes.5" trgNode="//@rules.1/@nodes.3">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/InteractionFlowModel/navBarContainer"/>
+    </edges>
+    <edges name="ifml__interactionFlowModel__flowModel_eMoflonEdge" domainType="TRG" srcNode="//@rules.1/@nodes.6" trgNode="//@rules.1/@nodes.5">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/EssentialIFMLModel/interactionFlowModel"/>
+    </edges>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="AdaptationCreateStudentNavBar">
+    <nodes name="context" outgoingEdges="//@rules.2/@edges.0" incomingCorrsSource="//@rules.2/@nodes.7">
+      <type href="platform:/resource/ContextML/model/contextML.ecore#//Context"/>
+    </nodes>
+    <nodes name="e" incomingEdges="//@rules.2/@edges.0" outgoingEdges="//@rules.2/@edges.1" incomingCorrsSource="//@rules.2/@nodes.8">
+      <type href="platform:/resource/ContextML/model/contextML.ecore#//User"/>
+    </nodes>
+    <nodes name="roleName" bindingType="CREATE" incomingEdges="//@rules.2/@edges.1">
+      <type href="platform:/resource/ContextML/model/contextML.ecore#//Student"/>
+    </nodes>
+    <nodes name="flowModel" domainType="TRG" incomingEdges="//@rules.2/@edges.4" outgoingEdges="//@rules.2/@edges.2 //@rules.2/@edges.3" incomingCorrsTarget="//@rules.2/@nodes.8">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/InteractionFlowModel"/>
+    </nodes>
+    <nodes name="ifml" domainType="TRG" outgoingEdges="//@rules.2/@edges.4" incomingCorrsTarget="//@rules.2/@nodes.7">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/EssentialIFMLModel"/>
+    </nodes>
+    <nodes name="lentBooks" domainType="TRG" incomingEdges="//@rules.2/@edges.2">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewContainer"/>
+    </nodes>
+    <nodes name="searchBooks" domainType="TRG" incomingEdges="//@rules.2/@edges.3">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ViewContainer"/>
+    </nodes>
+    <nodes xsi:type="org.emoflon.ibex.tgg.core.language:TGGRuleCorr" name="context2EssentialIFML" domainType="CORR" source="//@rules.2/@nodes.0" target="//@rules.2/@nodes.4">
+      <type href="platform:/resource/library/model/library.ecore#//Context2EssentialIFML"/>
+    </nodes>
+    <nodes xsi:type="org.emoflon.ibex.tgg.core.language:TGGRuleCorr" name="user2InteractionFLowModel" domainType="CORR" source="//@rules.2/@nodes.1" target="//@rules.2/@nodes.3">
+      <type href="platform:/resource/library/model/library.ecore#//CreateWindowsAndLinks"/>
+    </nodes>
+    <edges name="context__entity__e_eMoflonEdge" srcNode="//@rules.2/@nodes.0" trgNode="//@rules.2/@nodes.1">
+      <type href="platform:/resource/ContextML/model/contextML.ecore#//Context/entity"/>
+    </edges>
+    <edges name="e__role__roleName_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.2/@nodes.1" trgNode="//@rules.2/@nodes.2">
+      <type href="platform:/resource/ContextML/model/contextML.ecore#//User/role"/>
+    </edges>
+    <edges name="flowModel__navBarContainer__lentBooks_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.2/@nodes.3" trgNode="//@rules.2/@nodes.5">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/InteractionFlowModel/navBarContainer"/>
+    </edges>
+    <edges name="flowModel__navBarContainer__searchBooks_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.2/@nodes.3" trgNode="//@rules.2/@nodes.6">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/InteractionFlowModel/navBarContainer"/>
+    </edges>
+    <edges name="ifml__interactionFlowModel__flowModel_eMoflonEdge" domainType="TRG" srcNode="//@rules.2/@nodes.4" trgNode="//@rules.2/@nodes.3">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/EssentialIFMLModel/interactionFlowModel"/>
+    </edges>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="AdaptationEnglishLanguage">
+    <nodes name="context" outgoingEdges="//@rules.3/@edges.0" incomingCorrsSource="//@rules.3/@nodes.6">
+      <type href="platform:/resource/ContextML/model/contextML.ecore#//Context"/>
+    </nodes>
+    <nodes name="deviceLanguage" bindingType="CREATE" incomingEdges="//@rules.3/@edges.1">
+      <type href="platform:/resource/ContextML/model/contextML.ecore#//English"/>
+    </nodes>
+    <nodes name="e" incomingEdges="//@rules.3/@edges.0" outgoingEdges="//@rules.3/@edges.1" incomingCorrsSource="//@rules.3/@nodes.7">
+      <type href="platform:/resource/ContextML/model/contextML.ecore#//Platform"/>
+    </nodes>
+    <nodes name="english" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.3/@edges.2">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/Language"/>
+    </nodes>
+    <nodes name="flowModel" domainType="TRG" incomingEdges="//@rules.3/@edges.3" outgoingEdges="//@rules.3/@edges.2" incomingCorrsTarget="//@rules.3/@nodes.7">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/InteractionFlowModel"/>
+    </nodes>
+    <nodes name="ifml" domainType="TRG" outgoingEdges="//@rules.3/@edges.3" incomingCorrsTarget="//@rules.3/@nodes.6">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/EssentialIFMLModel"/>
+    </nodes>
+    <nodes xsi:type="org.emoflon.ibex.tgg.core.language:TGGRuleCorr" name="context2EssentialIFML" domainType="CORR" source="//@rules.3/@nodes.0" target="//@rules.3/@nodes.5">
+      <type href="platform:/resource/library/model/library.ecore#//Context2EssentialIFML"/>
+    </nodes>
+    <nodes xsi:type="org.emoflon.ibex.tgg.core.language:TGGRuleCorr" name="platform2IFML" domainType="CORR" source="//@rules.3/@nodes.2" target="//@rules.3/@nodes.4">
+      <type href="platform:/resource/library/model/library.ecore#//Platform2IFML"/>
+    </nodes>
+    <edges name="context__entity__e_eMoflonEdge" srcNode="//@rules.3/@nodes.0" trgNode="//@rules.3/@nodes.2">
+      <type href="platform:/resource/ContextML/model/contextML.ecore#//Context/entity"/>
+    </edges>
+    <edges name="e__lang__deviceLanguage_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.3/@nodes.2" trgNode="//@rules.3/@nodes.1">
+      <type href="platform:/resource/ContextML/model/contextML.ecore#//Platform/lang"/>
+    </edges>
+    <edges name="flowModel__setLanguage__english_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.3/@nodes.4" trgNode="//@rules.3/@nodes.3">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/InteractionFlowModel/setLanguage"/>
+    </edges>
+    <edges name="ifml__interactionFlowModel__flowModel_eMoflonEdge" domainType="TRG" srcNode="//@rules.3/@nodes.5" trgNode="//@rules.3/@nodes.4">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/EssentialIFMLModel/interactionFlowModel"/>
+    </edges>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="AdaptationGermanLanguage">
+    <nodes name="context" outgoingEdges="//@rules.4/@edges.0" incomingCorrsSource="//@rules.4/@nodes.6">
+      <type href="platform:/resource/ContextML/model/contextML.ecore#//Context"/>
+    </nodes>
+    <nodes name="deviceLanguage" bindingType="CREATE" incomingEdges="//@rules.4/@edges.1">
+      <type href="platform:/resource/ContextML/model/contextML.ecore#//German"/>
+    </nodes>
+    <nodes name="e" incomingEdges="//@rules.4/@edges.0" outgoingEdges="//@rules.4/@edges.1" incomingCorrsSource="//@rules.4/@nodes.7">
+      <type href="platform:/resource/ContextML/model/contextML.ecore#//Platform"/>
+    </nodes>
+    <nodes name="flowModel" domainType="TRG" incomingEdges="//@rules.4/@edges.3" outgoingEdges="//@rules.4/@edges.2" incomingCorrsTarget="//@rules.4/@nodes.7">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/InteractionFlowModel"/>
+    </nodes>
+    <nodes name="german" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.4/@edges.2">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/Language"/>
+    </nodes>
+    <nodes name="ifml" domainType="TRG" outgoingEdges="//@rules.4/@edges.3" incomingCorrsTarget="//@rules.4/@nodes.6">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/EssentialIFMLModel"/>
+    </nodes>
+    <nodes xsi:type="org.emoflon.ibex.tgg.core.language:TGGRuleCorr" name="context2EssentialIFML" domainType="CORR" source="//@rules.4/@nodes.0" target="//@rules.4/@nodes.5">
+      <type href="platform:/resource/library/model/library.ecore#//Context2EssentialIFML"/>
+    </nodes>
+    <nodes xsi:type="org.emoflon.ibex.tgg.core.language:TGGRuleCorr" name="platform2IFML" domainType="CORR" source="//@rules.4/@nodes.2" target="//@rules.4/@nodes.3">
+      <type href="platform:/resource/library/model/library.ecore#//Platform2IFML"/>
+    </nodes>
+    <edges name="context__entity__e_eMoflonEdge" srcNode="//@rules.4/@nodes.0" trgNode="//@rules.4/@nodes.2">
+      <type href="platform:/resource/ContextML/model/contextML.ecore#//Context/entity"/>
+    </edges>
+    <edges name="e__lang__deviceLanguage_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.4/@nodes.2" trgNode="//@rules.4/@nodes.1">
+      <type href="platform:/resource/ContextML/model/contextML.ecore#//Platform/lang"/>
+    </edges>
+    <edges name="flowModel__setLanguage__german_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.4/@nodes.3" trgNode="//@rules.4/@nodes.4">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/InteractionFlowModel/setLanguage"/>
+    </edges>
+    <edges name="ifml__interactionFlowModel__flowModel_eMoflonEdge" domainType="TRG" srcNode="//@rules.4/@nodes.5" trgNode="//@rules.4/@nodes.3">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/EssentialIFMLModel/interactionFlowModel"/>
+    </edges>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="AdaptationUserAge">
+    <nodes name="ageOfUser" bindingType="CREATE" incomingEdges="//@rules.5/@edges.1" incomingCorrsSource="//@rules.5/@nodes.8">
+      <type href="platform:/resource/ContextML/model/contextML.ecore#//UserIsOld"/>
+    </nodes>
+    <nodes name="context" outgoingEdges="//@rules.5/@edges.0" incomingCorrsSource="//@rules.5/@nodes.6">
+      <type href="platform:/resource/ContextML/model/contextML.ecore#//Context"/>
+    </nodes>
+    <nodes name="e" incomingEdges="//@rules.5/@edges.0" outgoingEdges="//@rules.5/@edges.1" incomingCorrsSource="//@rules.5/@nodes.7">
+      <type href="platform:/resource/ContextML/model/contextML.ecore#//User"/>
+    </nodes>
+    <nodes name="flowModel" domainType="TRG" incomingEdges="//@rules.5/@edges.3" outgoingEdges="//@rules.5/@edges.2" incomingCorrsTarget="//@rules.5/@nodes.7">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/InteractionFlowModel"/>
+    </nodes>
+    <nodes name="ifml" domainType="TRG" outgoingEdges="//@rules.5/@edges.3" incomingCorrsTarget="//@rules.5/@nodes.6">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/EssentialIFMLModel"/>
+    </nodes>
+    <nodes name="zoomScreen" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.5/@edges.2" incomingCorrsTarget="//@rules.5/@nodes.8">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/ScreenZoom"/>
+    </nodes>
+    <nodes xsi:type="org.emoflon.ibex.tgg.core.language:TGGRuleCorr" name="context2EssentialIFML" domainType="CORR" source="//@rules.5/@nodes.1" target="//@rules.5/@nodes.4">
+      <type href="platform:/resource/library/model/library.ecore#//Context2EssentialIFML"/>
+    </nodes>
+    <nodes xsi:type="org.emoflon.ibex.tgg.core.language:TGGRuleCorr" name="user2InteractionFLowModel" domainType="CORR" source="//@rules.5/@nodes.2" target="//@rules.5/@nodes.3">
+      <type href="platform:/resource/library/model/library.ecore#//CreateWindowsAndLinks"/>
+    </nodes>
+    <nodes xsi:type="org.emoflon.ibex.tgg.core.language:TGGRuleCorr" name="userAge2ScreenZoom" domainType="CORR" bindingType="CREATE" source="//@rules.5/@nodes.0" target="//@rules.5/@nodes.5">
+      <type href="platform:/resource/library/model/library.ecore#//UserAge2ScreenZoom"/>
+    </nodes>
+    <edges name="context__entity__e_eMoflonEdge" srcNode="//@rules.5/@nodes.1" trgNode="//@rules.5/@nodes.2">
+      <type href="platform:/resource/ContextML/model/contextML.ecore#//Context/entity"/>
+    </edges>
+    <edges name="e__age__ageOfUser_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.5/@nodes.2" trgNode="//@rules.5/@nodes.0">
+      <type href="platform:/resource/ContextML/model/contextML.ecore#//User/age"/>
+    </edges>
+    <edges name="flowModel__screenZoom__zoomScreen_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.5/@nodes.3" trgNode="//@rules.5/@nodes.5">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/InteractionFlowModel/screenZoom"/>
+    </edges>
+    <edges name="ifml__interactionFlowModel__flowModel_eMoflonEdge" domainType="TRG" srcNode="//@rules.5/@nodes.4" trgNode="//@rules.5/@nodes.3">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/EssentialIFMLModel/interactionFlowModel"/>
+    </edges>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="Context2IFML">
+    <nodes name="context" bindingType="CREATE" incomingCorrsSource="//@rules.6/@nodes.2">
+      <type href="platform:/resource/ContextML/model/contextML.ecore#//Context"/>
+    </nodes>
+    <nodes name="ifml" domainType="TRG" bindingType="CREATE" incomingCorrsTarget="//@rules.6/@nodes.2">
+      <type href="platform:/resource/EssentialIFML/model/essentialIFML.ecore#//Core/EssentialIFMLModel"/>
+    </nodes>
+    <nodes xsi:type="org.emoflon.ibex.tgg.core.language:TGGRuleCorr" name="context2EssentialIFML" domainType="CORR" bindingType="CREATE" source="//@rules.6/@nodes.0" target="//@rules.6/@nodes.1">
+      <type href="platform:/resource/library/model/library.ecore#//Context2EssentialIFML"/>
+    </nodes>
+    <attributeConditionLibrary/>
+  </rules>
+  <attributeConstraintDefinitionLibrary/>
+</org.emoflon.ibex.tgg.core.language:TGG>
